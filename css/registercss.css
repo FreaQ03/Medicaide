@@ -1,0 +1,54 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: #90CCF4 !important;
+}
+
+#navbar-color {
+	background-color: rgba(236, 236, 236, .8);
+}
+
+#check_patient {
+	display: none;
+}
+
+#check_doctor {
+	display: none;
+}
+
+.userchoice {
+	display: inline-block;
+	margin: 1rem !important;
+}
+
+.content-center {
+	justify-content: center !important;
+}
+
+.signup-button {
+	width: 10rem;
+}
+
+.signup-header {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.subheading {
+	font-family: 'Rubik', sans-serif;
+}
+
+label::before {
+    background-image: url("img/patient-signup.png");
+}
+
+:checked + label::before {
+	border-color: #ddd;
+}
+
+:checked+label img {
+  	transform: scale(1.1);
+  	box-shadow: 0 0 5px #333;
+  	z-index: -1;
+}
