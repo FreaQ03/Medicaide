@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.navbar-brand{
+	font-family: 'Quicksand', sans-serif;
+}
+
 .carousel .carousel-item {
   height: 40rem;
   object-position: center;
@@ -45,6 +49,10 @@ html {
 	font-family: 'Roboto', sans-serif;
 }
 
+.nav-link{
+	background-color: #ECECEC;
+}
+
 #bgyellow {
 	background-color: #F3D250;
 }
@@ -59,4 +67,28 @@ html {
 
 #navbar-color {
 	background-color: #ECECEC;
+}
+
+#calendar:hover{
+	background-color: #c3c3c3;
+}
+
+#phone:hover{
+	background-color: #c3c3c3;
+}
+
+#clock:hover{
+	background-color: #c3c3c3;
+}
+
+#prescriptions:hover{
+	background-color: #c3c3c3;
+}
+
+#journal:hover{
+	background-color: #c3c3c3;
+}
+
+#user:hover{
+	background-color: #c3c3c3;
 }
