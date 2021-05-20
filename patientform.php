@@ -37,73 +37,15 @@
         document.getElementById("A").style.visibility="visible";
 
     }
-  </script>
-
- <script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#includedContent").load("patientform.php"); 
-    });
-  </script> 
+</script>
 </head>
 
 <body>
-
-	<!--Navbar-->
-	<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
-  <div class="container-fluid sticky-top">
-    <a class="navbar-brand" href="#">Medicaide</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<div class="container pt-3">
-  <h1 class="signup-header" align="center">Sign up</h1>
-  <p class="subheading" align="center">In just a few steps, you can have an assistant for your medical needs!</p>
-</div>
-
 <!--Registration Form-->
 <center>
 <div class="container mt-5 ml-5 mr-5 pt-3 pb-3 border-top border-bottom">
 
     <form action="registrationPost.php" method="post">
-      <div class="form-group">
-        <div class="userchoice">
-          <input type="radio" id="check_patient" name="role" value="patient" onClick="hideB()" checked>
-          <label for="check_patient"><img src="img/patient-signup.jpg" class="h-25 mr-5"></label>
-        </div>
-        <div class="userchoice">
-          <input type="radio" id="check_doctor" name="role" value="doctor" onClick="hideA()">
-          <label for="check_doctor"><img src="img/doctor-signup.jpg" class="h-25"></label>
-        </div>
-      </div>
       <div id="A">
         <div class="row content-center">
           <div class="form-group col-md-6 w-25">
