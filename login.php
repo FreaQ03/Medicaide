@@ -2,70 +2,91 @@
 
 <head>
 
-	<!--Boostrap CSS-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  
+  <!--Boostrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-	<!--Fontawesome-->
-	<script src="https://kit.fontawesome.com/6af8a38aa6.js" crossorigin="anonymous"></script>
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/6af8a38aa6.js" crossorigin="anonymous"></script>
 
-	<!--Animate CSS-->
-	<link
+  <!--Animate CSS-->
+  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+
   />
 
-	<!--Google Fonts API-->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <!--Google Fonts API-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-	<!-- Custom CSS -->
+  <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/indexfile.css">
     <link rel="stylesheet" type="text/css" href="css/logincss.css">
+
 </head>
 
 <body>
 
-	<!--Navbar-->
+  <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
   <div class="container-fluid sticky-top">
-    <a class="navbar-brand" href="#"><b>MEDICAIDE</b></a>
+    <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
-        
-     
-          <a class="nav-link icon text-secondary" id="calendar" aria-current="page" href="#"> <i class="fas fa-calendar-plus"></i></a>
+      <div class="nav-links">
+        <ul>
+          <a href="#"><li>ABOUT US</li></a>
+          <a href="#"><li>CONTACT US</li></a>
+          <a href="#"><li>PRIVACY POLICY</li></a>
+        </ul>
+      </div>   
+          <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
 
-          <a class="nav-link icon text-secondary" id="phone" aria-current="page" href="#"> <i class="fas fa-phone-square-alt"></i>
-          <a class="nav-link icon text-secondary" id="clock" aria-current="page" href="#">  <i class="fas fa-clock"></i>
-          <a class="nav-link icon text-secondary" id="prescriptions" aria-current="page" href="#"> <i class="fas fa-notes-medical"></i>
-          <a class="nav-link icon text-secondary" id="journal" aria-current="page" href="#"> <i class="fas fa-sticky-note"></i>
-          <a class="nav-link icon text-secondary" id="user" aria-current="page" href="#"> <i class="fas fa-user"></i>
+          <a class="nav-link icon" id="phone" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
+          <a class="nav-link icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
+          <a class="nav-link icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
+          <a class="nav-link icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
+          <a class="nav-link icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
         </li> 
     </div>
   </div>
 </nav>
-  
-  <div class="container">
-    <div style="background-image: url('image_2021-05-19_222040-removebg-preview');">
-    <div class="row d-flex h-100">
-      <div class="col justify-content-center align-self-center">
-       <center> <form action="authenticate.php" method="post">
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
-            <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" name="email">
-          </div>
 
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
-            <input type="password" class="form-control" placeholder="Pass" aria-label="Username" aria-describedby="basic-addon1" name="password">
-          </div>
+  <!--Carousell-->
+         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner bg-info" role="listbox">
+    <div class="carousel-item active">
+      <img src="carousellimg/carou1.jpg" class="d-block w-100" alt="...">
+          
+      
+        <div class="center">
+      <h1>Login</h1>
+      <form action="authenticate.php" method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="#">Signup</a>
+        </div>
+      </form>
+    </div>
 
-          <button type="submit" class="btn btn-primary">Login</button>
-        </center></form>
+        <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
+        <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
 
         <?php
         if (isset($_GET['credentials'])) { //check if credentials key exists in URL
@@ -82,21 +103,47 @@
 
       </div>
       <div class="col">
-        
 
 
 
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+    
+
+
+
+
     </div>
   </div>
+</div>
 
-	<!--Bootstrap Javascript-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
-	<!--Wow.js Javascript-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script>
-		var wow = new WOW(
+
+  <!--Bootstrap Javascript-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+  <!--Wow.js Javascript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    var wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
@@ -112,6 +159,16 @@
   }
 );
 wow.init();
-	</script>
+  </script>
 </body>
 </html>
+
+
+<div class="carousel-item">
+      <img src="carousellimg/carou2.jpg" class="d-block w-100" alt="...">
+       <div class="carousel-caption text-block" style="
+            bottom: 300px;
+            position: absolute;
+            background-color: white;
+            color: #A4292E;
+
