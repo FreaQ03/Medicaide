@@ -5,3 +5,6 @@ html {
 #navbar-color {
 	background-color: #ECECEC;
 }
+.navbar-brand{
+	font-family: 'Quicksand', sans-serif;
+}

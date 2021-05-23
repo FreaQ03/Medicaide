@@ -17,7 +17,8 @@
 	<!--Google Fonts API-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 	<!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/logincss.css">
 </head>
@@ -25,44 +26,34 @@
 <body>
 
 	<!--Navbar-->
-	<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
   <div class="container-fluid sticky-top">
-    <a class="navbar-brand" href="#">Medicaide</a>
+    <a class="navbar-brand" href="#"><b>MEDICAIDE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        </ul>
+        
+     
+          <a class="nav-link icon text-secondary" id="calendar" aria-current="page" href="#"> <i class="fas fa-calendar-plus"></i></a>
+
+          <a class="nav-link icon text-secondary" id="phone" aria-current="page" href="#"> <i class="fas fa-phone-square-alt"></i>
+          <a class="nav-link icon text-secondary" id="clock" aria-current="page" href="#">  <i class="fas fa-clock"></i>
+          <a class="nav-link icon text-secondary" id="prescriptions" aria-current="page" href="#"> <i class="fas fa-notes-medical"></i>
+          <a class="nav-link icon text-secondary" id="journal" aria-current="page" href="#"> <i class="fas fa-sticky-note"></i>
+          <a class="nav-link icon text-secondary" id="user" aria-current="page" href="#"> <i class="fas fa-user"></i>
+        </li> 
     </div>
   </div>
 </nav>
   
   <div class="container">
+    <div style="background-image: url('image_2021-05-19_222040-removebg-preview');">
     <div class="row d-flex h-100">
       <div class="col justify-content-center align-self-center">
-        <form action="authenticate.php" method="post">
+       <center> <form action="authenticate.php" method="post">
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
             <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" name="email">
@@ -74,7 +65,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+        </center></form>
 
         <?php
         if (isset($_GET['credentials'])) { //check if credentials key exists in URL
@@ -91,7 +82,10 @@
 
       </div>
       <div class="col">
-        Col
+        
+
+
+
       </div>
     </div>
   </div>
