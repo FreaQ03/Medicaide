@@ -2,10 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-	background-color: #90CCF4 !important;
-}
-
 #navbar-color {
 	background-color: rgba(236, 236, 236, .8);
 }
@@ -28,15 +24,40 @@ body {
 }
 
 .signup-button {
-	width: 10rem;
+	width: 25%;
 }
 
 .signup-header {
 	font-family: 'Montserrat', sans-serif;
+	color: #FFFFFF;
+}
+
+.signup-container {
+	background-color: #5DA2D5 !important;
+	box-shadow: 2px 1px 10px 4px #888888;
+}
+
+.choice-container {
+	background-color: #F3D250 !important;
+	box-shadow: 2px 1px 10px 4px #888888;
 }
 
 .subheading {
 	font-family: 'Rubik', sans-serif;
+	color: #FFFFFF;
+}
+
+.img-choice {
+	height: 38%;
+	width: auto;
+}
+
+.registration {
+	width: 35%;
+}
+
+.registration-birthday {
+	width: 40% !important;
 }
 
 label::before {
@@ -44,11 +65,10 @@ label::before {
 }
 
 :checked + label::before {
-	border-color: #ddd;
+	
 }
 
 :checked+label img {
   	transform: scale(1.1);
-  	box-shadow: 0 0 5px #333;
   	z-index: -1;
 }

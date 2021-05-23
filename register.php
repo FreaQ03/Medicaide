@@ -20,31 +20,6 @@
 
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/registercss.css">
-
-  <!--Javascript for dynamic form-->
-  <script language="Javascript">
-    function hideA()
-    {
-
-        document.getElementById("A").style.visibility="hidden";
-        document.getElementById("B").style.visibility="visible";    
-
-    }
-
-    function hideB()
-    {
-        document.getElementById("B").style.visibility="hidden";
-        document.getElementById("A").style.visibility="visible";
-
-    }
-  </script>
-
- <script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#includedContent").load("patientform.php"); 
-    });
-  </script> 
 </head>
 
 <body>
@@ -84,92 +59,78 @@
   </div>
 </nav>
 
-<div class="container pt-3">
-  <h1 class="signup-header" align="center">Sign up</h1>
-  <p class="subheading" align="center">In just a few steps, you can have an assistant for your medical needs!</p>
-</div>
+<div class="container">
+  <div class="row h-75">
 
-<!--Registration Form-->
-<center>
-<div class="container mt-5 ml-5 mr-5 pt-3 pb-3 border-top border-bottom">
-
-    <form action="registrationPost.php" method="post">
-      <div class="form-group">
+    <!--First Column-->
+    <div class="col choice-container content-center align-self-center animate__animated animate__fadeInRight">
+      <center>
+      <div class="form-group" id="account-container">
+        <h1 class="signup-header mt-3 mb-1">Account Type</h1>
+        <p class="subheading" align="center">Please pick an account type.</p>
         <div class="userchoice">
           <input type="radio" id="check_patient" name="role" value="patient" onClick="hideB()" checked>
-          <label for="check_patient"><img src="img/patient-signup.jpg" class="h-25 mr-5"></label>
+          <label for="check_patient"><img src="img/patient-signup.png" class="img-choice mr-5 mb-3"></label>
         </div>
         <div class="userchoice">
           <input type="radio" id="check_doctor" name="role" value="doctor" onClick="hideA()">
-          <label for="check_doctor"><img src="img/doctor-signup.jpg" class="h-25"></label>
+          <label for="check_doctor"><img src="img/doctor-signup.png" class="img-choice mb-3"></label>
         </div>
       </div>
-      <div id="A">
-        <div class="row content-center">
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">First Name</label>
-            <input type="text" class="form-control registration" name="first_name" placeholder="e.g. Andrew" required>
-          </div>
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Last Name</label>
-            <input type="text" class="form-control registration" name="last_name" placeholder="e.g. Cook" required>
-          </div>
-        </div>
-        <div class="row content-center">
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Email</label>
-            <input type="email" class="form-control registration" name="email" placeholder="name@example.com" required>
-          </div>
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Password</label>
-            <input type="password" class="form-control registration" name="password" required>
-          </div>
-        </div>
-        <div class="row content-center">
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Birthday</label>
-            <input type="date" class="form-control registration" name="birthday" required>
-          </div>
-        </div>
-        <div class="row mt-5 signup-button">
-          <button type="submit" class="btn btn-primary subheading">Sign Up</button>
-        </div>
+    </center>
+    </div>
+
+    <!--Second Column-->
+    <div class="col signup-container align-self-center">
+      <div class="container pt-3">
+        <h1 class="signup-header" align="center">Sign up</h1>
+        <p class="subheading" align="center">In just a few steps, you can have an assistant for your medical needs!</p>
       </div>
 
-      <div id="B">
-        <div class="row content-center">
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">First Name</label>
-            <input type="text" class="form-control registration" name="first_name" placeholder="e.g. Andrew" required>
-          </div>
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Last Name</label>
-            <input type="text" class="form-control registration" name="last_name" placeholder="e.g. Cook" required>
-          </div>
+      <!--Registration Form-->
+      <center>
+      <div class="container mt-3 ml-5 mr-5 pt-3 pb-3 border-top border-bottom">
+
+          <form action="registrationPost.php" method="post">
+              <div class="row content-center">
+                <div class="form-group col-md-6 registration">
+                  <label class="subheading">First Name</label>
+                  <input type="text" class="form-control" name="first_name" placeholder="e.g. Andrew" required>
+                </div>
+                <div class="form-group col-md-6 registration">
+                  <label class="subheading">Last Name</label>
+                  <input type="text" class="form-control" name="last_name" placeholder="e.g. Cook" required>
+                </div>
+              </div>
+              <div class="row content-center mt-3">
+                <div class="form-group col-md-6 registration">
+                  <label class="subheading">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group col-md-6 registration">
+                  <label class="subheading">Birthday</label>
+                  <input type="date" class="form-control" name="birthday" required>
+                </div>
+              </div>
+              <div class="row content-center mt-3">
+                <div class="form-group col-md-6 registration">
+                  <label class="subheading">Password</label>
+                  <input type="password" class="form-control" name="password" required>
+                </div>
+                <div class="form-group col-md-6 registration">
+                  <label class="subheading">Confirm Password</label>
+                  <input type="password" class="form-control" name="password" required>
+                </div>
+              </div>
+              <div class="row mt-5 signup-button">
+                <button type="submit" class="btn btn-primary subheading">Sign Up</button>
+              </div>
+          </form>
         </div>
-        <div class="row content-center">
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Email</label>
-            <input type="email" class="form-control registration" name="email" placeholder="name@example.com" required>
-          </div>
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Password</label>
-            <input type="password" class="form-control registration" name="password" required>
-          </div>
-        </div>
-        <div class="row content-center">
-          <div class="form-group col-md-6 w-25">
-            <label class="subheading">Birthday</label>
-            <input type="date" class="form-control registration" name="birthday" required>
-          </div>
-        </div>
-        <div class="row mt-5 signup-button">
-          <button type="submit" class="btn btn-primary subheading">Sign Up</button>
-        </div>
-      </div>
-    </form>
+      </center>
+    </div>
   </div>
-</center>
+</div>
 
 	<!--Bootstrap Javascript-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
