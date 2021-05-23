@@ -28,22 +28,27 @@
 	<!--Navbar-->
 	<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
   <div class="container-fluid sticky-top">
-    <a class="navbar-brand" href="#"><b>MEDICAIDE</b></a>
+    <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
-        
-     
-          <a class="nav-link icon text-secondary" id="calendar" aria-current="page" href="#"> <i class="fas fa-calendar-plus"></i></a>
+      <div class="nav-links">
+        <ul>
+          <a href="#"><li>ABOUT US</li></a>
+          <a href="#"><li>CONTACT US</li></a>
+          <a href="#"><li>PRIVACY POLICY</li></a>
+        </ul>
+      </div>   
+          <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
 
-          <a class="nav-link icon text-secondary" id="phone" aria-current="page" href="#"> <i class="fas fa-phone-square-alt"></i>
-          <a class="nav-link icon text-secondary" id="clock" aria-current="page" href="#">  <i class="fas fa-clock"></i>
-          <a class="nav-link icon text-secondary" id="prescriptions" aria-current="page" href="#"> <i class="fas fa-notes-medical"></i>
-          <a class="nav-link icon text-secondary" id="journal" aria-current="page" href="#"> <i class="fas fa-sticky-note"></i>
-          <a class="nav-link icon text-secondary" id="user" aria-current="page" href="#"> <i class="fas fa-user"></i>
+          <a class="nav-link icon" id="phone" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
+          <a class="nav-link icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
+          <a class="nav-link icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
+          <a class="nav-link icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
+          <a class="nav-link icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
         </li> 
     </div>
   </div>
@@ -51,42 +56,54 @@
 
 	<!--Carousell-->
 	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
+  <div class="carousel-inner bg-info" role="listbox">
     <div class="carousel-item active">
       <img src="carousellimg/carou1.jpg" class="d-block w-100" alt="...">
+         <div class="carousel-caption text-block" style="
+            bottom: 300px;
+            position: absolute;
+            background-color: white;
+            color: #A4292E;
+          ">
+          <h1><b>MEDICAIDE</b></h1>
+            <p>For Patients and Doctors Medical Assistance</p>
+                <button type="button" class="btn btn-outline-success mr-1 btn-lg">Log in</button>
+                <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
+        </div>
     </div>
     <div class="carousel-item">
       <img src="carousellimg/carou2.jpg" class="d-block w-100" alt="...">
+       <div class="carousel-caption text-block" style="
+            bottom: 300px;
+            position: absolute;
+            background-color: white;
+            color: #A4292E;
+          ">
+          <h1><b>MEDICAIDE</b></h1>
+            <p>For Patients and Doctors Medical Assistance</p>
+            <button type="button" class="btn btn-outline-success mr-1 btn-lg">Log in</button>
+            <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
+        </div>
     </div>
     <div class="carousel-item">
       <img src="carousellimg/carou3.jpg" class="d-block w-100" alt="...">
+       <div class="carousel-caption text-block" style="
+            bottom: 300px;
+            position: absolute;
+            background-color: white;
+            color: #A4292E;
+          ">
+        <h1><b>MEDICAIDE</b></h1>
+          <p>For Patients and Doctors Medical Assistance</p>
+          <button type="button" class="btn btn-outline-success mr-1 btn-lg">Log in</button>
+          <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
+      </div>
+    <div class="carousel-content"></div>
+
     </div>
   </div>
 </div>
 
-	<!--Grid-->
-	<div class="grid" id="bgyellow">
-		<div class="interior-container">
-			<h1 class="icon-header wow animate__animated animate__fadeInDown" align="center">Doctors</h1>
-			
-			<img src="icons/docico.png" class="index-icons wow animate__animated animate__fadeInDown animate__delay-1s my-3">
-			<p class="icon-caption wow animate__animated animate__fadeInDown animate__delay-1s mx-3 px-5">Ensure convenient and efficient communication with your patients.</p>
-		</div>
-	</div>
-	<div class="grid" id="bgblue">
-		<div class="interior-container">
-			<h1 class="icon-header wow animate__animated animate__fadeInDown" align="center">Patients</h1>
-			<img src="icons/patientico.png" class="index-icons wow animate__animated animate__fadeInDown animate__delay-1s my-3">
-			<p class="icon-caption wow animate__animated animate__fadeInDown animate__delay-1s mx-3 px-5">Health is wealth. Save future costs by taking your medicine on time with our reminder features.</p>
-		</div>
-	</div>
-	<div class="grid" id="bgred">
-		<div class="interior-container">
-			<h1 class="icon-header wow animate__animated animate__fadeInDown" align="center">Prescriptions</h1>
-			<img src="icons/prescriptionico.png" class="index-icons wow animate__animated animate__fadeInDown animate__delay-1s my-3">
-			<p class="icon-caption wow animate__animated animate__fadeInDown animate__delay-1s mx-3 px-5">Enjoy paperless prescriptions that can be easily scanned in any pharmacies near you.</p>
-		</div>
-	</div>
 
 
 	<!--Bootstrap Javascript-->
