@@ -61,7 +61,7 @@
 
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
-            <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" name="password">
+            <input type="password" class="form-control" placeholder="Pass" aria-label="Username" aria-describedby="basic-addon1" name="password">
           </div>
 
           <button type="submit" class="btn btn-primary">Login</button>
