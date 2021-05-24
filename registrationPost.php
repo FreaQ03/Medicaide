@@ -34,7 +34,7 @@
       SELECT 
         * 
       FROM 
-        `users` 
+        `patient` 
       WHERE 
         `email`='".$email."'
     ";
