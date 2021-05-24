@@ -26,7 +26,7 @@
 <body>
 
 	<!--Navbar-->
-	<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-color">
   <div class="container-fluid sticky-top">
     <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,6 @@
         </ul>
       </div>   
           <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
-
           <a class="nav-link icon" id="phone" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
           <a class="nav-link icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
           <a class="nav-link icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
@@ -57,7 +56,7 @@
 	<!--Carousell-->
 	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner bg-info" role="listbox">
-    <div class="carousel-item active">
+    <div class="carousel-item active vh-100">
       <img src="carousellimg/carou1.jpg" class="d-block w-100" alt="...">
          <div class="carousel-caption text-block" style="
             bottom: 300px;
@@ -71,7 +70,7 @@
                 <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
         </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item vh-100">
       <img src="carousellimg/carou2.jpg" class="d-block w-100" alt="...">
        <div class="carousel-caption text-block" style="
             bottom: 300px;
@@ -85,7 +84,7 @@
             <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
         </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item vh-100">
       <img src="carousellimg/carou3.jpg" class="d-block w-100" alt="...">
        <div class="carousel-caption text-block" style="
             bottom: 300px;
