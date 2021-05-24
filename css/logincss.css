@@ -4,13 +4,15 @@
 	font-size: 400%;
 	position: absolute;
 	left: 13%;
-	bottom: 60%
+	bottom: 60%;
+  font-family: 'Quicksand', sans-serif;
 }
 .placeholdperry{
 	font-size: 100%;
 	position: absolute;
 	left: 13%;
-	bottom: 60%
+	bottom: 60%;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .center{
@@ -27,10 +29,14 @@
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid silver;
+  font-family: 'Quicksand', sans-serif;
+  color: #A4292E;
 }
 .center form{
   padding: 0 40px;
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  color: #A4292E;
 }
 form .txt_field{
   position: relative;

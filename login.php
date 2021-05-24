@@ -61,7 +61,7 @@
   <!--Carousell-->
          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner bg-info" role="listbox">
-    <div class="carousel-item active">
+    <div class="carousel-item active vh-100">
       <img src="carousellimg/carou1.jpg" class="d-block w-100" alt="...">
           
       

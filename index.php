@@ -25,7 +25,7 @@
 
 <body>
 
-	<!--Navbar-->
+	<!--Navbar-------------------------------------------------->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-color">
   <div class="container-fluid sticky-top">
     <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
@@ -53,55 +53,68 @@
   </div>
 </nav>
 
-	<!--Carousell-->
+	<!--Carousell---------------------------------------------------->
 	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="overlay"></div>
+  <div class="caption">
+    <h1><b>MEDICAIDE</b></h1>
+    <p>For Patients and Doctors Medical Assistance</p>
+     <button type="button" class="btn btn-outline-success btn-lg">Log in</button>
+      <button type="button" class="btn btn-primary btn-lg">Sign up</button>
+  </div>
   <div class="carousel-inner bg-info" role="listbox">
     <div class="carousel-item active vh-100">
       <img src="carousellimg/carou1.jpg" class="d-block w-100" alt="...">
-         <div class="carousel-caption text-block" style="
-            bottom: 300px;
-            position: absolute;
-            background-color: white;
-            color: #A4292E;
-          ">
-          <h1><b>MEDICAIDE</b></h1>
-            <p>For Patients and Doctors Medical Assistance</p>
-                <button type="button" class="btn btn-outline-success mr-1 btn-lg">Log in</button>
-                <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
-        </div>
+         
     </div>
     <div class="carousel-item vh-100">
       <img src="carousellimg/carou2.jpg" class="d-block w-100" alt="...">
-       <div class="carousel-caption text-block" style="
-            bottom: 300px;
-            position: absolute;
-            background-color: white;
-            color: #A4292E;
-          ">
-          <h1><b>MEDICAIDE</b></h1>
-            <p>For Patients and Doctors Medical Assistance</p>
-            <button type="button" class="btn btn-outline-success mr-1 btn-lg">Log in</button>
-            <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
-        </div>
+
     </div>
     <div class="carousel-item vh-100">
       <img src="carousellimg/carou3.jpg" class="d-block w-100" alt="...">
-       <div class="carousel-caption text-block" style="
-            bottom: 300px;
-            position: absolute;
-            background-color: white;
-            color: #A4292E;
-          ">
-        <h1><b>MEDICAIDE</b></h1>
-          <p>For Patients and Doctors Medical Assistance</p>
-          <button type="button" class="btn btn-outline-success mr-1 btn-lg">Log in</button>
-          <button type="button" class="btn btn-outline-primary btn-lg">Sign up</button>
-      </div>
-    <div class="carousel-content"></div>
-
     </div>
   </div>
 </div>
+
+  <!--Features---------------------------------------------------------->
+
+  <div class="features">
+    <!--text-->
+  <div class="features-text">
+    <h2>MADE FOR PATIENTS AND DOCTORS</h2>
+      <p>Our goal/aim (subheading)</p>
+      <p>Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. 
+      </p>
+  </div>
+</div>
+    <!--grid for features-->
+
+  <div class="container">
+      <div class="card-deck text-light">
+      <div class="card crdimg1" style="background-image: url(bgCards/calendar.png);">
+ 
+        <div class="card-body cb1">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">scary</p>
+        </div>
+      </div>
+      <div class="card crdimg2" style="background-image: url(bgCards/phone.png);">
+        <div class="card-body cb2">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">scary</p>
+        </div>
+      </div>
+      <div class="card crdimg3" style="background-image: url(bgCards/clock.png);">
+        <div class="card-body cb3">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">scary</p>
+        </div>
+  </div>
+
+
+
+
 
 
 

@@ -62,38 +62,154 @@ html {
     filter: blur(5px);
 }
 
-
-.grid {
-	display: inline-block;
-	float: left;
-	width: 33.33%;
-	height: 35rem;
+.caption{
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  margin: 400px;
+  left: 300px;
+  right: 0;
+  z-index: 16;
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: #A4292E;
 }
 
-.interior-container {
-	margin-top: 5rem;
+.btn-outline-success{
+  color: #A4292E !important;
+  border-color:  #A4292E !important;
 }
 
-.index-icons {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	height: 10rem; 
-	width:auto;
+.btn-outline-success:hover{
+  color: white !important;
+  border-color:  #A4292E !important;
+  background-color: #A4292E;
 }
 
-.icon-header {
-	font-family: 'Libre Caslon Text', serif;
+.btn-primary{
+	color: white;
+	background-color: #A4292E!important;
+	border-color:  #A4292E !important;
 }
 
-.icon-caption {
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
+.btn-primary:hover{
+	 background-color: #A4292E;
 }
 
 .nav-link{
 	background-color: #ECECEC;
 }
+
+.features{
+	height: 600px;
+	background-color: white;
+	padding: 2% 10% 0px 10%;
+}
+
+.features-text h2{
+	color: #373F51;
+	
+}
+
+.features-text p:nth-child(1){
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	color: #A4292E;
+	font-size: 30px;
+	line-height: 0px;
+}
+
+.features-text p:nth-child(2){
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	color: #A4292E;
+	font-size: 15px;
+	line-height: 5px;
+}
+
+.features-text p:nth-child(3){
+	font-family: 'Quicksand', sans-serif;
+	color: #A4292E;
+}
+
+.features-text{
+	width: 500px;
+	margin: 50px 0px;
+}
+
+.container{
+	width: 400px;
+
+}
+
+.crdimg1{
+	border:none;
+	background-image: url(calendar.png);
+	width: 394px;
+	height: 311px;
+	background-size: cover;
+	background-position: center;
+	left: -500px;
+	top: -241px;
+
+}
+
+.crdimg2{
+	border:none;
+	background-image: url(phone.png);
+	width: 394px;
+	height: 311px;
+	background-size: cover;
+	background-position: center;
+	top: -550px;
+}
+
+.crdimg3{
+	border:none;
+	background-image: url(presp.png);
+	width: 394px;
+	height: 311px;
+	background-size: cover;
+	background-position: center;
+	top:-862px;
+	right: -500px;
+}
+
+.cb1,.cb2,.cb3{
+	background:red;
+	opacity:0;
+	transition-duration: 1s;
+	
+}
+
+.cb1:hover,.cb2:hover,.cb3:hover{
+	opacity: 1;
+	background:blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #bgyellow {
