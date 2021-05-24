@@ -2,8 +2,92 @@ html {
   scroll-behavior: smooth;
 }
 
+.navbar-brand{
+	font-family: 'Quicksand', sans-serif;
+}
+
+.nav-links{
+	flex: 1;
+}
+
+.nav-links ul{
+	margin-left: 50px;
+	display: inline;
+}
+
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 25px;
+}
+
+.nav-links ul a{
+	color: #A4292E;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.nav-links ul li::after{
+	content: '';
+	width: 0;
+	height: 2px;
+	background: #A4292E;
+	display: block;
+	margin: auto;
+	transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+
+.nav-link{
+	background-color: #ECECEC;
+}
+
+.index-icons {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 10rem; 
+	width:auto;
+}
+
+.icon-header {
+	font-family: 'Libre Caslon Text', serif;
+}
+
+.icon-caption {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
 #navbar-color {
-	background-color: rgba(236, 236, 236, .8);
+	background-color: #ECECEC;
+}
+
+#calendar:hover{
+	background-color: #c3c3c3;
+}
+
+#phone:hover{
+	background-color: #c3c3c3;
+}
+
+#clock:hover{
+	background-color: #c3c3c3;
+}
+
+#prescriptions:hover{
+	background-color: #c3c3c3;
+}
+
+#journal:hover{
+	background-color: #c3c3c3;
+}
+
+#user:hover{
+	background-color: #c3c3c3;
 }
 
 #check_patient {
@@ -64,9 +148,11 @@ label::before {
     background-image: url("img/patient-signup.png");
 }
 
+/*
 :checked + label::before {
 	
 }
+*/
 
 :checked+label img {
   	transform: scale(1.1);
