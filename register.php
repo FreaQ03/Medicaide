@@ -71,11 +71,11 @@
         <p class="subheading" align="center">Please pick an account type.</p>
         <div class="userchoice">
           <input type="radio" id="check_patient" name="role" value="patient" checked>
-          <label for="check_patient"><img src="img/patient-signup.png" class="img-choice mr-5 mb-3"></label>
+          <label for="check_patient"><img src="img/patient-signup.jpg" class="img-choice mr-5 mb-3"></label>
         </div>
         <div class="userchoice">
           <input type="radio" id="check_doctor" name="role" value="doctor">
-          <label for="check_doctor"><img src="img/doctor-signup.png" class="img-choice mb-3"></label>
+          <label for="check_doctor"><img src="img/doctor-signup.jpg" class="img-choice mb-3"></label>
         </div>
       </div>
     </center>

@@ -98,6 +98,11 @@ html {
 	display: none;
 }
 
+
+
+
+
+
 .userchoice {
 	display: inline-block;
 	margin: 1rem !important;
@@ -122,7 +127,8 @@ html {
 }
 
 .choice-container {
-	background-color: #F3D250 !important;
+	border-radius: 25px;
+	background-color: #FFFFFF !important;
 	box-shadow: 2px 1px 10px 4px #888888;
 }
 
@@ -155,6 +161,7 @@ label::before {
 */
 
 :checked+label img {
-  	transform: scale(1.1);
+  	transform: scale(1.2);
+  	transition: transform 500ms ;
   	z-index: -1;
 }
