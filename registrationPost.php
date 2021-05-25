@@ -6,6 +6,8 @@
   $email = $_POST['email'];
   $password = md5($_POST['password']); //MD5 encryption
   $birthday = $_POST['birthday'];
+  $sex = $_POST['sex'];
+  $userType = $_POST['userType'];
 
   //1. Setup Database connection
   $servername = "localhost";
@@ -16,15 +18,17 @@
   $conn = mysqli_connect($servername, $db_username, $db_password, $database);
 
   //2. Insert SQL
-  $sql = "INSERT INTO `patient`(
+  $sql = "INSERT INTO `".$userType."`(
           `fname`,
           `lname`, 
+          `sex`,
           `email`, 
           `password`,
           `birthday`
         ) VALUES (
           '".$first_name."',
           '".$last_name."',
+          '".$sex."',
           '".$email."',
           '".$password."',
           '".$birthday."'
@@ -34,7 +38,7 @@
       SELECT 
         * 
       FROM 
-        `patient` 
+        `".$userType."` 
       WHERE 
         `email`='".$email."'
     ";
@@ -61,6 +65,8 @@
 
       else {
       echo mysqli_error($conn);
+      print_r($_REQUEST);
+      print_r($_SESSION['userType']);
       }
   }
 
