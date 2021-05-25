@@ -142,7 +142,7 @@ html {
 
 .container{
 	width: 400px;
-
+	height: 671px;
 }
 
 .crdimg1{
@@ -229,14 +229,15 @@ html {
 
 .devs{
 	width: 100%;
-	height: 2280px;
-	background-color: #A4292E;
+	height: 400px;
+	background-image: url("../img/bgDevs.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 }
 
 .devs p{
@@ -244,8 +245,7 @@ html {
 	font-size: 30px;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: bold;
-	border-bottom: 2px solid white;
-	
+	height: 361px;
 }
 
 

@@ -129,10 +129,16 @@
           <ul><h5 class="card-title">PATIENTS AND DOCTORS</h5></ul>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
+      </div>
+    </div>
   </div>
+</div>
+</div>
 <!--about the dev------------------------------------------------------------------->
   <div class="devs">
-    <p>The Team Behind MEDICAIDE</p>
+    <p><u> The Team Behind MEDICAIDE </u></p>
+    <a class="dev-icon1"><img src="img/dev-icon1.png"></a>
+
 
 
 
