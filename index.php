@@ -19,6 +19,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 	<!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/indexfile.css">
 </head>
@@ -95,22 +97,24 @@
       <div class="card crdimg1" style="background-image: url(bgCards/calendar.png);">
  
         <div class="card-body cb1">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">scary</p>
+           <ul><h5 class="card-title">CALENDAR TRACKING</h5></ul>
+          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
       <div class="card crdimg2" style="background-image: url(bgCards/phone.png);">
         <div class="card-body cb2">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">scary</p>
+           <ul><h5 class="card-title">APPOINTMENT BOOKING</h5></ul>
+          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
       <div class="card crdimg3" style="background-image: url(bgCards/clock.png);">
         <div class="card-body cb3">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">scary</p>
+          <ul><h5 class="card-title">MEDICATION REMINDER</h5></ul>
+          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
   </div>
+
+
 
 
 
