@@ -95,7 +95,6 @@
   <div class="container">
       <div class="card-deck text-light">
       <div class="card crdimg1" style="background-image: url(bgCards/calendar.png);">
- 
         <div class="card-body cb1">
            <ul><h5 class="card-title">CALENDAR TRACKING</h5></ul>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
@@ -112,6 +111,27 @@
           <ul><h5 class="card-title">MEDICATION REMINDER</h5></ul>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
+      <div class="card-deck text-light">
+      <div class="card crdimg4" style="background-image: url(bgCards/journal.png);">
+        <div class="card-body cb4">
+           <ul><h5 class="card-title">PATIENT'S JOURNAL</h5></ul>
+          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+        </div>
+      </div>
+      <div class="card crdimg5" style="background-image: url(bgCards/presp.png);">
+        <div class="card-body cb5">
+           <ul><h5 class="card-title">DOCTOR'S PRESCRIPTIONS</h5></ul>
+          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+        </div>
+      </div>
+      <div class="card crdimg6" style="background-image: url(bgCards/user.png);">
+        <div class="card-body cb6">
+          <ul><h5 class="card-title">PATIENTS AND DOCTORS</h5></ul>
+          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+        </div>
+
+
+
   </div>
 
 

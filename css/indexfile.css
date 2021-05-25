@@ -175,13 +175,44 @@ html {
 	right: -500px;
 }
 
-.cb1,.cb2,.cb3{
+.crdimg4{
+	border:none;
+	width: 394px;
+	height: 311px;
+	background-size: cover;
+	background-position: center;
+	top:149px;
+	right: 996px;
+}
+
+.crdimg5{
+	border:none;
+	width: 394px;
+	height: 311px;
+	background-size: cover;
+	background-position: center;
+	top:-161px;
+	right: 500px;
+}
+
+.crdimg6{
+	border:none;
+	width: 394px;
+	height: 311px;
+	background-size: cover;
+	background-position: center;
+	top:-473px;
+	right: 0px;
+}
+
+
+.cb1,.cb2,.cb3,.cb4,.cb5,.cb6{
 	opacity:0;
 	transition-duration: 1s;
 	
 }
 
-.cb1:hover,.cb2:hover,.cb3:hover{
+.cb1:hover,.cb2:hover,.cb3:hover,.cb4:hover,.cb5:hover,.cb6:hover{
 	opacity: 1;
 }
 
