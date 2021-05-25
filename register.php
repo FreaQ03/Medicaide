@@ -1,4 +1,9 @@
 <doctype html>
+<?php
+  //security check
+  session_start();
+?>
+
 
 <head>
 
@@ -7,6 +12,9 @@
 
 	<!--Fontawesome-->
 	<script src="https://kit.fontawesome.com/6af8a38aa6.js" crossorigin="anonymous"></script>
+
+  <!--Ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<!--Animate CSS-->
 	<link
@@ -62,11 +70,11 @@
         <h1 class="signup-header mt-3 mb-1">Account Type</h1>
         <p class="subheading" align="center">Please pick an account type.</p>
         <div class="userchoice">
-          <input type="radio" id="check_patient" name="role" value="patient" onClick="hideB()" checked>
+          <input type="radio" id="check_patient" name="role" value="patient" checked>
           <label for="check_patient"><img src="img/patient-signup.png" class="img-choice mr-5 mb-3"></label>
         </div>
         <div class="userchoice">
-          <input type="radio" id="check_doctor" name="role" value="doctor" onClick="hideA()">
+          <input type="radio" id="check_doctor" name="role" value="doctor">
           <label for="check_doctor"><img src="img/doctor-signup.png" class="img-choice mb-3"></label>
         </div>
       </div>
@@ -84,7 +92,7 @@
       <center>
       <div class="container mt-3 ml-5 mr-5 pt-3 pb-3 border-top border-bottom">
 
-          <form action="registrationPost.php" method="post">
+          <form id="registerForm" action="registrationPost.php" method="post">
               <div class="row content-center">
                 <div class="form-group col-md-6 registration">
                   <label class="subheading">First Name</label>
@@ -112,8 +120,19 @@
                 </div>
                 <div class="form-group col-md-6 registration">
                   <label class="subheading">Confirm Password</label>
-                  <input type="password" class="form-control" name="password" required>
+                  <input type="password" class="form-control" name="password1" required>
                 </div>
+              </div>
+              <div class="row content-center mt-3">
+                <div class="form-group col-md-6 registration">
+                  <label for="userSex" class="subheading">Sex</label>
+                  <select class="form-control" id="userSex" name="sex">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                  </select>
+                </div>
+                <input type="radio" name="userType" value="patient" id="radio1" style="display:none;" checked>
+                <input type="radio" name="userType" value="doctor" id="radio2" style="display:none;" checked>
               </div>
               <div class="row mt-5 signup-button">
                 <button type="submit" class="btn btn-primary subheading">Sign Up</button>
@@ -145,21 +164,36 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 	<script>
 		var wow = new WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       0,          // distance to the element when triggering the animation (default is 0)
-    mobile:       true,       // trigger animations on mobile devices (default is true)
-    live:         true,       // act on asynchronously loaded content (default is true)
-    callback:     function(box) {
-      // the callback is fired every time an animation is started
-      // the argument that is passed in is the DOM node being animated
-    },
-    scrollContainer: null,    // optional scroll container selector, otherwise use window,
-    resetAnimation: true,     // reset animation on end (default is true)
-  }
-);
-wow.init();
+      {
+        boxClass:     'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset:       0,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true,       // trigger animations on mobile devices (default is true)
+        live:         true,       // act on asynchronously loaded content (default is true)
+        callback:     function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,    // optional scroll container selector, otherwise use window,
+        resetAnimation: true,     // reset animation on end (default is true)
+      }
+    );
+    wow.init();
 	</script>
+
+  <!--Checkbox Script-->
+  <script>
+  $( "input:radio[id=check_patient]" ).on( "click", function() {
+    $("#radio_1").prop("checked", true); 
+
+  });
+
+  $( "input:radio[id=check_doctor]" ).on( "click", function() {
+    $("#radio_2").prop("checked", true);  
+
+  });
+
+  </script>
+
 </body>
 </html>
