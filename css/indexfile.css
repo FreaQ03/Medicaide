@@ -147,7 +147,6 @@ html {
 
 .crdimg1{
 	border:none;
-	background-image: url(calendar.png);
 	width: 394px;
 	height: 311px;
 	background-size: cover;
@@ -159,7 +158,6 @@ html {
 
 .crdimg2{
 	border:none;
-	background-image: url(phone.png);
 	width: 394px;
 	height: 311px;
 	background-size: cover;
@@ -169,7 +167,6 @@ html {
 
 .crdimg3{
 	border:none;
-	background-image: url(presp.png);
 	width: 394px;
 	height: 311px;
 	background-size: cover;
@@ -179,7 +176,6 @@ html {
 }
 
 .cb1,.cb2,.cb3{
-	background:red;
 	opacity:0;
 	transition-duration: 1s;
 	
@@ -187,7 +183,17 @@ html {
 
 .cb1:hover,.cb2:hover,.cb3:hover{
 	opacity: 1;
-	background:blue;
+}
+
+.card-title{
+	font-family: 'Quicksand', sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+}
+
+.card-text{
+	font-family: 'Montserrat', sans-serif;
 }
 
 
