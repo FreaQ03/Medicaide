@@ -61,8 +61,8 @@
   <div class="caption">
     <h1><b>MEDICAIDE</b></h1>
     <p>For Patients and Doctors Medical Assistance</p>
-     <button type="button" class="btn btn-outline-success btn-lg">Log in</button>
-      <button type="button" class="btn btn-primary btn-lg">Sign up</button>
+     <a class="btn btn-outline-success btn-lg" href="login.php" role="button">Login</a>
+    <a class="btn btn-primary btn-lg" href="register.php" role="button">Signup</a>
   </div>
   <div class="carousel-inner bg-info" role="listbox">
     <div class="carousel-item active vh-100">
@@ -129,11 +129,17 @@
           <ul><h5 class="card-title">PATIENTS AND DOCTORS</h5></ul>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
+  </div>
+<!--about the dev------------------------------------------------------------------->
+  <div class="devs">
+    <p>The Team Behind MEDICAIDE</p>
+
+
+
 
 
 
   </div>
-
 
 
 

@@ -90,13 +90,13 @@ html {
 }
 
 .btn-primary{
-	color: white;
+	color: white !important;
 	background-color: #A4292E!important;
 	border-color:  #A4292E !important;
 }
 
 .btn-primary:hover{
-	 background-color: #A4292E;
+	 background-color: #A4292E !important;
 }
 
 .nav-link{
@@ -227,7 +227,26 @@ html {
 	font-family: 'Montserrat', sans-serif;
 }
 
+.devs{
+	width: 100%;
+	height: 2280px;
+	background-color: #A4292E;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
+.devs p{
+	color: white;
+	font-size: 30px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-bottom: 2px solid white;
+	
+}
 
 
 
