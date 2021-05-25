@@ -95,9 +95,6 @@ html {
 	border-color:  #A4292E !important;
 }
 
-.btn-primary:hover{
-	 background-color: #A4292E !important;
-}
 
 .nav-link{
 	background-color: #ECECEC;
@@ -143,6 +140,7 @@ html {
 .container{
 	width: 400px;
 	height: 671px;
+ 	margin-top: 113px;
 }
 
 .crdimg1{
@@ -227,9 +225,9 @@ html {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.devs{
+.about-us{
 	width: 100%;
-	height: 400px;
+	height: 592px;
 	background-image: url("../img/bgDevs.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -240,25 +238,75 @@ html {
 
 }
 
-.devs p{
+.about-us h1{
 	color: white;
 	font-size: 30px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	height: 361px;
+	padding-top: 27px;
 }
 
+.about-us p{
+	color: white;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	height: 760px;
+	padding-top: 27px;
+	text-align: center;
+	width: 1000px;
+}
 
+footer{
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
+footer p{
+	font-family: 'Montserrat', sans-serif;
+}
 
+footer p:nth-child(1){
+	font-size: 30px;
+	font-weight: bold;
+	color: #A4292E;
+	line-height: 10px;
+}
 
+footer p:nth-child(2){
+	font-size: 16px;
+	color: #A4292E;
+	width: 600px;
+	text-align: center;
+}
 
+.social-icons a{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background color: #A4292E;
+	margin: 20px 10px;
+	border-radius: 50%;
+}
 
+.social-icons{
+  color: #A4292E !important;
+  border-color:  #A4292E !important;
+  display: flex;
+}
 
+.fa-envelope:hover,.fa-facebook-f:hover,.fa-instagram:hover,.fa-twitter:hover{
+  color: #721D1F !important;;
+}
 
-
-
-
+.fa-envelope,.fa-facebook-f,.fa-instagram,.fa-twitter{
+	color: #A4292E !important;
+}
 
 
 
@@ -308,3 +356,4 @@ html {
 #user:hover{
 	background-color: #c3c3c3;
 }
+

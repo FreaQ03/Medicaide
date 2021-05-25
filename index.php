@@ -135,18 +135,23 @@
 </div>
 </div>
 <!--about the dev------------------------------------------------------------------->
-  <div class="devs">
-    <p><u> The Team Behind MEDICAIDE </u></p>
-    <a class="dev-icon1"><img src="img/dev-icon1.png"></a>
-
-
-
-
-
-
-
+  <div class="about-us">
+    <h1><u> About Us</u></h1>
+      <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
   </div>
+<!--contact us---------------------------------------------------------------------->
+  <footer>
+    <p>Contact Us</p>
+    <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization.</p>
+    <!--social-------------------------------->
+    <div class="social-icons">
+      <a href=""><i class="fas fa-envelope"></i></a>
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
 
+    </div>
+  </footer>
 
 
 
