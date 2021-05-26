@@ -39,17 +39,21 @@
         </ul>
       <div class="nav-links">
         <ul>
-          <a href="#"><li>ABOUT US</li></a>
-          <a href="#"><li>CONTACT US</li></a>
-          <a href="#"><li>PRIVACY POLICY</li></a>
+          <a href="#aboutUs"><li>ABOUT US</li></a>
+          <a href="#aboutUs"><li>CONTACT US</li></a>
+   
         </ul>
       </div>   
-          <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
-          <a class="nav-link icon" id="phone" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
-          <a class="nav-link icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
-          <a class="nav-link icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
-          <a class="nav-link icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
-          <a class="nav-link icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
+          <a class="nav-link icon" id="calendar" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
+          <a class="nav-link icon" id="phone" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
+          <a class="nav-link icon" id="clock" aria-current="page" href="#Pcalendar" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
+          <a class="nav-link icon" id="prescriptions" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
+          <a class="nav-link icon" id="journal" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
+          <a class="nav-link icon" id="user" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
+
+
+
+
         </li> 
     </div>
   </div>
@@ -80,7 +84,7 @@
 </div>
 
   <!--Features---------------------------------------------------------->
-
+  <section id="Pcalendar">
   <div class="features">
     <!--text-->
   <div class="features-text">
@@ -93,6 +97,7 @@
     <!--grid for features-->
 
   <div class="container">
+    
       <div class="card-deck text-light">
       <div class="card crdimg1" style="background-image: url(bgCards/calendar.png);">
         <div class="card-body cb1">
@@ -100,6 +105,7 @@
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
+    
       <div class="card crdimg2" style="background-image: url(bgCards/phone.png);">
         <div class="card-body cb2">
            <ul><h5 class="card-title">APPOINTMENT BOOKING</h5></ul>
@@ -128,6 +134,7 @@
         <div class="card-body cb6">
           <ul><h5 class="card-title">PATIENTS AND DOCTORS</h5></ul>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+        </section>
         </div>
       </div>
     </div>
@@ -135,10 +142,12 @@
 </div>
 </div>
 <!--about the dev------------------------------------------------------------------->
+  <section id="aboutUs">
   <div class="about-us">
     <h1><u> About Us</u></h1>
       <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
   </div>
+  </section>
 <!--contact us---------------------------------------------------------------------->
   <footer>
     <p>Contact Us</p>
