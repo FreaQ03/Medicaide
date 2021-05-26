@@ -1,27 +1,15 @@
-
-.login-brand{
-	font-size: 400%;
-	position: absolute;
-	left: 13%;
-	bottom: 60%;
-  font-family: 'Quicksand', sans-serif;
-}
-.placeholdperry{
-	font-size: 100%;
-	position: absolute;
-	left: 13%;
-	bottom: 60%;
-  font-family: 'Quicksand', sans-serif;
+body {
+  background-color: lightblue;
 }
 
 .center{
   position: absolute;
-  top: 50%;
-  left: 70%;
+  top: 53%;
+  left: 52%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 600px;
   background: white;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
 .center h1{
@@ -36,6 +24,16 @@
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   color: #A4292E;
+}
+.center form .user_info {
+  display: flex;
+  flex-direction: row;
+}
+.center form .user_box {
+  display: flex;
+}
+.center form .user_pass {
+  display: flex;
 }
 form .txt_field{
   position: relative;
@@ -104,6 +102,11 @@ input[type="submit"]:hover{
   border-color: #12c0ff;
   transition: .5s;
 }
+
+
+
+
+
 .signup_link{
   margin: 30px 0;
   text-align: center;
@@ -116,4 +119,36 @@ input[type="submit"]:hover{
 }
 .signup_link a:hover{
   text-decoration: underline;
+}
+
+.userchoice {
+  display: inline-block;
+  margin: 1rem !important;
+  background-color: white;
+    display: inline-block;
+
+}
+.userchoice img:hover {
+    opacity: 100%;
+
+
+
+.img-choice {
+  height: 30%;
+  width: auto;
+  opacity: 70%;
+}
+
+
+/*
+:checked + label::before {
+  
+}
+*/
+
+:checked+label {
+  opacity: 100%;
+    transform: scale(1.2);
+    transition: transform 0.5s ;
+    z-index: -1;
 }
