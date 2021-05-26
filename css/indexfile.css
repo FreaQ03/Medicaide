@@ -137,6 +137,15 @@ html {
 	margin: 50px 0px;
 }
 
+.fa-user-md{
+	color: #A4292E;
+}
+
+.user-icons{
+	padding-left: 166px;
+}
+
+
 .container{
 	width: 400px;
 	height: 671px;

@@ -85,7 +85,14 @@
 
   <!--Features---------------------------------------------------------->
   <section id="Pcalendar">
-  <div class="features">
+     <div class="features"> 
+    <!--icons-->
+    <div class="user-icons" style="padding-left: 1000px;">
+      <i class="fas fa-user-md" style="color: #A4292E;"></i>
+      <i class="fas fa-user"  style="color: #A4292E;"></i>
+    </div>
+
+    
     <!--text-->
   <div class="features-text">
     <h2>MADE FOR PATIENTS AND DOCTORS</h2>
@@ -94,6 +101,10 @@
       </p>
   </div>
 </div>
+</section>
+
+
+
     <!--grid for features-->
 
   <div class="container">

@@ -1,0 +1,47 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar{
+	background-color: 
+}
+
+.navbar-brand{
+	font-family: 'Quicksand', sans-serif;
+}
+
+.nav-links{
+	flex: 1;
+}
+
+.nav-links ul{
+	margin-left: 50px;
+	display: inline;
+}
+
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 25px;
+}
+
+.nav-links ul a{
+	color: #A4292E;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.nav-links ul li::after{
+	content: '';
+	width: 0;
+	height: 2px;
+	background: #A4292E;
+	display: block;
+	margin: auto;
+	transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+
