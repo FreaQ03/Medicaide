@@ -98,9 +98,20 @@ html {
 	display: none;
 }
 
+
+
+
+
+
 .userchoice {
 	display: inline-block;
 	margin: 1rem !important;
+	background-color: white;
+    display: inline-block;
+
+}
+.userchoice img:hover {
+    opacity: 100%;
 }
 
 .content-center {
@@ -113,7 +124,7 @@ html {
 
 .signup-header {
 	font-family: 'Montserrat', sans-serif;
-	color: #FFFFFF;
+	color: #A4292E;
 }
 
 .signup-container {
@@ -122,8 +133,14 @@ html {
 }
 
 .choice-container {
-	background-color: #F3D250 !important;
+	border-radius: 25px;
+	background-color: #FFFFFF !important;
 	box-shadow: 2px 1px 10px 4px #888888;
+
+}
+.signup-header1 {
+	border-bottom: 1px solid silver;
+	color: #A4292E;
 }
 
 .subheading {
@@ -132,8 +149,9 @@ html {
 }
 
 .img-choice {
-	height: 38%;
+	height: 30%;
 	width: auto;
+	opacity: 70%;
 }
 
 .registration {
@@ -155,6 +173,8 @@ label::before {
 */
 
 :checked+label img {
-  	transform: scale(1.1);
+	opacity: 100%;
+  	transform: scale(1.2);
+  	transition: transform 600ms ;
   	z-index: -1;
 }

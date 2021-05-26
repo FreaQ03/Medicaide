@@ -60,6 +60,8 @@
   </div>
 </nav>
 
+
+
 <div class="container">
   <div class="row h-75">
 
@@ -67,15 +69,15 @@
     <div class="col choice-container content-center align-self-center animate__animated animate__fadeInRight">
       <center>
       <div class="form-group" id="account-container">
-        <h1 class="signup-header mt-3 mb-1">Account Type</h1>
-        <p class="subheading" align="center">Please pick an account type.</p>
+        <h1 class="signup-header1 mt-3 mb-1">Account Type</h1>        
+        <p class="subheading" style="color: #6c757d;" align="center">Please pick an account type.</p>
         <div class="userchoice">
           <input type="radio" id="check_patient" name="role" value="patient" checked>
-          <label for="check_patient"><img src="img/patient-signup.png" class="img-choice mr-5 mb-3"></label>
+          <label for="check_patient"><img src="img/patient-signup.jpg" class="img-choice mr-5 mb-3"></label>
         </div>
         <div class="userchoice">
           <input type="radio" id="check_doctor" name="role" value="doctor">
-          <label for="check_doctor"><img src="img/doctor-signup.png" class="img-choice mb-3"></label>
+          <label for="check_doctor"><img src="img/doctor-signup.jpg" class="img-choice mb-3"></label>
         </div>
       </div>
     </center>
