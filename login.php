@@ -57,14 +57,8 @@
     </div>
   </div>
 </nav>
-
-  <!--Carousell-->
-         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner bg-info" role="listbox">
-    <div class="carousel-item active vh-100">
-      <img src="carousellimg/carou1.jpg" class="d-block w-100" alt="...">
           
-      
+   
         <div class="center">
       <h1>Login</h1>
       <form action="authenticate.php" method="post">
@@ -162,13 +156,4 @@ wow.init();
   </script>
 </body>
 </html>
-
-
-<div class="carousel-item">
-      <img src="carousellimg/carou2.jpg" class="d-block w-100" alt="...">
-       <div class="carousel-caption text-block" style="
-            bottom: 300px;
-            position: absolute;
-            background-color: white;
-            color: #A4292E;
 
