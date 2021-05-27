@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap" rel="stylesheet">
 
 	<!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="css/registercss.css">
+  <link rel="stylesheet" type="text/css" href="css/signupcss.css">
 </head>
 
 <body>
