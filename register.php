@@ -35,7 +35,7 @@
 	<!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
   <div class="container-fluid sticky-top">
-    <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
+    <a class="navbar-brand" href="index.php" style="color: #A4292E;"><b>MEDICAIDE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
