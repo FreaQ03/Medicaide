@@ -28,6 +28,10 @@
 
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/signupcss.css">
+<<<<<<< Updated upstream
+=======
+  <link rel="stylesheet" type="text/css" href="css/indexfile.css">
+>>>>>>> Stashed changes
 </head>
 
 <body>
@@ -61,86 +65,90 @@
 </nav>
 
 
+    <div class="center">
+      <h1>Register</h1>
+      <form id="registerForm" action="registrationPost.php" method="post">
+        
 
-<div class="container">
-  <div class="row h-75">
 
-    <!--First Column-->
-    <div class="col choice-container content-center align-self-center animate__animated animate__fadeInRight">
-      <center>
-      <div class="form-group" id="account-container">
-        <h1 class="signup-header1 mt-3 mb-1">Account Type</h1>        
-        <p class="subheading" style="color: #6c757d;" align="center">Please pick an account type.</p>
+      <div class="form-group" id="account-container">        
+        <p class="subheading" style="color: #6c757d;" align="left">Please pick an account type.</p>
         <div class="userchoice">
           <input type="radio" id="check_patient" name="role" value="patient" checked>
-          <label for="check_patient"><img src="img/patient-signup.jpg" class="img-choice mr-5 mb-3"></label>
+          <label for="check_patient"><i class="fas fa-user"></i> Patient </label>
         </div>
         <div class="userchoice">
           <input type="radio" id="check_doctor" name="role" value="doctor">
-          <label for="check_doctor"><img src="img/doctor-signup.jpg" class="img-choice mb-3"></label>
+          <label for="check_doctor"><i class="fas fa-user-md"></i> Doctor </label>
         </div>
-      </div>
-    </center>
-    </div>
 
-    <!--Second Column-->
-    <div class="col signup-container align-self-center">
-      <div class="container pt-3">
-        <h1 class="signup-header" align="center">Sign up</h1>
-        <p class="subheading" align="center">In just a few steps, you can have an assistant for your medical needs!</p>
-      </div>
 
-      <!--Registration Form-->
-      <center>
-      <div class="container mt-3 ml-5 mr-5 pt-3 pb-3 border-top border-bottom">
 
-          <form id="registerForm" action="registrationPost.php" method="post">
-              <div class="row content-center">
-                <div class="form-group col-md-6 registration">
-                  <label class="subheading">First Name</label>
-                  <input type="text" class="form-control" name="first_name" placeholder="e.g. Andrew" required>
-                </div>
-                <div class="form-group col-md-6 registration">
-                  <label class="subheading">Last Name</label>
-                  <input type="text" class="form-control" name="last_name" placeholder="e.g. Cook" required>
-                </div>
-              </div>
-              <div class="row content-center mt-3">
-                <div class="form-group col-md-6 registration">
-                  <label class="subheading">Email</label>
-                  <input type="email" class="form-control" name="email" placeholder="name@example.com" required>
-                </div>
-                <div class="form-group col-md-6 registration">
+
+        <div class="user_info">
+        <div class="txt_field">
+          <input type="text" name="First Name" required>
+          <span></span>
+          <label>First Name</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="text" name="Last Name" required>
+          <span></span>
+          <label>Last Name</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="email" name="Email" required>
+          <span></span>
+          <label>Email</label>
+        </div>
+        </div>
+
+        <div class="user_box">
+        <div class="box_field">
                   <label class="subheading">Birthday</label>
                   <input type="date" class="form-control" name="birthday" required>
-                </div>
-              </div>
-              <div class="row content-center mt-3">
-                <div class="form-group col-md-6 registration">
-                  <label class="subheading">Password</label>
-                  <input type="password" class="form-control" name="password" required>
-                </div>
-                <div class="form-group col-md-6 registration">
-                  <label class="subheading">Confirm Password</label>
-                  <input type="password" class="form-control" name="password1" required>
-                </div>
-              </div>
-              <div class="row content-center mt-3">
-                <div class="form-group col-md-6 registration">
+        </div>
+
+        <div class="box_field">
+                <div class="form-group registration">
                   <label for="userSex" class="subheading">Sex</label>
                   <select class="form-control" id="userSex" name="sex">
                     <option value="1">Male</option>
                     <option value="2">Female</option>
                   </select>
-                </div>
+        </div>
                 <input type="radio" name="userType" value="patient" id="radio1" style="display:none;" checked>
                 <input type="radio" name="userType" value="doctor" id="radio2" style="display:none;" checked>
-              </div>
-              <div class="row mt-5 signup-button">
-                <button type="submit" class="btn btn-primary subheading">Sign Up</button>
-              </div>
-          </form>
-          <?php
+        </div>
+        </div>
+
+        <div class="user_pass">
+        <div class="txt_field">
+          <input type="password" name="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+
+
+        <div class="txt_field">
+          <input type="password" name="confirm_password" required>
+          <span></span>
+          <label>Confirm Password</label>
+        </div>
+        </div>
+
+
+
+        <input type="submit" value="Register">
+        <div class="register_link">
+          Not a member? <a href="login.php">Log in</a>
+        </div>
+      </form>
+    </div>
+
+    <?php
             if (isset($_GET['origemail'])) { //check if authenticate key exists in URL
               if ($_GET['origemail'] == "false") {
                 echo '
@@ -153,11 +161,20 @@
             }
           ?>
 
-        </div>
-      </center>
-    </div>
-  </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<!--Bootstrap Javascript-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
