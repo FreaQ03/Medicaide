@@ -28,10 +28,7 @@
 
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/signupcss.css">
-<<<<<<< Updated upstream
-=======
   <link rel="stylesheet" type="text/css" href="css/indexfile.css">
->>>>>>> Stashed changes
 </head>
 
 <body>
