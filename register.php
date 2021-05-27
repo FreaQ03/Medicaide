@@ -63,7 +63,7 @@
 
 
     <div class="center">
-      <h1>Register</h1>
+      <h1>Sign up</h1>
       <form id="registerForm" action="registrationPost.php" method="post">
         
 
