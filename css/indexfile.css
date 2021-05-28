@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .navbar-brand{
 	font-family: 'Quicksand', sans-serif;
 }
@@ -12,26 +11,26 @@ html {
 }
 
 .nav-links ul{
-	margin-left: 50px;
+	margin-left: 3.125rem;
 	display: inline;
 }
 
 .nav-links ul li{
 	list-style: none;
 	display: inline-block;
-	padding: 8px 25px;
+	padding: .5rem 1.563rem;
 }
 
 .nav-links ul a{
 	color: #A4292E;
 	text-decoration: none;
-	font-size: 13px;
+	font-size: .813rem;
 }
 
 .nav-links ul li::after{
 	content: '';
 	width: 0;
-	height: 2px;
+	height: .125rem;
 	background: #A4292E;
 	display: block;
 	margin: auto;
@@ -41,6 +40,7 @@ html {
 .nav-links ul li:hover::after{
 	width: 100%;
 }
+
 .carousel .carousel-item {
   height: 40rem;
   object-position: center; 
@@ -71,7 +71,7 @@ html {
   transform: translate(-50%, -50%);
   z-index: 16;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 1.25rem;
   font-family: 'Quicksand', sans-serif;
   color: #A4292E;
 }
@@ -93,15 +93,8 @@ html {
 	border-color:  #A4292E !important;
 }
 
-
 .nav-link{
 	background-color: #ECECEC;
-}
-
-.features{
-	/*height: 600px;
-	background-color: white;
-	padding: 2% 10% 0px 10%;*/
 }
 
 .features-col {
@@ -110,7 +103,7 @@ html {
 
 .features-text h2{
 	color: #373F51;
-	
+	font-family: 'cuniabold', sans-serif;
 }
 
 .features-text p:nth-child(1){
@@ -172,25 +165,23 @@ html {
 
 .about-us h1{
 	color: white;
-	font-size: 30px;
+	font-size: 1.8rem;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
-	height: 361px;
-	padding-top: 27px;
+	padding-top: 1.688rem;
 }
 
 .about-us p{
 	color: white;
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-family: 'Montserrat', sans-serif;
-	height: 760px;
-	padding-top: 27px;
+	padding-top: 1.688rem;
 	text-align: center;
-	width: 1000px;
 }
 
 footer{
-	height: 300px;
+	margin-top: 1.8rem;
+	margin-bottom: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -202,27 +193,27 @@ footer p{
 }
 
 footer p:nth-child(1){
-	font-size: 30px;
+	font-size: 1.875rem;
 	font-weight: bold;
 	color: #A4292E;
-	line-height: 10px;
+	line-height: .625rem;
 }
 
 footer p:nth-child(2){
-	font-size: 16px;
+	font-size: 1rem;
 	color: #A4292E;
-	width: 600px;
+	width: 37.5rem;
 	text-align: center;
 }
 
 .social-icons a{
-	width: 40px;
-	height: 40px;
+	font-size: 1.25rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: .8rem;
+	text-decoration: none;
 	background color: #A4292E;
-	margin: 20px 10px;
 	border-radius: 50%;
 }
 
