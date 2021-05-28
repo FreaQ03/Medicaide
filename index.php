@@ -27,7 +27,7 @@
 
 <body>
 
-	<!--Navbar-------------------------------------------------->
+	<!--Navbar-->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-color">
   <div class="container-fluid sticky-top">
     <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
@@ -51,17 +51,13 @@
           <a class="nav-link icon" id="journal" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
           <a class="nav-link icon" id="user" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
 
-
-
-
         </li> 
     </div>
   </div>
 </nav>
 
-	<!--Carousell---------------------------------------------------->
+	<!--Carousell-->
 	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="overlay"></div>
   <div class="caption">
     <h1><b>MEDICAIDE</b></h1>
     <p>For Patients and Doctors Medical Assistance</p>
@@ -83,93 +79,92 @@
   </div>
 </div>
 
-  <!--Features---------------------------------------------------------->
+  <!--Features-->
   <section id="Pcalendar">
-     <div class="features"> 
-    <!--icons-->
-    <div class="user-icons" style="padding-left: 1000px;">
-      <i class="fas fa-user-md" style="color: #A4292E;"></i>
-      <i class="fas fa-user"  style="color: #A4292E;"></i>
-    </div>
+    <div class="container-fluid features">
+      <div class="row justify-content-center feature-row">
+        <!--text-->
+        <div class="col-sm-8 features-text">
+          <h2>MADE FOR PATIENTS AND DOCTORS</h2>
+            <p>Our goal/aim (subheading)</p>
+            <p>Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. 
+            </p>
+        </div>
 
-    
-    <!--text-->
-  <div class="features-text">
-    <h2>MADE FOR PATIENTS AND DOCTORS</h2>
-      <p>Our goal/aim (subheading)</p>
-      <p>Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. 
-      </p>
-  </div>
+        <!--icons-->
+        <div class="col-sm-4 text-center my-auto">
+        <i class="fas fa-user-md fa-10x" style="color: #A4292E;"></i>
+        <i class="fas fa-user fa-10x"  style="color: #A4292E;"></i>
+        </div>
+      </div>
 </div>
 </section>
-
-
 
     <!--grid for features-->
 
   <div class="container">
-    
-      <div class="card-deck text-light">
-      <div class="card crdimg1" style="background-image: url(bgCards/calendar.png);">
+    <div class="card-deck text-light" align="center">
+      <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/calendar.png);">
         <div class="card-body cb1">
-           <ul><h5 class="card-title">CALENDAR TRACKING</h5></ul>
+          <h5 class="card-title">CALENDAR <br> TRACKING</h5>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
-    
-      <div class="card crdimg2" style="background-image: url(bgCards/phone.png);">
+  
+      <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/phone.png);">
         <div class="card-body cb2">
-           <ul><h5 class="card-title">APPOINTMENT BOOKING</h5></ul>
+          <h5 class="card-title">APPOINTMENT <br> BOOKING</h5>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
-      <div class="card crdimg3" style="background-image: url(bgCards/clock.png);">
+      <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/clock.png);">
         <div class="card-body cb3">
-          <ul><h5 class="card-title">MEDICATION REMINDER</h5></ul>
+          <h5 class="card-title">MEDICATION <br> REMINDER</h5>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
-      <div class="card-deck text-light">
-      <div class="card crdimg4" style="background-image: url(bgCards/journal.png);">
+      </div>
+    </div>
+    <div class="card-deck text-light mt-5" align="center">
+      <div class="card crdimg4 crdimg w-25 d-inline-block" style="background-image: url(bgCards/journal.png);">
         <div class="card-body cb4">
-           <ul><h5 class="card-title">PATIENT'S JOURNAL</h5></ul>
+          <h5 class="card-title">PATIENT'S <br> JOURNAL</h5>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
-      <div class="card crdimg5" style="background-image: url(bgCards/presp.png);">
+      <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/presp.png);">
         <div class="card-body cb5">
-           <ul><h5 class="card-title">DOCTOR'S PRESCRIPTIONS</h5></ul>
+          <h5 class="card-title">DOCTOR'S PRESCRIPTIONS</h5>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
-      <div class="card crdimg6" style="background-image: url(bgCards/user.png);">
+      <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/user.png);">
         <div class="card-body cb6">
-          <ul><h5 class="card-title">PATIENTS AND DOCTORS</h5></ul>
+          <h5 class="card-title">PATIENTS <br> AND DOCTORS</h5>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
-        </section>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-<!--about the dev------------------------------------------------------------------->
+
+<!--about the dev-->
   <section id="aboutUs">
-  <div class="about-us">
+  <div class="container about-us">
     <h1><u> About Us</u></h1>
       <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
   </div>
   </section>
-<!--contact us---------------------------------------------------------------------->
+
+
+<!--contact us-->
   <footer>
     <p>Contact Us</p>
     <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization.</p>
-    <!--social-------------------------------->
+    <!--social-->
     <div class="social-icons">
       <a href=""><i class="fas fa-envelope"></i></a>
       <a href=""><i class="fab fa-facebook-f"></i></a>
       <a href=""><i class="fab fa-instagram"></i></a>
       <a href=""><i class="fab fa-twitter"></i></a>
-
     </div>
   </footer>
 
