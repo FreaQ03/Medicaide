@@ -16,11 +16,9 @@
 
 	<!--Google Fonts API-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 	<!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/indexfile.css">
 </head>
@@ -82,17 +80,17 @@
   <!--Features-->
   <section id="Pcalendar">
     <div class="container-fluid features">
-      <div class="row justify-content-center feature-row">
+      <div class="row justify-content-center">
         <!--text-->
-        <div class="col-sm-8 features-text">
-          <h2>MADE FOR PATIENTS AND DOCTORS</h2>
-            <p>Our goal/aim (subheading)</p>
-            <p>Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. 
+        <div class="col-8 features-col features-text px-5 my-5">
+          <h2 class="wow animate__animated animate__fadeInDown">MADE FOR PATIENTS AND DOCTORS</h2>
+            <p class="wow animate__animated animate__fadeInDown">Our goal/aim (subheading)</p>
+            <p class="wow animate__animated animate__fadeInDown">Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. 
             </p>
         </div>
 
         <!--icons-->
-        <div class="col-sm-4 text-center my-auto">
+        <div class="col-4 features-col text-center my-auto wow animate__animated animate__fadeInRightBig">
         <i class="fas fa-user-md fa-10x" style="color: #A4292E;"></i>
         <i class="fas fa-user fa-10x"  style="color: #A4292E;"></i>
         </div>
@@ -103,7 +101,7 @@
     <!--grid for features-->
 
   <div class="container">
-    <div class="card-deck text-light" align="center">
+    <div class="card-deck text-light wow animate__animated animate__bounceIn" align="center">
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/calendar.png);">
         <div class="card-body cb1">
           <h5 class="card-title">CALENDAR <br> TRACKING</h5>
@@ -124,7 +122,7 @@
         </div>
       </div>
     </div>
-    <div class="card-deck text-light mt-5" align="center">
+    <div class="card-deck text-light mt-5 wow animate__animated animate__bounceIn" align="center">
       <div class="card crdimg4 crdimg w-25 d-inline-block" style="background-image: url(bgCards/journal.png);">
         <div class="card-body cb4">
           <h5 class="card-title">PATIENT'S <br> JOURNAL</h5>
@@ -148,9 +146,9 @@
 
 <!--about the dev-->
   <section id="aboutUs">
-  <div class="container about-us">
+  <div class="container about-us d-flex flex-column justify-content-center align-items-center h-75 mt-5">
     <h1><u> About Us</u></h1>
-      <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+    <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
   </div>
   </section>
 
@@ -167,12 +165,6 @@
       <a href=""><i class="fab fa-twitter"></i></a>
     </div>
   </footer>
-
-
-
-
-
-
 
 	<!--Bootstrap Javascript-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>

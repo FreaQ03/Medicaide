@@ -104,8 +104,8 @@ html {
 	padding: 2% 10% 0px 10%;*/
 }
 
-.feature-row {
-	width: 100% !important;
+.features-col {
+	flex-grow: 1;
 }
 
 .features-text h2{
@@ -117,26 +117,20 @@ html {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: bold;
 	color: #A4292E;
-	font-size: 30px;
-	line-height: 0px;
+	font-size: 30rem;
+	line-height: 0rem;
 }
 
 .features-text p:nth-child(2){
 	font-family: 'Quicksand', sans-serif;
 	font-weight: bold;
 	color: #A4292E;
-	font-size: 15px;
-	line-height: 5px;
+	font-size: 1.2rem;
 }
 
 .features-text p:nth-child(3){
 	font-family: 'Quicksand', sans-serif;
 	color: #A4292E;
-}
-
-.features-text{
-	width: 500px;
-	margin: 50px 0px;
 }
 
 .fa-user-md{
@@ -171,18 +165,9 @@ html {
 }
 
 .about-us{
-	/*
-	width: 100%;
-	height: 592px;
 	background-image: url("../img/bgDevs.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	*/	
-
 }
 
 .about-us h1{
