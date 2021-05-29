@@ -2,6 +2,12 @@
 <?php
   //security check
   session_start();
+
+  if(isset($_SESSION['isLogin'])){
+    if($_SESSION['isLogin'] == true){
+      header('Location: dashboard.php');
+    }
+  }
 ?>
 
 
@@ -84,19 +90,19 @@
 
         <div class="user_info">
         <div class="txt_field">
-          <input type="text" name="First Name" required>
+          <input type="text" name="first_name" required>
           <span></span>
           <label>First Name</label>
         </div>
 
         <div class="txt_field">
-          <input type="text" name="Last Name" required>
+          <input type="text" name="last_name" required>
           <span></span>
           <label>Last Name</label>
         </div>
 
         <div class="txt_field">
-          <input type="email" name="Email" required>
+          <input type="email" name="email" required>
           <span></span>
           <label>Email</label>
         </div>

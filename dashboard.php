@@ -1,4 +1,17 @@
 <doctype html>
+<?php
+  //security check
+  session_start();
+
+  if(isset($_SESSION['isLogin'])){
+    if($_SESSION['isLogin'] == false){
+      header('Location: index.php');
+    }
+  }
+  else{
+    header('Location: index.php');
+  }
+?>
 
 <head>
 

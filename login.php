@@ -1,5 +1,14 @@
 <doctype html>
+<?php
+  //security check
+  session_start();
 
+  if(isset($_SESSION['isLogin'])){
+    if($_SESSION['isLogin'] == true){
+      header('Location: dashboard.php');
+    }
+  }
+?>
 <head>
 
   

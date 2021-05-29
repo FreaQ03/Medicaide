@@ -7,7 +7,7 @@
   $password = md5($_POST['password']); //MD5 encryption
   $birthday = $_POST['birthday'];
   $sex = $_POST['sex'];
-  $userType = $_POST['userType'];
+  $userType = $_POST['role'];
 
   //1. Setup Database connection
   $servername = "localhost";
@@ -60,13 +60,12 @@
       $_SESSION['email'] = $email;
       $_SESSION['password'] = $password;
       $_SESSION['isLogin'] = true;
-      header('Location: index.php');
+      header('Location: dashboard.php');
       } 
 
       else {
       echo mysqli_error($conn);
       print_r($_REQUEST);
-      print_r($_SESSION['userType']);
       }
   }
 
