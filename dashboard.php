@@ -81,27 +81,20 @@
     </div>
   </section>
 
-</div>
-
-
-
-<!--calendar
-<div class="Pcalendar">-->
-
-<!-- Add jQuery library (required) 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-  <script type="evo-calendar.min.js"></script>
-  <script>
-      $(document).ready(function() {
-       $('#calendar').evoCalendar({
+  <!--calendar-->
+  <div class="Pcalendar">
+    <!-- Add jQuery library (required) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script type="evo-calendar.min.js"></script>
+    <script>
+        $(document).ready(function() {
+         $('#calendar').evoCalendar({
+          })
         })
-      })
-</script>
+    </script>
+  </div>
 
 </div>
--->
-
-</body>
 
   <!--Bootstrap Javascript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
