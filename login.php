@@ -58,9 +58,20 @@
   </div>
 </nav>
           
-   
-        <div class="center">
-      <h1>Login</h1>
+  <div class="center">
+    <h1>Login</h1>
+    <?php
+      if (isset($_GET['credentials'])) { //check if credentials key exists in URL
+        if ($_GET['credentials'] == "false") {
+          echo '
+            <br>
+            <div class="alert alert-danger invalid-credentials" align="center" role="alert">
+              Invalid Email / Password.
+            </div>
+          ';
+        }
+      }
+    ?>
       <form action="authenticate.php" method="post">
         <div class="txt_field">
           <input type="text" name="email" required>
@@ -79,57 +90,8 @@
       </form>
     </div>
 
-        <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
-        <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
-
-        <?php
-        if (isset($_GET['credentials'])) { //check if credentials key exists in URL
-          if ($_GET['credentials'] == "false") {
-            echo '
-              <br>
-              <div class="alert alert-danger" role="alert">
-                Invalid email / password.
-              </div>
-            ';
-          }
-        }
-      ?>
-
-      </div>
-      <div class="col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-    </div>
-    
-
-
-
-
-    </div>
-  </div>
-</div>
-
-
+    <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
+    <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
 
   <!--Bootstrap Javascript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
