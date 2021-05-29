@@ -23,7 +23,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 	<!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/indexfile.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/evo-calendar.min.css">
+    <link rel="stylesheet" type="text/css" href="css/evo-calendar.midnight-blue.min.css">
 </head>
 
 <body>
@@ -31,7 +33,7 @@
 	<!--Navbar-------------------------------------------------->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-color">
   <div class="container-fluid sticky-top">
-    <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
+    <a class="navbar-brand" href="#" style="color: white;"><b>MEDICAIDE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,12 +42,12 @@
         </ul>
       <div class="nav-links">
         <ul>
-          <a href="#aboutUs"><li>ABOUT US</li></a>
-          <a href="#aboutUs"><li>CONTACT US</li></a>
+          <a href="#aboutUs" style="color: white;"><li>ABOUT US</li></a>
+          <a href="#aboutUs" style="color: white;"><li>CONTACT US</li></a>
         </ul>
     </div>   
       <div class="navbar-welc">
-        <a class="navbar-brand" href="#" style="color: #A4292E;"><b>WELCOME "name"</b></a>
+        <a class="navbar-brand" href="#" style="color: white;"><b>WELCOME "name"</b></a>
       </div>
         </li> 
   </div>
@@ -67,130 +69,19 @@
 </section>
 <!--calendar--------------------------------------------------->
 <div class="Pcalendar">
- 
-  <?php
-// Set your timezone
-date_default_timezone_set('Asia/Tokyo');
 
-// Get prev & next month
-if (isset($_GET['ym'])) {
-    $ym = $_GET['ym'];
-} else {
-    // This month
-    $ym = date('Y-m');
-}
+<!-- Add jQuery library (required) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script type="evo-calendar.min.js"></script>
+  <script>
+      $(document).ready(function() {
+       $('#calendar').evoCalendar({
+        })
+      })
+</script>
 
-// Check format
-$timestamp = strtotime($ym . '-01');
-if ($timestamp === false) {
-    $ym = date('Y-m');
-    $timestamp = strtotime($ym . '-01');
-}
+</div>
 
-// Today
-$today = date('Y-m-j', time());
-
-// For H3 title
-$html_title = date('Y / m', $timestamp);
-
-// Create prev & next month link     mktime(hour,minute,second,month,day,year)
-$prev = date('Y-m', mktime(0, 0, 0, date('m', $timestamp)-1, 1, date('Y', $timestamp)));
-$next = date('Y-m', mktime(0, 0, 0, date('m', $timestamp)+1, 1, date('Y', $timestamp)));
-// You can also use strtotime!
-// $prev = date('Y-m', strtotime('-1 month', $timestamp));
-// $next = date('Y-m', strtotime('+1 month', $timestamp));
-
-// Number of days in the month
-$day_count = date('t', $timestamp);
- 
-// 0:Sun 1:Mon 2:Tue ...
-$str = date('w', mktime(0, 0, 0, date('m', $timestamp), 1, date('Y', $timestamp)));
-//$str = date('w', $timestamp);
-
-
-// Create Calendar!!
-$weeks = array();
-$week = '';
-
-// Add empty cell
-$week .= str_repeat('<td></td>', $str);
-
-for ( $day = 1; $day <= $day_count; $day++, $str++) {
-     
-    $date = $ym . '-' . $day;
-     
-    if ($today == $date) {
-        $week .= '<td class="today">' . $day;
-    } else {
-        $week .= '<td>' . $day;
-    }
-    $week .= '</td>';
-     
-    // End of the week OR End of the month
-    if ($str % 7 == 6 || $day == $day_count) {
-
-        if ($day == $day_count) {
-            // Add empty cell
-            $week .= str_repeat('<td></td>', 6 - ($str % 7));
-        }
-
-        $weeks[] = '<tr>' . $week . '</tr>';
-
-        // Prepare for new week
-        $week = '';
-    }
-
-}
-?>
-
-    <style>
-        .container {
-            font-family: 'Noto Sans', sans-serif;
-            margin-top: 80px;
-        }
-        h3 {
-            margin-bottom: 30px;
-        }
-        th {
-            height: 30px;
-            text-align: center;
-        }
-        td {
-            height: 100px;
-        }
-        .today {
-            background: orange;
-        }
-        th:nth-of-type(1), td:nth-of-type(1) {
-            color: red;
-        }
-        th:nth-of-type(7), td:nth-of-type(7) {
-            color: blue;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h3><a href="?ym=<?php echo $prev; ?>">&lt;</a> <?php echo $html_title; ?> <a href="?ym=<?php echo $next; ?>">&gt;</a></h3>
-        <table class="table table-bordered">
-            <tr>
-                <th>S</th>
-                <th>M</th>
-                <th>T</th>
-                <th>W</th>
-                <th>T</th>
-                <th>F</th>
-                <th>S</th>
-            </tr>
-            <?php
-                foreach ($weeks as $week) {
-                    echo $week;
-                }
-            ?>
-        </table>
-    </div>
-</body>
-</html>
 
 
 
