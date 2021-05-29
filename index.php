@@ -19,8 +19,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+
+  <!--Webface fonts-->
+  <link rel="stylesheet" type="text/css" href="webface/stylesheet.css">
+
 	<!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/indexfile.css">
+  <link rel="stylesheet" type="text/css" href="css/indexfile.css">
+  
 </head>
 
 <body>
@@ -79,7 +85,7 @@
 
   <!--Features-->
   <section id="Pcalendar">
-    <div class="container-fluid features">
+    <div class="container-fluid">
       <div class="row justify-content-center">
         <!--text-->
         <div class="col-8 features-col features-text px-5 my-5">
@@ -98,7 +104,7 @@
 </div>
 </section>
 
-    <!--grid for features-->
+  <!--grid for features-->
 
   <div class="container">
     <div class="card-deck text-light wow animate__animated animate__bounceIn" align="center">
@@ -131,7 +137,7 @@
       </div>
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/presp.png);">
         <div class="card-body cb5">
-          <h5 class="card-title">DOCTOR'S PRESCRIPTIONS</h5>
+          <h5 class="card-title">DOCTOR'S <br> PRESCRIPTIONS</h5>
           <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
         </div>
       </div>
@@ -148,7 +154,7 @@
   <section id="aboutUs">
   <div class="container about-us d-flex flex-column justify-content-center align-items-center h-75 mt-5">
     <h1><u> About Us</u></h1>
-    <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+    <p class="px-5">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
   </div>
   </section>
 
