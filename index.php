@@ -62,7 +62,7 @@
 
 	<!--Carousell-->
 	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="caption">
+  <div class="caption" style="height: 180px;">
     <h1><b>MEDICAIDE</b></h1>
     <p>For Patients and Doctors Medical Assistance</p>
      <a class="btn btn-outline-success btn-lg" href="login.php" role="button">Login</a>
@@ -88,7 +88,8 @@
     <div class="container-fluid">
       <div class="row justify-content-center">
         <!--text-->
-        <div class="col-8 features-col features-text px-5 my-5">
+        <div class="col-8 features-col features-text px-5 my-5" style="padding-right: 9rem!important;
+        padding-left: 13rem!important;">
           <h2 class="wow animate__animated animate__fadeInDown">MADE FOR PATIENTS AND DOCTORS</h2>
             <p class="wow animate__animated animate__fadeInDown">Our goal/aim (subheading)</p>
             <p class="wow animate__animated animate__fadeInDown">Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. 

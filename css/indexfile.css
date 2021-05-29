@@ -41,6 +41,12 @@ html {
 	width: 100%;
 }
 
+.px-5 {
+    padding-right: 9rem!important;
+    padding-left: 13rem!important;
+}
+
+
 .carousel .carousel-item {
   height: 40rem;
   object-position: center; 
