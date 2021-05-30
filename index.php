@@ -49,7 +49,7 @@
         </ul>
       </div>   
           <a class="nav-link icon" id="calendar" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
-          <a class="nav-link icon" id="phone" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
+          <a class="nav-link icon" id="search" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-search"></i></a>
           <a class="nav-link icon" id="clock" aria-current="page" href="#Pcalendar" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
           <a class="nav-link icon" id="prescriptions" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
           <a class="nav-link icon" id="journal" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
@@ -116,10 +116,10 @@
         </div>
       </div>
   
-      <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/phone.png);">
+      <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/search.png);">
         <div class="card-body cb2">
-          <h5 class="card-title">APPOINTMENT <br> BOOKING</h5>
-          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+          <h5 class="card-title">APPOINTMENT BOOKING<br>&<br>DOCTOR SEARCH AVAILABILITY</h5>
+          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization</p>
         </div>
       </div>
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/clock.png);">
