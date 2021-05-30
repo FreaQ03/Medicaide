@@ -1,6 +1,7 @@
 <?php
   session_start();
 
+  //INSERTING USER DATA INTO DATABASE
   $first_name = $_POST['first_name'];
   $last_name = $_POST['last_name'];
   $email = $_POST['email'];
@@ -55,12 +56,10 @@
   } 
   else {
     //original email
+    
       if (mysqli_query($conn, $sql)) {
-      echo "Added";
-      $_SESSION['email'] = $email;
-      $_SESSION['password'] = $password;
       $_SESSION['isLogin'] = true;
-      header('Location: dashboard.php');
+      //header('Location: dashboard.php');
       } 
 
       else {
@@ -68,9 +67,39 @@
       print_r($_REQUEST);
       }
   }
-
-  //.4 Closing Database Connection
-  mysqli_close($conn);
   
+  //CREATION OF USER JOURNAL IF USER IS A PATIENT
+  if($userType == "patient") {
+    $userDetails = [];
 
+    //1. SELECT ID SQL CODE
+    $selectSQL = "SELECT * FROM `patient` WHERE `email`= '".$email."'";
+
+    //2. Execute Select Query
+    $result = mysqli_query($conn, $selectSQL);
+    while ($row = mysqli_fetch_assoc($result)) {
+      array_push($userDetails, $row);
+    }
+
+    //3. Insert SQL code
+    $createJournal = 'INSERT INTO `journal` (
+      `pat_id`
+    ) VALUES (
+      '.$userDetails[0]["id"].'
+    )';
+
+    //4. Execute Insert Query
+    if (mysqli_query($conn, $createJournal)) {
+      header('Location: dashboard.php');
+    } 
+
+    else {
+      echo mysqli_error($conn);
+    }
+  }
+
+  //Closing Database Connection
+  mysqli_close($conn);
+
+  header('Location: dashboard.php');
 ?>
