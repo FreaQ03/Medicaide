@@ -1,0 +1,14 @@
+.comments{
+    margin-left: 1%;
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+#submit{
+    background-color:#29506D;
+    border:1px solid #29506D;
+    border-radius:2px;
+    padding: 1% 5%;
+    color:#FFF;
+    font-family: 'Montserrat', sans-serif;
+}
