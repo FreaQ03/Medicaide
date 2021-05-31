@@ -1,1 +1,3 @@
-<iframe src="dashboard-files/iframe/JSCalendar.php" align="right" style="height:50%; width:50%;"></iframe>
+<div class="responsiveCalendar">
+	<iframe src="dashboard-files/iframe/JSCalendar.php" scrolling="no"></iframe>
+</div>
