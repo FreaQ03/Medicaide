@@ -8,9 +8,7 @@
 	</head>
 
 	<body>
-		<div style="height:50px !important; width: auto !important;">
-			<div id="calendar"></div>
-		</div>
+		<div id="calendar" style="width: 100%; height: 100%;"></div>
 		
 
 
