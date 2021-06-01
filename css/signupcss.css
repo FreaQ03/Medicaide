@@ -80,6 +80,11 @@ form .txt_field{
 .txt_field input:valid ~ span::before{
   width: 100%;
 }
+.box_field {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 .pass{
   margin: -5px 0 20px 5px;
   color: #a6a6a6;
@@ -122,9 +127,8 @@ input[type="submit"]:hover{
 
 .userchoice {
   display: inline-block;
-  margin: 1rem !important;
-  background-color: white;
-    display: inline-block;
+  margin-right: 80px;
+  margin-left: 80px;
 
 }
 
@@ -134,9 +138,15 @@ input[type="submit"]:hover{
 }
 */
 
+#check_patient {
+  margin-right: 3px;
+}
+#check_doctor {
+  margin-right: 3px;
+}
 :checked+label {
   opacity: 100%;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 0.5s ;
     z-index: -1;
 }

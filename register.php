@@ -75,7 +75,7 @@
 
 
       <div class="form-group" id="account-container">        
-        <p class="subheading" style="color: #6c757d;" align="left">Please pick an account type.</p>
+        <p class="subheading" style="color: #6c757d;" align="center">Please pick an account type.</p>
         <div class="userchoice">
           <input type="radio" id="check_patient" name="role" value="patient" checked>
           <label for="check_patient"><i class="fas fa-user"></i> Patient </label>
@@ -116,7 +116,7 @@
 
         <div class="box_field">
                 <div class="form-group registration">
-                  <label for="userSex" class="subheading">Sex</label>
+                  <label for="userSex">Sex</label>
                   <select class="form-control" id="userSex" name="sex">
                     <option value="1">Male</option>
                     <option value="2">Female</option>
