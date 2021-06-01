@@ -2,8 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 .navbar{
 	background: #A4292E;
+}
+
+#navbar-color {
+	position: absolute;
 }
 
 body {
@@ -57,17 +63,73 @@ body {
 	background: linear-gradient (45deg, #6ac1c5, #bda5ff);
 }
 
+
 #dash-sidebar{
+	position: relative;
 	width: 8% !important; 
-	height: 55% !important;
-	background: transparent;
+	height: 100% !important;
+	background: #A4292E;
+	padding-left: 0%;
+	
 }
 
+
 #dynamicBody{
-	width: 100vw;
-	height: 100vh;
-	max-width: 100vw;
+	width: 200%;
+	height: 200%;
+	max-width: 200%;
 	margin: 0 !important;
 	padding-top: 4rem;
 	
+}
+
+.sidebar{
+	height: 100%;
+}
+
+
+
+.sidebar header {
+	color: #e4e9f7;
+	font-size: 20px;
+	border-bottom: 1px solid silver;
+	margin-bottom: 30px;
+	line-height: 70px;
+	text-align: center;
+	user-select: none;
+}
+.sidebar ul a {
+  font-size: 10px;
+  padding-left: 10px ;
+}
+
+ul:hover {
+	padding-left: 15px;
+	transition: .4s;
+}
+
+#calendar_button :focus{
+	;
+	color: #2982f0;
+	transition: .3s;
+}
+#search :focus{
+	color: #2982f0;
+	transition: .3s;
+}
+#clock :focus{
+	color: #2982f0;
+	transition: .3s;
+}
+#prescriptions :focus{
+	color: #2982f0;
+	transition: .3s;
+}
+#journal :focus{
+	color: #2982f0;
+	transition: .3s;
+}
+#user :focus{
+	color: #2982f0;
+	transition: .3s;
 }

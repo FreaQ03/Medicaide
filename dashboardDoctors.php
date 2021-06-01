@@ -1,17 +1,10 @@
 <doctype html>
-<?php
-  //security check
-  session_start();
 
-  if(isset($_SESSION['isLogin'])){
-    if($_SESSION['isLogin'] == false){
-      header('Location: index.php');
-    }
-  }
-  else{
-    header('Location: index.php');
-  }
-?>
+
+
+
+
+
 
 <head>
 
@@ -80,19 +73,28 @@
   </div>
 
   <!--SIDEBAR-->
-  <section class="sidebar">
-    <div class="w3-sidebar w3-bar-block w3-medium" id="dash-sidebar">
+  <section class="sidebarsec">
+    <div class="sidebar" id="dash-sidebar" >
 
-      <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; padding-top: 9px"> <i class="fas fa-calendar-plus fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"></i></a></ul>
+      <header> My Menu </header>
+      <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #e4e9f7; "> <i class="fas fa-calendar-plus fa-2x"> Calendar </i></a></ul>
 
+      <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #e4e9f7;"> <i class="fas fa-search fa-2x"> Search </i></a></ul>
+
+      <ul><a class="sidebar-icon" id="clock" aria-current="page" href="#" style="color: #e4e9f7;">  <i class="fas fa-clock fa-2x">Clock</i></a></ul>
+
+      <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #e4e9f7;"> <i class="fas  fa-notes-medical fa-2x"> Prescriptions </i></a></ul>
+
+      <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #e4e9f7;"> <i class="fas fa-sticky-note fa-2x"> Journals </i></a></ul>
+
+      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #e4e9f7;"> <i class="fas fa-user fa-2x"> User </i></a></ul>
+
+      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #e4e9f7;"> <i class="fas fa-sign-out-alt fa-2x"> Logout </i></a></ul>
+
+      
     </div>
   </section>
+  </div>
 
   <!--Bootstrap Javascript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
