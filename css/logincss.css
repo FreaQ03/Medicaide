@@ -1,3 +1,7 @@
+body {
+  background-color: lightblue;
+}
+
 .login-brand{
 	font-size: 400%;
 	position: absolute;

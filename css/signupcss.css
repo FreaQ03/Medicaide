@@ -38,7 +38,9 @@ body {
 form .txt_field{
   position: relative;
   border-bottom: 2px solid #adadad;
-  margin right: 15px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 .txt_field input{
   width: 100%;
@@ -48,8 +50,6 @@ form .txt_field{
   border: none;
   background: none;
   outline: none;
-  margin-right: 150px;
-
 }
 .txt_field label{
   position: absolute;
@@ -105,17 +105,18 @@ input[type="submit"]:hover{
   transition: .5s;
 }
 
-.signup_link{
+.register_link{
   margin: 30px 0;
   text-align: center;
   font-size: 16px;
+  margin: 15px;
   color: #666666;
 }
-.signup_link a{
+.register_link a{
   color: #12c0ff;
   text-decoration: none;
 }
-.signup_link a:hover{
+.register_link a:hover{
   text-decoration: underline;
 }
 
@@ -126,11 +127,6 @@ input[type="submit"]:hover{
     display: inline-block;
 
 }
-
-.register_link {
-  margin: 15px;
-}
-
 
 /*
 :checked + label::before {
