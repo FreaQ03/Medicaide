@@ -151,5 +151,15 @@
 
   </script>
 
+  <script>
+    // Selecting the iframe element
+    var iframe = document.getElementById("calendarFrame");
+    
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+  </script>
+
 </body>
 </html>
