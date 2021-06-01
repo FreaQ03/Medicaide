@@ -52,9 +52,9 @@ body {
 }
 
 .responsiveCalendar{
-	width: 70%;
+	width: 80%;
 	height: 0;
-	padding-bottom: 40%;
+	padding-bottom: 45%;
 	position: relative;
 }
 
@@ -68,6 +68,11 @@ body {
 	width: 8% !important; 
 	height: 55% !important;
 	background: transparent;
+}
+
+#dynamicElement{
+	width: 100%;
+	height: 100%;
 }
 
 #dynamicBody{
