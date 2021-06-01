@@ -84,7 +84,7 @@
     <div class="w3-sidebar w3-bar-block w3-medium" id="dash-sidebar">
 
       <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; padding-top: 9px"> <i class="fas fa-calendar-plus fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="phone" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"></i></a></ul>
+      <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"></i></a></ul>
@@ -110,42 +110,42 @@
       }
     };
 
-    xhr.open("get", "dashboard-files/calendar.php");
+    xhr.open("get", "dashboard-files/doctor/calendar.php");
     xhr.send();
 
     $("#calendar_button").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/calendar.php");
+      xhr.open("get", "dashboard-files/doctor/calendar.php");
       xhr.send();
     });
 
-    $("#phone").on('click', function(event) {
+    $("#search").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/phone.php");
+      xhr.open("get", "dashboard-files/doctor/search.php");
       xhr.send();
     });
 
     $("#clock").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/clock.php");
+      xhr.open("get", "dashboard-files/doctor/clock.php");
       xhr.send();
     });
 
     $("#prescriptions").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/prescriptions.php");
+      xhr.open("get", "dashboard-files/doctor/prescriptions.php");
       xhr.send();
     });
 
     $("#journal").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/journal.php");
+      xhr.open("get", "dashboard-files/doctor/journal.php");
       xhr.send();
     });
 
     $("#user").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/user.php");
+      xhr.open("get", "dashboard-files/doctor/user.php");
       xhr.send();
     });
 
