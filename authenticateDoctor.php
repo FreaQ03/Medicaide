@@ -17,7 +17,7 @@
     SELECT 
       * 
     FROM 
-      `patient` 
+      `doctor` 
     WHERE 
       `email`='".$email."'
       AND

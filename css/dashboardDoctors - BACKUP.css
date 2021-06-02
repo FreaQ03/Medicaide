@@ -1,0 +1,87 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar{
+	background: #A4292E;
+}
+
+body {
+	margin: 0;
+}
+
+.navbar-brand{
+	font-family: 'Quicksand', sans-serif;
+
+}
+
+.nav-links{
+	flex: 1;
+}
+
+
+.nav-links ul{
+	margin-left: 3.125rem;
+	display: inline;
+}
+
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: .5rem 1.563rem;
+}
+
+.nav-links ul a{
+	color: white;
+	text-decoration: none;
+	font-size: .813rem;
+}
+
+.nav-links ul li::after{
+	content: '';
+	width: 0;
+	height: .125rem;
+	background: white;
+	display: block;
+	margin: auto;
+	transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+
+.responsiveCalendar{
+	width: 50%;
+	height: 0;
+	padding-bottom: 40%;
+	position: relative;
+}
+
+.responsiveCalendar iframe{
+	position: absolute;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#dash-sidebar{
+	width: 8% !important; 
+	height: 55% !important;
+	background: transparent;
+}
+
+#dynamicElement{
+	width: 100%;
+	height: 100%;
+}
+
+#dynamicBody{
+	width: 100vw;
+	height: 100vh;
+	max-width: 100vw;
+	margin: 0 !important;
+	padding-top: 4rem;
+	
+}

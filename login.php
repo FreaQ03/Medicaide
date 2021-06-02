@@ -27,9 +27,9 @@
 
   <!--Google Fonts API-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/indexfile.css">
     <link rel="stylesheet" type="text/css" href="css/logincss.css">
@@ -69,6 +69,7 @@
           
   <div class="center">
     <h1>Login</h1>
+
     <?php
       if (isset($_GET['credentials'])) { //check if credentials key exists in URL
         if ($_GET['credentials'] == "false") {
@@ -81,49 +82,54 @@
         }
       }
     ?>
-      <form action="authenticate.php" method="post">
-        <div class="txt_field">
-          <input type="text" name="email" required>
-          <span></span>
-          <label>Email</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" name="password" required>
-          <span></span>
-          <label>Password</label>
-        </div>
-        <input type="submit" value="Login">
-        <div class="signup_link">
-          Not a member? <a href="register.php">Signup</a>
-        </div>
-      </form>
+    <div class="container" id="login-user-type">
+      <center>
+        <h4>Please pick a user type</h4>
+        <br>
+        <input type="image" src="img/doctor-signup.png" class="pickUser" id="doctor">
+        <input type="image" src="img/patient-signup.png" class="pickUser" id="patient">
+      </center>
     </div>
+  </div>
+    
 
-    <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
-    <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
+  <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
+  <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
 
   <!--Bootstrap Javascript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
-  <!--Wow.js Javascript-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <!--Ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!--Picking User Type JS-->
   <script>
-    var wow = new WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       0,          // distance to the element when triggering the animation (default is 0)
-    mobile:       true,       // trigger animations on mobile devices (default is true)
-    live:         true,       // act on asynchronously loaded content (default is true)
-    callback:     function(box) {
-      // the callback is fired every time an animation is started
-      // the argument that is passed in is the DOM node being animated
-    },
-    scrollContainer: null,    // optional scroll container selector, otherwise use window,
-    resetAnimation: true,     // reset animation on end (default is true)
-  }
-);
-wow.init();
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById("login-user-type");
+
+    xhr.onload = function(){
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      }
+      else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    
+    $( "input:image[id=patient]" ).on( "click", function() {
+      event.preventDefault();
+      xhr.open("get", "login_patient.php");
+      xhr.send();
+
+    });
+
+    $( "input:image[id=doctor]" ).on( "click", function() {
+      event.preventDefault();
+      xhr.open("get", "login_doctor.php");
+      xhr.send(); 
+
+  });
+
   </script>
 </body>
 </html>

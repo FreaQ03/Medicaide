@@ -141,3 +141,8 @@ input[type="submit"]:hover{
   width: 75%;
   margin-bottom: 1rem;
 }
+
+.pickUser{
+  width: 35%;
+  height: auto;
+}
