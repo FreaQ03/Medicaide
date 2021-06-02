@@ -63,12 +63,13 @@ body {
 	background: linear-gradient (45deg, #6ac1c5, #bda5ff);
 }
 
-
-
 #dash-sidebar{
 	width: 20% !important; 
-	height: 55% !important;
+	height: 100% !important;
 	background: transparent;
+	position: fixed !important;
+	z-index: 1;
+	transform: translateY(-10%);
 }
 
 #dynamicBody{
@@ -85,12 +86,18 @@ body {
 	max-height: 100%;
 }
 
-.sidebar ul a {
-  font-size: 10px;
-  padding-left: 10px ;
+#dash-sidebar ul a {
+	font-size: .625rem;
+	padding-left: .625rem;
+	padding-top: 0.563rem;
 }
 
-ul:hover {
-	padding-left: 15px;
+#font{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1rem;
+}
+
+li:hover {
+	padding-left: .938rem;
 	transition: .4s;
 }

@@ -66,34 +66,34 @@
 
 <div class="container m-0" id="dynamicBody">
 
-  
+  <!--SIDEBAR-->
+  <ul class="nav d-inline-flex flex-column justify-content-center" id="dash-sidebar">
+    <li class="nav-item">
+      <a class="nav-link sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E;"><i class="fas fa-calendar-plus fa-2x"><span id="font"> Calendar</span></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"><span id="font"> Search Doctors</span></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"><span id="font"> Prescriptions</span></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> Journal</span></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"><span id="font"> Profile</span></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"><span id="font"> Log out</span></i></a>
+    </li>
+  </ul>
 
+  <!--Content goes here-->
   <div id="dynamicElement">
 
   </div>
 
-  <!--SIDEBAR-->
-  <section class="sidebarsec">
-    <div class="sidebar" id="dash-sidebar" >
-
-      <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; "> <i class="fas fa-calendar-plus fa-2x"> Calendar </i></a></ul>
-
-      <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"> Search </i></a></ul>
-
-      <ul><a class="sidebar-icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock fa-2x">Clock</i></a></ul>
-
-      <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas  fa-notes-medical fa-2x"> Prescriptions </i></a></ul>
-
-      <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"> Journals </i></a></ul>
-
-      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"> User </i></a></ul>
-
-      <ul><a class="sidebar-icon" id="logout" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"> Logout </i></a></ul>
-
-      
-    </div>
-  </section>
-  </div>
+</div>
 
   <!--Bootstrap Javascript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
