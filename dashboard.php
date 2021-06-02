@@ -43,6 +43,7 @@
 
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+  <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/journal.css">
 </head>
 
 <body>
@@ -70,13 +71,9 @@
     </div>
     </div>
   </nav>
-
+<!--Sidebar Functions-->
 <div class="container m-0 p-0" id="dynamicBody">
-
-  
-
   <div id="dynamicElement">
-
   </div>
 
   <!--SIDEBAR-->
@@ -85,7 +82,6 @@
 
       <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; padding-top: 9px"> <i class="fas fa-calendar-plus fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"></i></a></ul>
@@ -122,12 +118,6 @@
     $("#search").on('click', function(event) {
       event.preventDefault();
       xhr.open("get", "dashboard-files/search.php");
-      xhr.send();
-    });
-
-    $("#clock").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/clock.php");
       xhr.send();
     });
 

@@ -58,9 +58,18 @@ body {
 }
 
 #dash-sidebar{
-	width: 8% !important; 
+	display: flex;
+   	align-items: center;
+   	justify-content: center;
+	position: sticky;
+	vertical-align: center;
+	
 	height: 55% !important;
 	background: transparent;
+	width: 190px; 
+  position: fixed; 
+  margin-left: 410px;
+
 }
 
 #dynamicBody{

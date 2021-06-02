@@ -1,14 +1,51 @@
-.comments{
-    margin-left: 1%;
-    margin-top: 1.5%;
+#entries{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+#PatientJournal{
+    background: #A4292E;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 394px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-top: 100px;
+
+}
+
+#output{
+	width: 497px;
+	height: 225px;
+}
+
+.journalEntry{
+	margin-left: 1%;
+   	margin-top: 1.5%;
     text-align: center;
 }
 
-#submit{
-    background-color:#29506D;
-    border:1px solid #29506D;
-    border-radius:2px;
-    padding: 1% 5%;
-    color:#FFF;
-    font-family: 'Montserrat', sans-serif;
+.journalOutput p{
+	color:#FFF; font-family: 'Quicksand', sans-serif; 
+	padding-top: 9px; 
+	height: 34px;
+}
+
+.btn-outline-success{
+  color: #A4292E !important;
+  border-color:  #A4292E !important;
+  font-family: 'Quicksand', sans-serif; 
+  align-items: center;
+}
+
+.btn-outline-success:hover{
+  color: white !important;
+  border-color:  #A4292E !important;
+  background-color: #A4292E;
+}
+
+.text-center{
+	width: 775px;
 }
