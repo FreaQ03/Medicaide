@@ -36,7 +36,7 @@
     $_SESSION['profile_image'] = $row['profile_image'];
     $_SESSION['first_name'] = $row['first_name'];
 
-    header('Location: index.php');
+    header('Location: dashboard.php');
   } else {
     //invalid credentials
     $_SESSION['isLogin'] = false;
