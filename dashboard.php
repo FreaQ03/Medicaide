@@ -80,7 +80,7 @@
   <section class="sidebar">
     <div class="w3-sidebar w3-bar-block w3-medium" id="dash-sidebar">
 
-      <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; padding-top: 9px"> <i class="fas fa-calendar-plus fa-2x"></i></a></ul>
+      <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; padding-top: 9px"><i class="fas fa-calendar-plus fa-2x"> Calendar</i></a></ul>
       <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"></i></a></ul>
       <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"></i></a></ul>
