@@ -4,8 +4,6 @@
 	background-position: center;
 }
 
-
-
 .card-title{
 	font-family: 'Quicksand', sans-serif;
 	font-style: italic;
@@ -13,6 +11,30 @@
 	text-align: center;
 }
 
-.card-text{
+.list{
 	font-family: 'Montserrat', sans-serif;
+}
+
+.cb1{
+	height: 360px;
+}
+
+.cb1 li{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.card-deck{
+	padding-top: 26px;
+}
+
+.container{
+	align-items: center;
+}
+
+.mt-5 {
+    margin-top: 3rem!important;
+}
+
+.doctorName{
+	font-family: 'Rubik', sans-serif;
 }
