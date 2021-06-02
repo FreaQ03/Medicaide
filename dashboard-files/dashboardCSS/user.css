@@ -9,11 +9,11 @@
 
 img {
   box-sizing: border-box;
-  width: 149px;
-  height: 149px;
+  width: 7.3125rem;
+  height: 7.3125rem;
   border-radius: 50%;
   margin: 0;
-  border: 5px solid;
+  border: 0.3125rem solid;
 }
 
 input[type="text"]{
