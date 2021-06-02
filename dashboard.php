@@ -44,6 +44,7 @@
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
   <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/journal.css">
+  <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/prescription.css">
 </head>
 
 <body>
@@ -60,8 +61,8 @@
           </ul>
         <div class="nav-links">
           <ul>
-            <a href="#aboutUs" style="color: white;"><li>ABOUT US</li></a>
-            <a href="#aboutUs" style="color: white;"><li>CONTACT US</li></a>
+            <a href="index.php#aboutUs" style="color: white;"><li>ABOUT US</li></a>
+            <a href="index.php#aboutUs" style="color: white;"><li>CONTACT US</li></a>
           </ul>
       </div>   
         <div class="navbar-welc">
@@ -80,12 +81,12 @@
   <section class="sidebar">
     <div class="w3-sidebar w3-bar-block w3-medium" id="dash-sidebar">
 
-      <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; padding-top: 9px"><i class="fas fa-calendar-plus fa-2x"> Calendar</i></a></ul>
-      <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"></i></a></ul>
-      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"></i></a></ul>
+      <ul><a class="sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E; padding-top: 9px"><i class="fas fa-calendar-plus fa-2x"><span id="font"> Calendar</span></i></a></ul>
+      <ul><a class="sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"><span id="font"> Search Doctors</span></i></a></ul>
+      <ul><a class="sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"><span id="font"> Prescriptions</span></i></a></ul>
+      <ul><a class="sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> Journal</span></i></a></ul>
+      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"><span id="font"> Profile</span></i></a></ul>
+      <ul><a class="sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"><span id="font"> Log out</span></i></a></ul>
 
     </div>
   </section>
