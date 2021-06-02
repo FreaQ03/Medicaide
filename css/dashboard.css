@@ -92,3 +92,12 @@ body {
 	max-height: 100%;
 }
 
+.sidebar ul a {
+  font-size: 10px;
+  padding-left: 10px ;
+}
+
+ul:hover {
+	padding-left: 15px;
+	transition: .4s;
+}
