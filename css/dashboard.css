@@ -93,11 +93,11 @@ body {
 }
 
 .sidebar ul a {
-  font-size: 10px;
-  padding-left: 10px ;
+  font-size: .625rem;
+  padding-left: .625rem;
 }
 
 ul:hover {
-	padding-left: 15px;
+	padding-left: .938rem;
 	transition: .4s;
 }
