@@ -47,6 +47,7 @@
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
   <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/journal.css">
   <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/prescription.css">
+  <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/search.css">
 </head>
 
 <body>

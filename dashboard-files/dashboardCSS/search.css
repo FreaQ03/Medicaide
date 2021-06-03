@@ -1,0 +1,70 @@
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+
+.BookingHeader h1, p{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+.fa-search:hover{
+	color: #A4292E !important;
+}
+
+.nearestDoc p{
+	color: #A4292E;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.DocCards{
+	z-index: 1;
+	float: left;
+	margin-top: 6rem;
+	height: auto;
+}
+
+.card-text{
+	color: #A4292E !important;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#PatientSearch{
+    background: #A4292E;
+    position: relative;
+    margin: 0 auto;
+    width: 100rem;
+    height: 55rem;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-top: 50px;
+    margin-right: 3px;
+}
+
+
+
+#text-above-cards{
+	background: white;
+    position: relative;
+    margin: 0 auto;
+    width: 20rem;
+    height: 2rem;
+    border-radius:10px;
+    z-index: 1;
+    float: left;
+    margin-left: 2rem;
+}
+
+
+
+form{
+	padding-top: 1rem;
+}
+
