@@ -2,14 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 .navbar{
 	background: #A4292E;
-}
-
-#navbar-color {
-	position: absolute;
 }
 
 body {

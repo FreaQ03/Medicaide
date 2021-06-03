@@ -41,7 +41,7 @@
 <body>
 
 <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-color">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
     <div class="container-fluid sticky-top">
       <a class="navbar-brand" href="#" style="color: white;"><b>MEDICAIDE</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
     </div>
   </nav>
 
-<div class="container m-0" id="dynamicBody">
+<div class="container m-0 p-0" id="dynamicBody">
 
   <!--SIDEBAR-->
   <ul class="nav d-inline-flex flex-column justify-content-center" id="dash-sidebar">
