@@ -10,6 +10,10 @@
   $sex = $_POST['sex'];
   $userType = $_POST['role'];
 
+  //Make first name and last name first letter capitalized
+  $first_name = ucfirst($first_name);
+  $last_name = ucfirst($last_name);
+
   //1. Setup Database connection
   $servername = "localhost";
   $db_username = "root"; //xampp default
@@ -59,7 +63,8 @@
     
       if (mysqli_query($conn, $sql)) {
       $_SESSION['isLogin'] = true;
-      //header('Location: dashboard.php');
+      $_SESSION['fname'] = $first_name;
+      
       } 
 
       else {

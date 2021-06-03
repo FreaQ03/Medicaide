@@ -33,8 +33,7 @@
 
     $_SESSION['isLogin'] = true;
 
-    $_SESSION['profile_image'] = $row['profile_image'];
-    $_SESSION['first_name'] = $row['first_name'];
+    $_SESSION['fname'] = $row['fname'];
 
     header('Location: dashboard.php');
   } else {

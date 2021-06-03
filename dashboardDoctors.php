@@ -57,7 +57,7 @@
           </ul>
       </div>   
         <div class="navbar-welc">
-          <a class="navbar-brand" href="#" style="color: white;"><b>WELCOME "name"</b></a>
+          <a class="navbar-brand" href="#" style="color: white;"><b>Welcome, <?php echo $_SESSION['fname'];?>!</b></a>
         </div>
           </li> 
     </div>
