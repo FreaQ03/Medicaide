@@ -69,14 +69,14 @@
           </ul>
       </div>   
         <div class="navbar-welc">
-          <a class="navbar-brand" href="#" style="color: white;"><b>WELCOME "name"</b></a>
+          <a class="navbar-brand" href="#" style="color: white;"><b>Welcome, <?php echo $_SESSION['fname'];?>!</b></a>
         </div>
           </li> 
     </div>
     </div>
   </nav>
 <!--Sidebar Functions-->
-<div class="container m-0 p-0" id="dynamicBody">
+<div class="container m-0 p-0 d-inline" id="dynamicBody">
 
   <!--SIDEBAR-->
   <ul class="nav d-inline-flex flex-column justify-content-center" id="dash-sidebar">
@@ -96,14 +96,16 @@
       <a class="nav-link sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"><span id="font"> Profile</span></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"><span id="font"> Log out</span></i></a>
+      <a class="nav-link sidebar-icon" id="user" aria-current="page" href="logout.php" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"><span id="font"> Log out</span></i></a>
     </li>
   </ul>
 
   <!--Content goes here-->
-  <div id="dynamicElement">
-    
-  </div>
+  <center>
+    <div id="dynamicElement">
+      
+    </div>
+  </center>
 
   <!--Bootstrap Javascript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
