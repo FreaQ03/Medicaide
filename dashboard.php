@@ -75,7 +75,7 @@
     </div>
   </nav>
 <!--Sidebar Functions-->
-<div class="container m-0 p-0" id="dynamicBody">
+<div class="container m-0 p-0 d-inline" id="dynamicBody">
 
   <!--SIDEBAR-->
   <ul class="nav d-inline-flex flex-column justify-content-center" id="dash-sidebar">
