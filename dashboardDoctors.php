@@ -89,9 +89,11 @@
   </ul>
 
   <!--Content goes here-->
-  <div id="dynamicElement">
+  <center>
+    <div id="dynamicElement">
 
-  </div>
+    </div>
+  </center>
 
 </div>
 
