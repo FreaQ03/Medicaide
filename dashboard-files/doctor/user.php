@@ -32,7 +32,7 @@
                     <h4>Current Hospital</h4>                  
                     <input type="text" value="" placeholder="Makati Medical Center" >
                     <span class="tooltiptext">Edit</span>
-                    <input type="submit" value="Edit1">
+                    <button type="button" class="btn btn-danger">Edit1</button>
 
                  </div>
                  
@@ -46,7 +46,7 @@
                     
                     <input type="text" value="" placeholder="surgery">
                     <span class="tooltiptext">Edit</span>
-                    <input type="submit" value="Edit2">
+                    <button type="button" class="btn btn-danger">Edit2</button>
 
 
                 </div>
