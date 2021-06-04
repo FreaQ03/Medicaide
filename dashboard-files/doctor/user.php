@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="dashboardCSS/user.css">
+<link rel="stylesheet" type="text/css" href="dashboard-files/doctor/css/user.css">
 
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
