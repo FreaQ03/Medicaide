@@ -62,49 +62,47 @@
     //original email
     
       if (mysqli_query($conn, $sql)) {
-      $_SESSION['isLogin'] = true;
-      $_SESSION['fname'] = $first_name;
-      
+        $_SESSION['isLogin'] = true;
+        $_SESSION['fname'] = $first_name;
+        header('Location: dashboard.php');
+        
+        //CREATION OF USER JOURNAL IF USER IS A PATIENT
+        if($userType == "patient") {
+          $userDetails = [];
+
+          //1. SELECT ID SQL CODE
+          $selectSQL = "SELECT * FROM `patient` WHERE `email`= '".$email."'";
+
+          //2. Execute Select Query
+          $result = mysqli_query($conn, $selectSQL);
+          while ($row = mysqli_fetch_assoc($result)) {
+            array_push($userDetails, $row);
+          }
+
+          //3. Insert SQL code
+          $createJournal = 'INSERT INTO `journal` (
+            `pat_id`
+          ) VALUES (
+            '.$userDetails[0]["id"].'
+          )';
+
+          //4. Execute Insert Query
+          if (mysqli_query($conn, $createJournal)) {
+            header('Location: dashboard.php');
+          } 
+
+          else {
+            echo mysqli_error($conn);
+          }
+        }
       } 
 
       else {
-      echo mysqli_error($conn);
-      print_r($_REQUEST);
+        echo mysqli_error($conn);
+        print_r($_REQUEST);
       }
-  }
-  
-  //CREATION OF USER JOURNAL IF USER IS A PATIENT
-  if($userType == "patient") {
-    $userDetails = [];
-
-    //1. SELECT ID SQL CODE
-    $selectSQL = "SELECT * FROM `patient` WHERE `email`= '".$email."'";
-
-    //2. Execute Select Query
-    $result = mysqli_query($conn, $selectSQL);
-    while ($row = mysqli_fetch_assoc($result)) {
-      array_push($userDetails, $row);
-    }
-
-    //3. Insert SQL code
-    $createJournal = 'INSERT INTO `journal` (
-      `pat_id`
-    ) VALUES (
-      '.$userDetails[0]["id"].'
-    )';
-
-    //4. Execute Insert Query
-    if (mysqli_query($conn, $createJournal)) {
-      header('Location: dashboard.php');
-    } 
-
-    else {
-      echo mysqli_error($conn);
-    }
   }
 
   //Closing Database Connection
   mysqli_close($conn);
-
-  header('Location: dashboard.php');
 ?>

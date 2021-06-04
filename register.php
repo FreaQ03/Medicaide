@@ -148,10 +148,8 @@
         <div class="register_link">
           Not a member? <a href="login.php">Login</a>
         </div>
-      </form>
-    </div>
 
-    <?php
+        <?php
             if (isset($_GET['origemail'])) { //check if authenticate key exists in URL
               if ($_GET['origemail'] == "false") {
                 echo '
@@ -163,6 +161,10 @@
               }
             }
           ?>
+      </form>
+    </div>
+
+    
 
 
 
