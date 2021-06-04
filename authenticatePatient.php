@@ -34,6 +34,7 @@
     $_SESSION['isLogin'] = true;
 
     $_SESSION['fname'] = $row['fname'];
+    $_SESSION['lname'] = $row['lname'];
 
     header('Location: dashboard.php');
   } else {
