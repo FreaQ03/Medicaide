@@ -38,3 +38,10 @@
 .doctorName{
 	font-family: 'Rubik', sans-serif;
 }
+
+.PrespHeader h1{
+	padding-top: 3rem;
+	font-family: 'Montserrat', sans-serif;
+	color:  #A4292E;
+	font-weight: bold;
+}
