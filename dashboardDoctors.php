@@ -1,5 +1,7 @@
 <doctype html>
-
+<?php
+  session_start();
+?>
 <head>
 
 	<!--Boostrap CSS-->
