@@ -67,34 +67,45 @@
   </div>
 </nav>
           
-  <div class="center">
-    <h1>Login</h1>
+  <!--Start of Main Body-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
+        <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
+      </div>
+      <div class="col-sm">
+        <div class="center">
+          <h1>Login</h1>
 
-    <?php
-      if (isset($_GET['credentials'])) { //check if credentials key exists in URL
-        if ($_GET['credentials'] == "false") {
-          echo '
-            <br>
-            <div class="alert alert-danger invalid-credentials" align="center" role="alert">
-              Invalid Email / Password.
-            </div>
-          ';
-        }
-      }
-    ?>
-    <div class="container" id="login-user-type">
-      <center>
-        <h4>Please pick a user type</h4>
-        <br>
-        <input type="image" src="img/doctor-signup.png" class="pickUser" id="doctor">
-        <input type="image" src="img/patient-signup.png" class="pickUser" id="patient">
-      </center>
+          <?php
+            if (isset($_GET['credentials'])) { //check if credentials key exists in URL
+              if ($_GET['credentials'] == "false") {
+                echo '
+                  <br>
+                  <div class="alert alert-danger invalid-credentials" align="center" role="alert">
+                    Invalid Email / Password.
+                  </div>
+                ';
+              }
+            }
+          ?>
+          <div class="container" id="login-user-type">
+            <center>
+              <h4>Please pick a user type</h4>
+              <br>
+              <input type="image" src="img/doctor-signup.png" class="pickUser" id="doctor">
+              <input type="image" src="img/patient-signup.png" class="pickUser" id="patient">
+            </center>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  
     
 
-  <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
-  <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
+  
 
   <!--Bootstrap Javascript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
