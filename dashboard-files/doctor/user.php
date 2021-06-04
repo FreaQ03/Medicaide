@@ -32,6 +32,7 @@
                     <h4>Current Hospital</h4>                  
                     <input type="text" value="" placeholder="Makati Medical Center" >
                     <span class="tooltiptext">Edit</span>
+                    <input type="submit" value="Edit1">
 
                  </div>
                  
@@ -45,6 +46,7 @@
                     
                     <input type="text" value="" placeholder="surgery">
                     <span class="tooltiptext">Edit</span>
+                    <input type="submit" value="Edit2">
 
 
                 </div>
@@ -53,26 +55,7 @@
             </div>
         </div>
       
-      <div class="schedule">
-            <h3>Schedule</h3>
-            <div class="schedule_data">
-                 
-
-
-                 <div class="data">
-
-
-
-
-                    
-                    <input type="text" placeholder="3pm saturday jan 20" >
-                    <span class="tooltiptext">Edit</span>
-
-
-                 </div>
-           
-            </div>
-        </div>
+      
       
         <div class="UPDATE">
             
