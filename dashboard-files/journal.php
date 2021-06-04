@@ -1,4 +1,4 @@
-<div id="PatientJournal">
+<div id="PatientJournal" class="Journal">
 	<div id = "entries">
 		<h1>Journal Entries</h1>	          
 	</div>

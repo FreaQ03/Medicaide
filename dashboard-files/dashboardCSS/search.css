@@ -13,27 +13,72 @@
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
+  font-weight: bold;
 }
 
-.fa-search:hover{
-	color: #A4292E !important;
+.searchBar{
+  width: 30rem;
+  padding-bottom: 2rem;
 }
+
+.search-btn{
+  color: white !important;
+  border-color:  #A4292E !important;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.search-btn:hover{
+  color: #A4292E !important;
+  border-color:  white !important;
+  background-color: white;
+}
+
+
 
 .nearestDoc p{
 	color: #A4292E;
 	font-family: 'Quicksand', sans-serif;
+  padding-top: 5px;
 }
 
-.DocCards{
+.docCards{
 	z-index: 1;
 	float: left;
-	margin-top: 6rem;
+	margin-top: 6 rem;
 	height: auto;
+  padding-left: 1rem;
+  padding-top: 1rem;
 }
 
-.card-text{
+.cardTitle{
+    font-family: 'Quicksand', sans-serif;
+    color: #A4292E;
+}
+
+.card-text{ 
 	color: #A4292E !important;
 	font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bookNow{
+  color: #A4292E !important;
+  border-color:  #A4292E !important;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.bookNow:hover{
+  color: white !important;
+  border-color:  #A4292E !important;
+  background-color: #A4292E;
+}
+
+.mapouter{
+  float: right;
+  right: 1rem;
+  top: 0rem;
 }
 
 #PatientSearch{
@@ -67,4 +112,5 @@
 form{
 	padding-top: 1rem;
 }
+
 

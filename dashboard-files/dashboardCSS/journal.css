@@ -1,24 +1,7 @@
-#entries{
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-}
-
-#PatientJournal{
-    background: #A4292E;
-    position: relative;
-    margin: 0 auto;
-    width: 740px;
-    height: 410px !important;
-    border:1px solid #ccc;
-    border-radius:10px;
-    margin-top: 100px;
-
-}
-
-#output{
-	width: 497px;
-	height: 225px;
+.Journal h1{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
 }
 
 .journalEntry{
@@ -48,4 +31,27 @@
 
 .text-center{
 	width: 775px;
+}
+
+#entries{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+#PatientJournal{
+    background: #A4292E;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 410px !important;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-top: 100px;
+
+}
+
+#output{
+  width: 497px;
+  height: 225px;
 }
