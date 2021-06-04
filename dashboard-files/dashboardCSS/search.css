@@ -17,7 +17,7 @@
 }
 
 .searchBar{
-  width: 30rem;
+  width: 50%;
   padding-bottom: 2rem;
 }
 
@@ -31,7 +31,7 @@
 .search-btn:hover{
   color: #A4292E !important;
   border-color:  white !important;
-  background-color: white;
+  background-color: white !important;
 }
 
 
@@ -72,7 +72,7 @@
 .bookNow:hover{
   color: white !important;
   border-color:  #A4292E !important;
-  background-color: #A4292E;
+  background-color: #A4292E !important;
 }
 
 .mapouter{
@@ -85,7 +85,7 @@
     background: #A4292E;
     position: relative;
     margin: 0 auto;
-    width: 100rem;
+    width: 90%;
     height: 55rem;
     border:1px solid #ccc;
     border-radius:10px;
@@ -99,7 +99,7 @@
 	background: white;
     position: relative;
     margin: 0 auto;
-    width: 20rem;
+    width: 20%;
     height: 2rem;
     border-radius:10px;
     z-index: 1;
