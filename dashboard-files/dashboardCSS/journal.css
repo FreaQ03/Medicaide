@@ -21,16 +21,19 @@
   border-color:  #A4292E !important;
   font-family: 'Quicksand', sans-serif; 
   align-items: center;
+
 }
 
 .btn-outline-success:hover{
   color: white !important;
   border-color:  #A4292E !important;
-  background-color: #A4292E;
+  background-color: #A4292E !important;
 }
 
 .text-center{
 	width: 775px;
+  padding-top: 1rem;
+  padding-left: 3rem;
 }
 
 #entries{
@@ -43,8 +46,8 @@
     background: #A4292E;
     position: relative;
     margin: 0 auto;
-    width: 740px;
-    height: 410px !important;
+    width: 70%;
+    height: 42% !important;
     border:1px solid #ccc;
     border-radius:10px;
     margin-top: 100px;
@@ -52,6 +55,6 @@
 }
 
 #output{
-  width: 497px;
+  width: 70%;
   height: 225px;
 }
