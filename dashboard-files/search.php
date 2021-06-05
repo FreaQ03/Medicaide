@@ -86,6 +86,28 @@
 	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
 	  </div>
 	</div>
+	<div class="card" id="nearbyDoc" style="width: 18rem;">
+	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+	  <div class="card-body">
+	    <h5 class="cardTitle">Name of Doctor</h5>
+	    <p class="card-text" > 
+	    	Medical Specialist: Cardiologist<br>
+	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
+	    </p>
+	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
+	  </div>
+	</div>
+	<div class="card" id="nearbyDoc2" style="width: 18rem;">
+	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+	  <div class="card-body">
+	    <h5 class="cardTitle">Name of Doctor</h5>
+	    <p class="card-text" > 
+	    	Medical Specialist: Cardiologist<br>
+	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
+	    </p>
+	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
+	  </div>
+	</div>
 	
 </div>
 <!--Google Maps----------------------------->

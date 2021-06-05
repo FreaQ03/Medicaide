@@ -107,7 +107,15 @@
     margin-left: 2rem;
 }
 
+#nearbyDoc{
+  left: 37rem;
+  top: -32rem;
+}
 
+#nearbyDoc2{
+  left: 56rem;
+  top: -64rem;
+}
 
 form{
 	padding-top: 1rem;
