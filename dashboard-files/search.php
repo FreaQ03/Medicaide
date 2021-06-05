@@ -112,34 +112,7 @@
 </div>
 <!--Google Maps----------------------------->
 <div class="mapouter">
+
+	<iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7724.218866917946!2d121.0139724976897!3d14.535732494615596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c93a386baf7f%3A0xba1f27fb436114e3!2sMagallanes%2C%20Makati%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1622886943473!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 	
-	<div class="gmap_canvas">
-		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Magallanes%20Metro%20Manila%20Philippines&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-		</iframe>
-		<style>
-			iframe {
-				width:100%;
-				height:100%;
-			}
-		</style>
-		<a href="https://2piratebay.org"></a><br>
-		<style>
-			.mapouter{
-				position:relative;
-				text-align:right;
-				height:500px;
-				width:600px;
-			}
-		</style>
-		<a href="https://www.embedgooglemap.net">google maps embed responsive</a>
-		<style>
-			.gmap_canvas {
-				overflow:hidden;
-				background:none!important;
-				height:500px;
-				width:600px;
-			}
-		</style>
-		
-	</div>
 </div>

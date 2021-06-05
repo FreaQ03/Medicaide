@@ -28,6 +28,12 @@
 
 }
 
+.googlemap{
+  max-width: 200%;
+  padding-right: 1rem;
+  padding-top: 2rem;
+}
+
 .search-btn:hover{
   color: #A4292E !important;
   border-color:  white !important;
