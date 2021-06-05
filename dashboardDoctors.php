@@ -66,13 +66,10 @@
       <a class="nav-link sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E;"><i class="fas fa-calendar-plus fa-2x"><span id="font"> Calendar</span></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"><span id="font"> Search Doctors</span></i></a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"><span id="font"> Prescriptions</span></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> Journal</span></i></a>
+      <a class="nav-link sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> View Journals</span></i></a>
     </li>
     <li class="nav-item">
       <a class="nav-link sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"><span id="font"> Profile</span></i></a>
@@ -113,12 +110,6 @@
     $("#calendar_button").on('click', function(event) {
       event.preventDefault();
       xhr.open("get", "dashboard-files/doctor/calendar.php");
-      xhr.send();
-    });
-
-    $("#search").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/search.php");
       xhr.send();
     });
 
