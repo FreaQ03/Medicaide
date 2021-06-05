@@ -2,6 +2,7 @@
 <?php 
   session_start();
   $prescriptions = [];
+  $userID = $_SESSION['userID'];
 
   //1. Setup Database connection
   $servername = "localhost";
@@ -11,8 +12,8 @@
 
   $conn = mysqli_connect($servername, $db_username, $db_password, $database); 
 
-  //2. SELECT SQL
-  $sql = "SELECT * FROM `prescription`";
+  //2. SQL Statements
+  $sql = "SELECT * FROM `prescription` WHERE `pat_id`=" . $userID;
 
   //3. Execute SQL
   $result = mysqli_query($conn, $sql);
@@ -33,12 +34,38 @@
   <div class="card-deck text-light wow animate__animated animate__bounceIn" align="center">
   
   <?php
+    $fname = $_SESSION['fname'];
+    $lname = $_SESSION['lname'];
+
     //Displaying prescriptions
     for ($index = 0; $index < count($prescriptions); $index++) {
       $prespNo = $index + 1;
-      $fname = $_SESSION['fname'];
-      $lname = $_SESSION['lname'];
 
+      //Finding doctor name of each prescription
+
+      //1. Setup Database connection
+      $servername = "localhost";
+      $db_username = "root"; //xampp default
+      $db_password = "";  //xampp default
+      $database = "medicaide";
+
+      $conn = mysqli_connect($servername, $db_username, $db_password, $database); 
+
+      //2. Select SQL
+      $sql = 'SELECT `fname`, `lname` FROM `doctor` WHERE id=' . $prescriptions[$index]["doc_id"];
+
+      //3. Execute SQL
+      $result = mysqli_query($conn, $sql);
+      $row = mysqli_fetch_assoc($result);
+
+      //4. Set doctor name
+      $docFname = $row["fname"];
+      $docLname = $row["lname"];
+
+      //5. Closing Database Connection
+      mysqli_close($conn);
+
+      //Print the prescriptions
       echo '
 
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(img/PrescriptionCard.png);">
@@ -52,7 +79,7 @@
             <br><i>' . $prescriptions[$index]["repeatBy"] . '</i> </li>
           </p>
           <p class="doctorName">
-            Prescribed by: NAME
+            Prescribed by: ' . $docFname . ' ' . $docLname . '
           </p>
         </div>
       </div>
