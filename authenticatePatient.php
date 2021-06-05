@@ -35,6 +35,7 @@
 
     $_SESSION['fname'] = $row['fname'];
     $_SESSION['lname'] = $row['lname'];
+    $_SESSION['userID'] = $row['id'];
 
     header('Location: dashboard.php');
   } else {
