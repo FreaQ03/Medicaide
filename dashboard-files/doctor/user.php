@@ -5,62 +5,43 @@
 <div class="wrapper">
     <div class="left">
         <div class="profile-pic-div">
-  <img src="icons/img_placeholder.png" id="photo">
+        <img src="icons/img_placeholder.png" id="photo">
 
-        
+            
 
-</div>
+        </div>
 
-    <input type="file" id="picfile">
-    <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
- 
-    <h1>Name Goes Here</h1>
-
-<script src=" "></script>
-        
-
+        <input type="file" id="picfile">
+        <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
+     
+        <p id="docName">Name Goes Here</p>
 
     </div>
-    <div class="right">
+    <div class="right pt-0">
         <div class="info">
-            <h3>User Profile</h3>
+            <h3 id="main-header">User Profile</h3>
             <div class="info_data">
-                 <div class="data">
-                    
-
-
-                    <h4>Current Hospital</h4>                  
-                    <input type="text" value="" placeholder="Makati Medical Center" >
+                <div class="data">
+                    <p class="category">Current Hospital</p>                  
+                    <input type="text" placeholder="Makati Medical Center">
                     <span class="tooltiptext">Edit</span>
-                    <button type="button" class="btn btn-danger">Edit1</button>
-
-                 </div>
+                    <button type="button" class="btn btn-success btn-sm">Edit Schedule</button>
+                    <button type="button" class="btn btn-danger btn-sm">Add</button>
+                </div>
                  
-
-
-                 <div class="data" value="">
-                  
-
-
-                   <h4>Specialization</h4>
+                <div class="data" value="">
+                    <p class="category">Specialization</p>
                     
-                    <input type="text" value="" placeholder="surgery">
+                    <input type="text" placeholder="surgery">
                     <span class="tooltiptext">Edit</span>
-                    <button type="button" class="btn btn-danger">Edit2</button>
-
-
+                    <button type="button" class="btn btn-danger btn-sm">Add</button>
                 </div>
             
-
             </div>
-        </div>
+        </div> 
       
-      
-      
-        <div class="UPDATE">
-            
+        <div class="UPDATE">           
             <input type="submit" value="Update">
-
-      </div>
+        </div>
     </div>
 </div>
