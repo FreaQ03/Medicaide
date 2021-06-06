@@ -1,0 +1,135 @@
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+
+.Header h1, p{
+	text-align: center !important;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+  font-weight: bold;
+}
+
+
+.searchBar{
+  width: 30%;
+  padding-bottom: 2rem;
+}
+
+.search-btn{
+  color: white !important;
+  border-color:  #A4292E !important;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.card-img-top {
+
+  height: 8.125rem;
+    width: 8.125rem;
+    position: relative;
+    top: 0.875rem;
+    border-radius: 50%;
+    border: 0.0625rem solid grey;
+}
+
+
+
+.search-btn:hover{
+  color: #A4292E !important;
+  border-color:  white !important;
+  background-color: white !important;
+}
+
+.docCards{
+	z-index: 1;
+	float: left;
+	margin-top: 6 rem;
+	height: auto;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.cardTitle{
+    font-family: 'Quicksand', sans-serif;
+    color: #A4292E;
+}
+
+.card-text{ 
+	color: #A4292E !important;
+	font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Prescription{
+  color: #A4292E !important;
+  border-color:  #A4292E !important;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.Prescription:hover{
+  color: white !important;
+  border-color:  #A4292E !important;
+  background-color: #A4292E !important;
+}
+
+#PatientSearch{
+    background: #A4292E;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 90rem;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-top: 50px;
+    margin-right: 3px;
+}
+
+
+
+#text-above-cards{
+	 background: white;
+    position: relative;
+    margin: 0 auto;
+    width: 15%;
+    height: 2rem;
+    border-radius:6px;
+    z-index: 1;
+    float: left;
+    margin-left: 2rem;
+}
+
+form{
+	padding-top: 1rem;
+}
+
+
+.wrapper{
+  position: absolute;
+  top: 17%;
+  left: 40%;
+  width: 50%;
+  display: flex;
+  box-shadow: 0 0.0625rem 1.25rem 0 rgba(69,90,100,.08);
+  width: 50%;
+  background: #fff;
+  padding: 1.875rem 1.5625rem;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  
+}
+
+.category {
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+}
