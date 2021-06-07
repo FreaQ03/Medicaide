@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/search.css">
+
 <!--search button------------->
 <div id="PatientSearch">
 	

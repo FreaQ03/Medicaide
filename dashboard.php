@@ -41,15 +41,9 @@
 
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-  <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/journal.css">
-  <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/prescription.css">
-  <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/search.css">
 
   <!-- MDB -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
-  rel="stylesheet"
-/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"rel="stylesheet" />
 </head>
 
 <body>

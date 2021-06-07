@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/prescription.css">
+
 <!--Getting prescriptions from SQL Database-->
 <?php 
   session_start();

@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/journal.css">
+
 <div id="PatientJournal" class="Journal">
 	<div id = "entries">
 		<h1>Journal Entries</h1>	          
