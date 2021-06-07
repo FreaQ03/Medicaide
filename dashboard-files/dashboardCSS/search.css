@@ -48,14 +48,6 @@
   padding-top: 5px;
 }
 
-.docCards{
-	z-index: 1;
-	float: left;
-	margin-top: 6 rem;
-	height: auto;
-  padding-left: 1rem;
-  padding-top: 1rem;
-}
 
 .cardTitle{
     font-family: 'Quicksand', sans-serif;
@@ -107,16 +99,6 @@
     border-radius:6px;
     float: left;
     margin-left: 2rem;
-}
-
-#nearbyDoc{
-  left: 37rem;
-  top: -32rem;
-}
-
-#nearbyDoc2{
-  left: 56rem;
-  top: -64rem;
 }
 
 form{

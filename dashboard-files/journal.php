@@ -19,7 +19,7 @@
 	</div>
 	<!--Initial Journal Entry-->
 		<div class="journalOutput">
-		    <br/><textarea id="output" name="journalData" rows="9" wrap="virtual" cols=48 placeholder="Write your day here..." ></textarea><br>
+		    <br/><textarea id="output" name="journalData" placeholder="Write your day here..." ></textarea><br>
 		    <ul><p align="center"><input type="reset" value="clear"></p></ul>
 		  	</form>	
 		</div>

@@ -6,13 +6,13 @@
 
 .journalEntry{
 	margin-left: 1%;
-   	margin-top: 1.5%;
-    text-align: center;
+  margin-top: 1.5%;
+  text-align: center;
 }
 
 .journalOutput p{
 	color:#FFF; font-family: 'Quicksand', sans-serif; 
-	padding-top: 1%; 
+ 
 	height: 2%;
 }
 

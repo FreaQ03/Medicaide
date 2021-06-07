@@ -18,76 +18,37 @@
 	</div>
 	<p style="text-align: left; padding-left: 4rem;">Check their availability details and book an appointment. Your schedule will be updated in you calendar as well.</p>
 <!--Cards------------------------------>	
-	<div class="docCards m-0 d-block">
-	  <div class="card" style="width: 18rem;" >
-	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="cardTitle">Name of Doctor</h5>
-	    <p class="card-text" > 
-	    	Medical Specialist: Cardiologist<br>
-	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
-	    </p>
-	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="cardTitle">Name of Doctor</h5>
-	    <p class="card-text" > 
-	    	Medical Specialist: Cardiologist<br>
-	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
-	    </p>
-	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="cardTitle">Name of Doctor</h5>
-	    <p class="card-text" > 
-	    	Medical Specialist: Cardiologist<br>
-	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
-	    </p>
-	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
-	  </div>
-	</div>
-	<br><br><br><br><br>
-	<div class="card" style="width: 18rem;" >
-	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="cardTitle">Name of Doctor</h5>
-	    <p class="card-text" > 
-	    	Medical Specialist: Cardiologist<br>
-	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
-	    </p>
-	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="cardTitle">Name of Doctor</h5>
-	    <p class="card-text" > 
-	    	Medical Specialist: Cardiologist<br>
-	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
-	    </p>
-	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="cardTitle">Name of Doctor</h5>
-	    <p class="card-text" > 
-	    	Medical Specialist: Cardiologist<br>
-	    	Doctor Details and Schedule Here Doctor Details and Schedule Here 
-	    </p>
-	    <a href="#" class="btn btn-outline-primary bookNow">Book Now</a>
-	  </div>
-	</div>
-	
+<div class="card-deck" id="docCards">
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
 </div>
+
+
+
+
+
 <!--Google Maps----------------------------->
 <div class="mapouter">
 
