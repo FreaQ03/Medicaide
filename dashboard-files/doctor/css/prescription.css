@@ -15,6 +15,10 @@
 	color: white;
   font-weight: bold;
 }
+#main-header {
+  color: #A4292E !important;
+  font-weight: 400;
+}
 
 
 .searchBar{
@@ -111,18 +115,17 @@ form{
 }
 
 
-.wrapper{
+.presWrapper{
   position: absolute;
-  top: 17%;
+  top: 16.5%;
   left: 40%;
-  width: 50%;
   display: flex;
   box-shadow: 0 0.0625rem 1.25rem 0 rgba(69,90,100,.08);
-  width: 50%;
+  width: 40%;
   background: #fff;
   padding: 1.875rem 1.5625rem;
-  border-top-right-radius: 0.3125rem;
-  border-bottom-right-radius: 0.3125rem;
+  border-radius: .25rem;
+  visibility: visible;
   
 }
 
@@ -132,4 +135,55 @@ form{
 
 .dropdown {
   position: relative;
+}
+
+.form-group {
+  color: #A4292E;
+  margin: 0;
+}
+.form-control {
+  display: inline-block;
+  font-size: .95rem;
+  text-align: left;
+  margin-bottom: 0.625rem;
+  color: #717880;
+  border: 0;
+  border-bottom: 0.0625rem solid #3fb6a8;
+  outline: none;
+  border-radius: 0%;
+
+}
+input[type="text"]{
+  display: inline-block;
+  width: 100%;
+  font-size: .95rem;
+  text-align: left;
+  margin-bottom: 0.625rem;
+  color: #717880;
+  border: 0;
+  border-bottom: 0.0625rem solid #3fb6a8;
+  outline: none;
+}
+
+textarea{
+  margin: 15px;
+  border-radius: .25rem;
+  border-color:  #A4292E;
+  outline: none;
+
+}
+textarea:focus{
+  color: white !important;
+  border-color:  #A4292E !important;
+  background-color: #A4292E !important;
+  transition: 0.5s;
+}
+.Submit .Prescription {
+  margin: 15px;
+}
+
+label[for="txtMedicine"], [for="Frequency"], [for="selRoute"] {
+  color: #A4292E;
+  display: block;
+  text-align: left;
 }

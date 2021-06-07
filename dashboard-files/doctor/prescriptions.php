@@ -32,7 +32,7 @@
 	    	UserID: "here"<br>
 	    	Address: "here"<br>
 	    </p>
-	    <a input class="btn btn-outline-primary Prescription" >Create a Prescription</a>
+	    <a id="showForm" class="btn btn-outline-primary Prescription" >Create a Prescription</a>
 
 	    	
 
@@ -47,20 +47,19 @@
 	
 </div>
 
-<div class="wrapper">
+<div class="presWrapper">
 	<div class="right pt-0">
         <div class="info">
             <h3 id="main-header">Create Prescription Form</h3>
             <div class="info_data">
                 
 
-                <div class="data">
+                <div class="form-group">
                     
-                    <p class="category">Medicine</p>                  
-                    
+                                    
+                    <label for="txtMedicine">Medicine:</label>
                     <input type="text" placeholder="Enter specific medicine"> 
                     
-                    <button type="button" class="btn btn-danger btn-sm">Add</button>
                 
                 </div>
 
@@ -104,12 +103,12 @@
             </div>
         </div> 
       
-        <div class="UPDATE">           
-            <input type="submit" value="Create Prescription for user">
+        <div class="Submit">           
+            <a class="btn btn-outline-primary Prescription" >Submit Prescription</a>
         </div>
     </div>
 
 
 
-
+</div>
 </div>
