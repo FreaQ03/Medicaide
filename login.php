@@ -94,8 +94,8 @@
             <center>
               <h4>Please pick a user type</h4>
               <br>
-              <input type="image" src="img/doctor-signup.png" class="pickUser" id="doctor">
-              <input type="image" src="img/patient-signup.png" class="pickUser" id="patient">
+              <input type="image" src="img/DocIcon-Login.png" class="pickUser" id="doctor">
+              <input type="image" src="img/UserIcon-Login.png" class="pickUser" id="patient">
             </center>
           </div>
         </div>

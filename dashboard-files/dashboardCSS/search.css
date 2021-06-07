@@ -29,9 +29,17 @@
 }
 
 .googlemap{
-  max-width: 200%;
+  width: 100%;
   padding-right: 1rem;
+  padding-left: 1rem;
   padding-top: 2rem;
+}
+
+.mapouter{
+  float: right;
+  right: 1rem;
+  top: 0rem;
+  max-width: 700px;
 }
 
 .search-btn:hover{
@@ -49,7 +57,7 @@
 }
 
 
-.cardTitle{
+.card-title{
     font-family: 'Quicksand', sans-serif;
     color: #A4292E;
 }
@@ -73,24 +81,16 @@
   background-color: #A4292E !important;
 }
 
-.mapouter{
-  float: right;
-  right: 1rem;
-  top: 0rem;
-}
 
 #PatientSearch{
     background: #A4292E;
     margin: 0 auto;
     width: 90%;
-    height: 90rem;
     border:1px solid #ccc;
     border-radius:10px;
     margin-top: 3.125rem;
     margin-right: .188rem;
 }
-
-
 
 #text-above-cards{
 	 background: white;
@@ -99,6 +99,13 @@
     border-radius:6px;
     float: left;
     margin-left: 2rem;
+    margin-top: 2%;
+}
+
+#docCards{
+  width: 60%;
+  float: center;
+
 }
 
 form{
