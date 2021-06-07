@@ -94,6 +94,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <script>
+    var addFunctionsDefined = false;
+
     const xhr = new XMLHttpRequest();
     const container = document.getElementById("dynamicElement");
 
@@ -140,29 +142,45 @@
 
       var am = 1;
       var pm = 1;
-
-      //Add button JS for Hospitals
-      function addHosp() {
+      
+      if (addFunctionsDefined == false){
+        //Add button JS for Hospitals
+        function addHosp() {
           var newText = $('<input />').attr('type','text').attr('placeholder', 'Makati Medical Center').attr('class','mt-2').attr('id','hosp'+am+' autocomplete').attr('name','doctorHosp'+am);
           var newBtn = $('<button />').attr('id','sched'+am).attr('type','button').attr('class','btn btn-success btn-sm').html('Edit Schedule');
           $('#innerHosp').append(newText);
           $('#innerHosp').append(newBtn);
           am++;
-      }
+        }
 
-      function addSpecialization(){
-        var newText = $('<input />').attr('type','text').attr('placeholder', 'surgery').attr('class','mt-2').attr('name','doctorSpec'+pm).attr('id','spec'+pm);
-          $('#innerSpec').append(newText);
+        function addSpecialization(){
+          /*
+          var newText = $('<input />').attr('type','text').attr('placeholder', 'surgery').attr('class','mt-2').attr('name','doctorSpec'+pm).attr('id','spec'+pm);
+            $('#innerSpec').append(newText);
+          */
+
+          $("#specialization-group").clone().appendTo("#innerSpec");
+
           pm++;
+        }
+
+        $(document).on("click", "#addHosp", function(){
+          addHosp();
+        });        
+
+        $(document).on("click", "#addSpec", function(){
+          addSpecialization();
+        });
+
+        $(document).on("change", "#picfile", function() {
+          $("#profile-picture").submit();
+        });
+
+        addFunctionsDefined = true;
       }
+      
 
-      $(document).on("click", "#addHosp", function(){
-        addHosp();
-      });        
-
-      $(document).on("click", "#addSpec", function(){
-        addSpecialization();
-      });
+      
 
 
 
