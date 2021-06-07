@@ -135,6 +135,33 @@
       event.preventDefault();
       xhr.open("get", "dashboard-files/doctor/user.php");
       xhr.send();
+
+      var am = 1;
+      var pm = 1;
+
+      //Add button JS for Hospitals
+      function addHosp() {
+          var newText = $('<input />').attr('type','text').attr('placeholder', 'Makati Medical Center').attr('class','mt-2').attr('id','hosp'+am+' autocomplete').attr('name','doctorHosp'+am);
+          var newBtn = $('<button />').attr('id','sched'+am).attr('type','button').attr('class','btn btn-success btn-sm').html('Edit Schedule');
+          $('#innerHosp').append(newText);
+          $('#innerHosp').append(newBtn);
+          am++;
+      }
+
+      function addSpecialization(){
+        var newText = $('<input />').attr('type','text').attr('placeholder', 'surgery').attr('class','mt-2').attr('name','doctorSpec'+pm).attr('id','spec'+pm);
+          $('#innerSpec').append(newText);
+          pm++;
+      }
+
+      $(document).on("click", "#addHosp", function(){
+        addHosp();
+      });        
+
+      $(document).on("click", "#addSpec", function(){
+        addSpecialization();
+      });
+
     });
 
   </script>
@@ -147,6 +174,12 @@
     iframe.onload = function(){
         iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     }
+  </script>
+
+  <script>
+    
+    
+
   </script>
 
 </body>

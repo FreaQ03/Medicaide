@@ -32,10 +32,12 @@
 .profile-pic-div{
     height: 8.125rem;
     width: 8.125rem;
+    /*
     position: relative;
     top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
+    */
     border-radius: 50%;
     overflow: hidden;
     border: 0.0625rem solid grey;
@@ -121,7 +123,7 @@ input[type="text"]{
 
 input[type="submit"]{
   width: 50%;
-  height: 15%;
+  height: 2.5rem;
   border: 0.0625rem solid;
   background: #A4292E;
   border-radius: 1.5625rem;
