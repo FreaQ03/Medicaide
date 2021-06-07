@@ -24,6 +24,7 @@
 	  </form>
 	</div>
 </div>
+</div>
 <div class="text-center">
     <a class="btn btn-outline-success btn-lg" href="#" role="button">Submit</a>  
 </div>
