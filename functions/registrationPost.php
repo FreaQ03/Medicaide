@@ -56,7 +56,7 @@
   if ($count > 0) {
     //existing email
 
-    header('Location: register.php?origemail=false');
+    header('Location: ../register.php?origemail=false');
   } 
   else {
     //original email
@@ -65,7 +65,7 @@
         $_SESSION['isLogin'] = true;
         $_SESSION['fname'] = $first_name;
         $_SESSION['lname'] = $last_name;
-        header('Location: dashboard.php');
+        header('Location: ../dashboard.php');
         
         //CREATION OF USER JOURNAL IF USER IS A PATIENT
         if($userType == "patient") {
@@ -89,7 +89,7 @@
 
           //4. Execute Insert Query
           if (mysqli_query($conn, $createJournal)) {
-            header('Location: dashboard.php');
+            header('Location: ../dashboard.php');
           } 
 
           else {

@@ -66,19 +66,16 @@
       <a class="nav-link sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E;"><i class="fas fa-calendar-plus fa-2x"><span id="font"> Calendar</span></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"><span id="font"> Search Doctors</span></i></a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"><span id="font"> Prescriptions</span></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> Journal</span></i></a>
+      <a class="nav-link sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> View Journals</span></i></a>
     </li>
     <li class="nav-item">
       <a class="nav-link sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"><span id="font"> Profile</span></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link sidebar-icon" id="user" aria-current="page" href="logout.php" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"><span id="font"> Log out</span></i></a>
+      <a class="nav-link sidebar-icon" id="user" aria-current="page" href="functions/logout.php" style="color: #A4292E;"> <i class="fas fa-sign-out-alt fa-2x"><span id="font"> Log out</span></i></a>
     </li>
   </ul>
 
@@ -116,12 +113,6 @@
       xhr.send();
     });
 
-    $("#search").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/search.php");
-      xhr.send();
-    });
-
     $("#clock").on('click', function(event) {
       event.preventDefault();
       xhr.open("get", "dashboard-files/doctor/clock.php");
@@ -144,6 +135,33 @@
       event.preventDefault();
       xhr.open("get", "dashboard-files/doctor/user.php");
       xhr.send();
+
+      var am = 1;
+      var pm = 1;
+
+      //Add button JS for Hospitals
+      function addHosp() {
+          var newText = $('<input />').attr('type','text').attr('placeholder', 'Makati Medical Center').attr('class','mt-2').attr('id','hosp'+am+' autocomplete').attr('name','doctorHosp'+am);
+          var newBtn = $('<button />').attr('id','sched'+am).attr('type','button').attr('class','btn btn-success btn-sm').html('Edit Schedule');
+          $('#innerHosp').append(newText);
+          $('#innerHosp').append(newBtn);
+          am++;
+      }
+
+      function addSpecialization(){
+        var newText = $('<input />').attr('type','text').attr('placeholder', 'surgery').attr('class','mt-2').attr('name','doctorSpec'+pm).attr('id','spec'+pm);
+          $('#innerSpec').append(newText);
+          pm++;
+      }
+
+      $(document).on("click", "#addHosp", function(){
+        addHosp();
+      });        
+
+      $(document).on("click", "#addSpec", function(){
+        addSpecialization();
+      });
+
     });
 
   </script>
@@ -156,6 +174,12 @@
     iframe.onload = function(){
         iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     }
+  </script>
+
+  <script>
+    
+    
+
   </script>
 
 </body>

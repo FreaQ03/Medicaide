@@ -70,7 +70,7 @@
 
     <div class="center">
       <h1>Sign up</h1>
-      <form id="registerForm" action="registrationPost.php" method="post">
+      <form id="registerForm" action="functions/registrationPost.php" method="post">
         
 
 

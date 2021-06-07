@@ -17,7 +17,7 @@
     SELECT 
       * 
     FROM 
-      `patient` 
+      `doctor` 
     WHERE 
       `email`='".$email."'
       AND
@@ -35,13 +35,12 @@
 
     $_SESSION['fname'] = $row['fname'];
     $_SESSION['lname'] = $row['lname'];
-    $_SESSION['userID'] = $row['id'];
 
-    header('Location: dashboard.php');
+    header('Location: ../dashboard.php');
   } else {
     //invalid credentials
     $_SESSION['isLogin'] = false;
-    header('Location: login.php?credentials=false');
+    header('Location: ../login.php?credentials=false');
   }
 
   //.4 Closing Database Connection

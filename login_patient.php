@@ -2,7 +2,7 @@
   $_SESSION['userType'] = "patient";
 ?>
 
-<form action="authenticatePatient.php" method="post">
+<form action="functions/authenticatePatient.php" method="post">
   <div class="txt_field">
     <input type="text" name="email" required>
     <span></span>
