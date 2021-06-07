@@ -33,9 +33,10 @@
                 <img src="icons/img_placeholder.png" id="photo">
             </div>
         </center>
-
-        <input type="file" id="picfile">
-        <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
+        <form action="functions/updateDoctorDP.php" method="post" id="profile-picture">
+            <input type="file" id="picfile">
+            <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
+        </form>
      
         <p id="docName">Name Goes Here</p>
 
