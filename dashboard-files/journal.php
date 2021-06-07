@@ -15,21 +15,22 @@
 			<a class="dropdown-item" href="#">Action</a>
 			<a class="dropdown-item" href="#">Another action</a>
 			<a class="dropdown-item" href="#">Something else here</a>
-			</div>
 		</div>
+	</div>
 	<!--Initial Journal Entry-->
 		<div class="journalOutput">
 		    <br/><textarea id="output" name="journalData" rows="9" wrap="virtual" cols=48 placeholder="Write your day here..." ></textarea><br>
 		    <ul><p align="center"><input type="reset" value="clear"></p></ul>
-		  	
+		  	</form>	
 		</div>
+	</div>
+</div>	
 		<div class="text-center">
 		    <input class="btn btn-outline-success btn-lg" type="submit" value="submit">
 		</div>
 
-		</form>
-	</div>
-</div>
+	
+	
 
 
   
