@@ -99,6 +99,25 @@
           //Set session variable for userID
           $_SESSION['userID'] = $userDetails[0]["id"];
         }
+
+        //Args if user is a doctor
+        if($userType == "doctor") {
+
+          $userDetails = [];
+
+          //1. SELECT ID SQL CODE
+          $selectSQL = "SELECT * FROM `doctor` WHERE `email`= '".$email."'";
+
+          //2. Execute Select Query
+          $result = mysqli_query($conn, $selectSQL);
+          while ($row = mysqli_fetch_assoc($result)) {
+            array_push($userDetails, $row);
+          }
+
+          //Set session variable for userID
+          $_SESSION['userID'] = $userDetails[0]["id"];
+
+        }
       } 
 
       else {

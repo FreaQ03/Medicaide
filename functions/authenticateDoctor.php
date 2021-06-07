@@ -35,6 +35,7 @@
 
     $_SESSION['fname'] = $row['fname'];
     $_SESSION['lname'] = $row['lname'];
+    $_SESSION['userID'] = $row['id'];
 
     header('Location: ../dashboard.php');
   } else {
@@ -43,7 +44,7 @@
     header('Location: ../login.php?credentials=false');
   }
 
-  //.4 Closing Database Connection
+  //4. Closing Database Connection
   mysqli_close($conn);
 
 ?>

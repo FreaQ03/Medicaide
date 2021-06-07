@@ -151,9 +151,14 @@
       }
 
       function addSpecialization(){
+        /*
         var newText = $('<input />').attr('type','text').attr('placeholder', 'surgery').attr('class','mt-2').attr('name','doctorSpec'+pm).attr('id','spec'+pm);
           $('#innerSpec').append(newText);
-          pm++;
+        */
+
+        $("#specialization-group").clone().appendTo("#innerSpec");
+
+        pm++;
       }
 
       $(document).on("click", "#addHosp", function(){
