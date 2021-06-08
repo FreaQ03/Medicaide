@@ -1,4 +1,6 @@
 <?php 
+    session_start();
+
     $specialization = [];
 
     //1. Setup Database connection
@@ -8,8 +10,8 @@
     $database = "medicaide";
 
     $conn = mysqli_connect($servername, $db_username, $db_password, $database);
-
-    //2. Select PHP
+    //I. Finding specializations in the database
+    //2. Select SQL
     $sql = "SELECT * FROM `specialization` ORDER BY `id` ASC";
 
     //3. Execute Select Query
@@ -18,7 +20,25 @@
     array_push($specialization, $row);
     }
 
-    //4. Closing Database Connection
+
+    //II. Checking if user has a profile picture
+
+    $profilePictureDatabase = [];
+    $pictureDirectory = "icons/img_placeholder.png";
+
+    //2. Select SQL
+    $selectDP = "SELECT `profile_pic` FROM `doctor` WHERE `id` = " . $_SESSION['userID'];
+
+    $result = mysqli_query($conn, $selectDP);
+    while ($row = mysqli_fetch_assoc($result)) {
+        array_push($profilePictureDatabase, $row);
+    }
+
+    if(!empty($profilePictureDatabase[0]["profile_pic"])){
+        $pictureDirectory = $profilePictureDatabase[0]["profile_pic"];
+    }
+
+    //Closing Database Connection
     mysqli_close($conn);
 ?>
 
@@ -30,15 +50,15 @@
     <div class="left">
         <center>
             <div class="profile-pic-div">
-                <img src="icons/img_placeholder.png" id="photo">
+                <img src="<?php echo $pictureDirectory;?>" id="photo">
             </div>
         </center>
-        <form action="functions/updateDoctorDP.php" method="post" id="profile-picture">
-            <input type="file" id="picfile">
+        <form action="functions/updateDoctorDP.php" method="post" id="profile-picture" enctype="multipart/form-data">
+            <input type="file" id="picfile" name="profile-pic">
             <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
         </form>
      
-        <p id="docName">Name Goes Here</p>
+        <p id="docName"><?php echo $_SESSION['fname'] . " " . $_SESSION['lname'];?></p>
 
     </div>
     <div class="right pt-0">
@@ -84,19 +104,3 @@
         </div> 
     </div>
 </div>
-
-<!--
-<script>
-    let autocomplete;
-    function initMap(){
-        autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'),
-            {
-
-            }
-        )
-    }
-</script>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNhUxODxb5Ou1nuTITaSaXJ-IsCaqhczM&libraries=places&callback=initMap">
-</script>
--->
