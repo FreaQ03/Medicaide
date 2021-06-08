@@ -2,16 +2,37 @@ body {
   background-color: lightblue;
 }
 
+.subheading {
+  text-align: left !important;
+}
+
+.picform{
+  align-content: center;
+  position: absolute;
+  top: 53%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  max-height: 78%;
+  max-width: 30%;
+  background: #A4292E;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
 .center{
   position: absolute;
   top: 53%;
-  left: 52%;
+  left: 65%;
   transform: translate(-50%, -50%);
-  width: 600px;
+  max-height: 78%;
+  max-width: 70%;
   background: white;
   border-radius: 20px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
+
+
 .center h1{
   text-align: center;
   padding: 20px 0;
@@ -30,7 +51,8 @@ body {
   flex-direction: row;
 }
 .center form .user_box {
-  display: flex;
+  align-self: left;
+  display: flex ;
 }
 .center form .user_pass {
   display: flex;
@@ -79,6 +101,13 @@ form .txt_field{
 .txt_field input:focus ~ span::before,
 .txt_field input:valid ~ span::before{
   width: 100%;
+}
+input::placeholder {
+  visibility: hidden;
+}
+input:focus::placeholder {
+  visibility: visible;
+  transition: .5s;
 }
 .box_field {
   margin-right: 50px;
@@ -149,4 +178,64 @@ input[type="submit"]:hover{
     transform: scale(1.1);
     transition: transform 0.5s ;
     z-index: -1;
+}
+
+
+
+
+
+
+.id-pic-div{
+    height: 5.125rem;
+    width: 5.125rem;
+    /*
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    */
+    border-radius: 0%;
+    overflow: hidden;
+    border: 0.0625rem solid grey;
+    align-items: center !important;
+    margin-left: 1.5625rem;
+}
+
+.profile-pic-div{
+    height: 5.125rem;
+    width: 5.125rem;
+    /*
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    */
+    border-radius: 100%;
+    overflow: hidden;
+    border: 0.0625rem solid grey;
+    align-items: center !important;
+    margin-left: 1.5625rem;
+
+}
+
+#photo{
+  height: 100%;
+  width: 100%;
+}
+
+#picfile {
+  display: none;
+}
+
+#uploadpic {
+  margin: 10px;
+  position: sticky;
+  padding: 0.5rem;
+  color: #fff;
+  border: 0.0625rem solid;
+  border
+  background: #A4292E;
+  border-radius: 1.5625rem;
+  cursor: pointer;
+   
 }
