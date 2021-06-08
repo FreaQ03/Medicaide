@@ -29,7 +29,7 @@
 	</div>
 </div>	
 		<div class="text-center">
-		    <input class="btn btn-outline-success btn-lg" type="submit" value="submit">
+		    <button type="button" class="btn btn-outline-primary submit-btn btn-lg">Submit</button>
 		</div>
 
 	
