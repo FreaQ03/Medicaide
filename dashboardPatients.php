@@ -3,7 +3,6 @@
 
 	<!--Boostrap CSS-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <!--Ajax-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -24,9 +23,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
 
 	<!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="css/dashboardDoctors.css">
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"rel="stylesheet" />
 </head>
 
 <body>
@@ -43,8 +46,8 @@
           </ul>
         <div class="nav-links">
           <ul>
-            <a href="#aboutUs" style="color: white;"><li>ABOUT US</li></a>
-            <a href="#aboutUs" style="color: white;"><li>CONTACT US</li></a>
+            <a href="index.php#aboutUs" style="color: white;"><li>ABOUT US</li></a>
+            <a href="index.php#aboutUs" style="color: white;"><li>CONTACT US</li></a>
           </ul>
       </div>   
         <div class="navbar-welc">
@@ -54,7 +57,7 @@
     </div>
     </div>
   </nav>
-
+<!--Sidebar Functions-->
 <div class="container m-0 p-0 d-inline" id="dynamicBody">
 
   <!--SIDEBAR-->
@@ -63,10 +66,13 @@
       <a class="nav-link sidebar-icon" id="calendar_button" aria-current="page" href="#" style="color: #A4292E;"><i class="fas fa-calendar-plus fa-2x"><span id="font"> Calendar</span></i></a>
     </li>
     <li class="nav-item">
+      <a class="nav-link sidebar-icon" id="search" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-search fa-2x"><span id="font"> Search Doctors</span></i></a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link sidebar-icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical fa-2x"><span id="font"> Prescriptions</span></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> View Journals</span></i></a>
+      <a class="nav-link sidebar-icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note fa-2x"><span id="font"> Journal</span></i></a>
     </li>
     <li class="nav-item">
       <a class="nav-link sidebar-icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user fa-2x"><span id="font"> Profile</span></i></a>
@@ -79,11 +85,9 @@
   <!--Content goes here-->
   <center>
     <div id="dynamicElement">
-
+      
     </div>
   </center>
-
-</div>
 
   <!--Bootstrap Javascript-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -91,8 +95,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <script>
-    var addFunctionsDefined = false;
-
     const xhr = new XMLHttpRequest();
     const container = document.getElementById("dynamicElement");
 
@@ -105,108 +107,38 @@
       }
     };
 
-    xhr.open("get", "dashboard-files/doctor/calendar.php");
+    xhr.open("get", "dashboard-files/calendar.php");
     xhr.send();
 
     $("#calendar_button").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/calendar.php");
+      xhr.open("get", "dashboard-files/calendar.php");
       xhr.send();
     });
 
-    $("#clock").on('click', function(event) {
+    $("#search").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/clock.php");
+      xhr.open("get", "dashboard-files/search.php");
       xhr.send();
     });
 
     $("#prescriptions").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/prescriptions.php");
+      xhr.open("get", "dashboard-files/prescriptions.php");
       xhr.send();
     });
 
     $("#journal").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/journal.php");
+      xhr.open("get", "dashboard-files/journal.php");
       xhr.send();
     });
 
     $("#user").on('click', function(event) {
       event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/user.php");
+      xhr.open("get", "dashboard-files/user.php");
       xhr.send();
-
-      var am = 1;
-      var pm = 1;
-      
-      if (addFunctionsDefined == false){
-        //Add button JS for Hospitals
-        function addHosp() {
-          var newText = $('<input />').attr('type','text').attr('placeholder', 'Makati Medical Center').attr('class','mt-2').attr('id','hosp'+am+' autocomplete').attr('name','doctorHosp'+am);
-          var newBtn = $('<button />').attr('id','sched'+am).attr('type','button').attr('class','btn btn-success btn-sm').html('Edit Schedule');
-          $('#innerHosp').append(newText);
-          $('#innerHosp').append(newBtn);
-          am++;
-        }
-
-        function addSpecialization(){
-          /*
-          var newText = $('<input />').attr('type','text').attr('placeholder', 'surgery').attr('class','mt-2').attr('name','doctorSpec'+pm).attr('id','spec'+pm);
-            $('#innerSpec').append(newText);
-          */
-
-          $("#specialization-group").clone().appendTo("#innerSpec");
-
-          pm++;
-        }
-
-        $(document).on("click", "#addHosp", function(){
-          addHosp();
-        });        
-
-        $(document).on("click", "#addSpec", function(){
-          addSpecialization();
-        });
-
-        $(document).on("change", "#picfile", function() {
-          $("#profile-picture").submit();
-        });
-
-        addFunctionsDefined = true;
-      }
-      
-
-      
-
-
-
-      function addPresForm() {
-        document.getElementByClassName("presWrapper").style.visibility = "visible";
-        
-      }
-      
-      $(document).on("click", "#showForm", function(){
-        addPresForm();
-      });
-
     });
-
-  </script>
-
-  <script>
-    // Selecting the iframe element
-    var iframe = document.getElementById("calendarFrame");
-    
-    // Adjusting the iframe height onload event
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    }
-  </script>
-
-  <script>
-    
-    
 
   </script>
 

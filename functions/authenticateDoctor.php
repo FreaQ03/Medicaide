@@ -36,6 +36,7 @@
     $_SESSION['fname'] = $row['fname'];
     $_SESSION['lname'] = $row['lname'];
     $_SESSION['userID'] = $row['id'];
+    $_SESSION['userType'] = "doctor";
 
     header('Location: ../dashboard.php');
   } else {

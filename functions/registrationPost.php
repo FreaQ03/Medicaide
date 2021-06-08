@@ -65,6 +65,8 @@
         $_SESSION['isLogin'] = true;
         $_SESSION['fname'] = $first_name;
         $_SESSION['lname'] = $last_name;
+        $_SESSION['userType'] = $userType;
+
         header('Location: ../dashboard.php');
         
         //CREATION OF USER JOURNAL IF USER IS A PATIENT

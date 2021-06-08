@@ -37,6 +37,8 @@
     $_SESSION['lname'] = $row['lname'];
     $_SESSION['userID'] = $row['id'];
 
+    $_SESSION['userType'] = "patient";
+
     header('Location: ../dashboard.php');
   } else {
     //invalid credentials
