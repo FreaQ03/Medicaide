@@ -16,7 +16,7 @@
 	height: 2%;
 }
 
-.btn-outline-success{
+.submit-btn{
   color: #A4292E !important;
   border-color:  #A4292E !important;
   font-family: 'Quicksand', sans-serif; 
@@ -24,7 +24,7 @@
 
 }
 
-.btn-outline-success:hover{
+.submit-btn:hover{
   color: white !important;
   border-color:  #A4292E !important;
   background-color: #A4292E !important;

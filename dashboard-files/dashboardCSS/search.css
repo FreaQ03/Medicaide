@@ -14,11 +14,13 @@
 	font-family: 'Montserrat', sans-serif;
 	color: white;
   font-weight: bold;
+  padding-top: 3%;
 }
 
 .searchBar{
   width: 20%;
   padding-bottom: 2rem;
+  padding-top: 3%;
 }
 
 .search-btn{
@@ -103,9 +105,8 @@
 }
 
 #docCards{
-  width: 60%;
+  width: 90%;
   float: center;
-
 }
 
 form{
