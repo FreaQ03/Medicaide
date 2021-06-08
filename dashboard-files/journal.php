@@ -10,14 +10,16 @@
 
  		<!--dropdown for days-->
  		<div class="dropdown">
-		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Day of Medication
-		  </button>
-		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-		    <a class="dropdown-item" href="#">Day 1</a>
-		    <a class="dropdown-item" href="#">Day 2</a>
-		    <a class="dropdown-item" href="#">Day 3</a>
-		  </div>
+		  <div class="btn-group">
+			  <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Day of Medication
+			  </button>
+			  <div class="dropdown-menu">
+			    <a class="dropdown-item" href="#">Day 1</a>
+			    <a class="dropdown-item" href="#">Day 2</a>
+			    <a class="dropdown-item" href="#">Day 3</a>
+			  </div>
+			</div>
 		</div>
 	</div>
 	<!--Initial Journal Entry-->
