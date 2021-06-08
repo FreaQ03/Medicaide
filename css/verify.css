@@ -26,7 +26,7 @@ body {
   left: 65%;
   transform: translate(-50%, -50%);
   max-height: 78%;
-  max-width: 70%;
+  width: 47%;
   background: white;
   border-radius: 20px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
