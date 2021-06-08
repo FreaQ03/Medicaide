@@ -58,7 +58,7 @@
             <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
         </form>
      
-        <p id="docName">Name Goes Here</p>
+        <p id="docName"><?php echo $_SESSION['fname'] . " " . $_SESSION['lname'];?></p>
 
     </div>
     <div class="right pt-0">
