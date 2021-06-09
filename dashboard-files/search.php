@@ -57,14 +57,89 @@
 
   <br><br><br><br>
 
-<!--Cards-->  
-  <div class="card-deck" id="docCards">
-  <div class="card" >
-    <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Name of Doctor</h5>
-      <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-      <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+<!--Cards-->
+<div class="row mx-5">
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- The Modal -->
 <div class="modal" id="myModal" >
@@ -116,74 +191,6 @@
   </div>
 </div>
 
-
-
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Name of Doctor</h5>
-      <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-       <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow">Book Now</button></small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Name of Doctor</h5>
-      <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-       <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow">Book Now</button></small></p>
-    </div>
-  </div>
-  <div class="card" >
-      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow">Book Now</button></small></p>
-      </div>
-    </div>
-  </div>
-
-  
-<br><br><br>
-
-
-<div class="card-deck" id="docCards">
-  <div class="card" >
-    <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Name of Doctor</h5>
-      <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-      <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow">Book Now</button></small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Name of Doctor</h5>
-      <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-       <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow">Book Now</button></small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Name of Doctor</h5>
-      <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-       <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow">Book Now</button></small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Name of Doctor</h5>
-      <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-       <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow">Book Now</button></small></p>
-    </div>
-  </div>
-</div>
 <br><br><br>
 
 <!--pagination------------------>
