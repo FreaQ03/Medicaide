@@ -30,6 +30,12 @@
 
 }
 
+.search-btn:hover{
+  color: #A4292E !important;
+  border-color:  white !important;
+  background-color: white !important;
+}
+
 .googlemap{
   width: 100%;
   padding-right: 1rem;
@@ -43,14 +49,6 @@
   top: 0rem;
   max-width: 700px;
 }
-
-.search-btn:hover{
-  color: #A4292E !important;
-  border-color:  white !important;
-  background-color: white !important;
-}
-
-
 
 .nearestDoc p{
 	color: #A4292E;
@@ -83,6 +81,51 @@
   background-color: #A4292E !important;
 }
 
+.PatientBooking{
+  color: #A4292E !important;
+  border-color:  #A4292E !important;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.PatientBooking:hover{
+  color: white !important;
+  border-color:  #A4292E !important;
+  background-color: #A4292E !important;
+}
+
+.modal-title{
+  font-family: 'Quicksand', sans-serif;
+  color: #A4292E !important;
+}
+
+.modal-body th{
+  font-weight: bold;
+  color: #A4292E;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.modalDateForm{
+  color: #A4292E !important;
+  font-weight: bold;
+}
+
+.modalTimeForm{
+  color: #A4292E !important;
+  font-weight: bold;
+}
+
+.pickDate{
+  width: 50%;
+}
+
+.SetAppoint{
+  background-color: #A4292E !important;
+  color: white !important;
+  border-color:  #A4292E !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
 
 #PatientSearch{
     background: #A4292E;

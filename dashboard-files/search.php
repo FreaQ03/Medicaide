@@ -64,7 +64,7 @@
       <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
         <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
       </div>
     </div>
@@ -74,7 +74,17 @@
       <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
+        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#modalForm">Book Now</button></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name of Doctor</h5>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
         <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
       </div>
     </div>
@@ -84,7 +94,7 @@
       <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
         <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
       </div>
     </div>
@@ -94,7 +104,7 @@
       <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
         <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
       </div>
     </div>
@@ -104,7 +114,7 @@
       <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
         <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
       </div>
     </div>
@@ -114,7 +124,7 @@
       <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
         <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
       </div>
     </div>
@@ -124,31 +134,21 @@
       <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
-        <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Name of Doctor</h5>
-        <p class="card-text">Medical Specialist: Cardiologist <br><br>Doctor details here Doctor details here Doctor details here</p>
+        <p class="card-text">Medical Specialist: Cardiologist <br> Hospital: St. Lukes Medical Center</p>
         <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal">Book Now</button></small></p>
       </div>
     </div>
   </div>
 </div>
 
-      <!-- The Modal -->
+      <!-- The Modal Schedule-->
 <div class="modal" id="myModal" >
   <div class="modal-dialog">
     <div class="modal-content">
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
+        <h4 class="modal-title">Doctor Schedule</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
@@ -157,26 +157,26 @@
           <table class="table table-striped">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>Contact</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>8:00am-1:00pm</td>
+        <td>Monday</td>
+        <td><i>john@example.com</i></td>
       </tr>
       <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
+        <td>8:00am-1:00pm</td>
+        <td>Tueday</td>
+        <td><i>091919191919</i></td>
       </tr>
       <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+        <td>8:00am-1:00pm</td>
+        <td>Wedneday</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -184,12 +184,49 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline-danger PatientBooking" data-dismiss="modal">Book an Appointment</button>
       </div>
 
     </div>
   </div>
 </div>
+
+<!-- The Modal Form------------------>
+
+   <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Appointment Schedule</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5 modalDateForm">
+           Pick a date:
+           <input type="date" class="form-control pickDate" required>
+        </div>
+
+        <div class="md-form mb-4 modalTimeForm">
+            Pick a time:<br>
+            <input type="time" name="time" value="22:00" />
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-primary SetAppoint">Set Appointment Schedule</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
 <br><br><br>
 
