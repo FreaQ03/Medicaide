@@ -1,5 +1,31 @@
 <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/search.css">
 
+<!--Getting doctors from databsae-->
+<?php
+
+  session_start();
+  $doctors = [];
+
+  //1. Setup Database connection
+  $servername = "localhost";
+  $db_username = "root"; //xampp default
+  $db_password = "";  //xampp default
+  $database = "medicaide";
+
+  $conn = mysqli_connect($servername, $db_username, $db_password, $database);
+
+  //2. SQL Statements
+  $selectDoctors = "SELECT * FROM `doctor`";
+
+  //3. Execute SQL
+  $doctorResult = mysqli_query($conn, $selectDoctors);
+  while ($doctorsRow = mysqli_fetch_assoc($doctorResult)) {
+    array_push($doctors, $doctorsRow);
+  }
+
+?>
+
+
 <!--search button------------->
 <div id="PatientSearch">
 	
@@ -27,8 +53,11 @@
 
 <div id="text-above-cards" class="nearestDoc d-block" align="left"> 
     <p>Recommended Nearest Doctor</p>
-  </div><br><br><br><br>
-<!--Cards------------------------------>  
+  </div>
+
+  <br><br><br><br>
+
+<!--Cards-->  
   <div class="card-deck" id="docCards">
   <div class="card" >
     <img class="card-img-top" src="img/DocCardImg.jpg" alt="Card image cap">
