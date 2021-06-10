@@ -2,6 +2,45 @@ body {
   background-color: lightblue;
 }
 
+.navbar-brand{
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nav-links{
+  flex: 1;
+}
+
+.nav-links ul{
+  margin-left: 3.125rem;
+  display: inline;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: .5rem 1.563rem;
+}
+
+.nav-links ul a{
+  color: #A4292E;
+  text-decoration: none;
+  font-size: .813rem;
+}
+
+.nav-links ul li::after{
+  content: '';
+  width: 0;
+  height: .125rem;
+  background: #A4292E;
+  display: block;
+  margin: auto;
+  transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
 .subheading {
   text-align: left !important;
 }

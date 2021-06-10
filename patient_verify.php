@@ -1,16 +1,3 @@
-<doctype html>
-<?php
-  //security check
-  session_start();
-
-  if(isset($_SESSION['isLogin'])){
-    if($_SESSION['isLogin'] == false){
-      header('Location: dashboard.php');
-    }
-  }
-?>
-
-
 <head>
 
 	<!--Boostrap CSS-->
@@ -31,9 +18,10 @@
 	<!--Google Fonts API-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
 	<!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="css/doc_verify.css">
+  <link rel="stylesheet" type="text/css" href="css/patient_verify.css">
 
 </head>
 
@@ -70,7 +58,7 @@
     <div class="picform">
 
       <div class="form-group" id="account-container">        
-        <p class="subheading" style="color: #fff;" >Send image of valid ID (required).</p>
+        <p class="subheading">Send image of valid ID (required).</p>
 
         <div class="id-pic-div">
                 <img src="https://i.stack.imgur.com/y9DpT.jpg" id="photo" >
@@ -142,7 +130,7 @@
         <div class="txt_field">
           <input type="text" name="Hospital" required>
           <span></span>
-          <label>Hospital</label>
+          <label>Phone Number</label>
         </div>
         </div>
 
