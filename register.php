@@ -31,6 +31,7 @@
 	<!--Google Fonts API-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/signupcss.css">
@@ -42,7 +43,7 @@
 	<!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
   <div class="container-fluid sticky-top">
-    <a class="navbar-brand" href="index.php" style="color: #A4292E;"><b>MEDICAIDE</b></a>
+    <a class="navbar-brand" href="index.php" style="color: #A4292E; font-family: 'Quicksand', sans-serif;"><b>MEDICAIDE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,7 +54,6 @@
         <ul>
           <a href="#"><li>ABOUT US</li></a>
           <a href="#"><li>CONTACT US</li></a>
-          <a href="#"><li>PRIVACY POLICY</li></a>
         </ul>
       </div>   
           <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>

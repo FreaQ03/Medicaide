@@ -52,7 +52,6 @@
         <ul>
           <a href="#"><li>ABOUT US</li></a>
           <a href="#"><li>CONTACT US</li></a>
-          <a href="#"><li>PRIVACY POLICY</li></a>
         </ul>
       </div>   
           <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>

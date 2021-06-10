@@ -121,15 +121,16 @@ html {
 }
 
 .features-text p:nth-child(2){
-	font-family: 'Quicksand', sans-serif;
-	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
 	color: #A4292E;
 	font-size: 1.2rem;
 }
 
 .features-text p:nth-child(3){
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: #A4292E;
+	font-weight: bold;
 }
 
 .fa-user-md{
