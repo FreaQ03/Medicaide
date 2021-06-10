@@ -115,6 +115,23 @@
     xhr.open("get", "dashboard-files/calendar.php");
     xhr.send();
 
+    //Live search function for search doctors
+    $(document).on("keyup", "#doctorSearch", function() {
+      //alert('Handler for .keyup() called.');
+      
+      var search = $(this).val();
+
+      $.ajax({
+        url:'functions/asyncSearch.php',
+        method:'post',
+        data:{query:search},
+        success:function(response){
+          $("#doctorList").html(response);
+        }
+      });
+      
+    });
+
     //Automatic redirection if element has "page" php element
     if (window.location.href.indexOf("page") > -1) {
       xhr.open("get", "dashboard-files/search.php");
@@ -131,23 +148,6 @@
       event.preventDefault();
       xhr.open("get", "dashboard-files/search.php");
       xhr.send();
-
-      $(document).on("keyup", "#doctorSearch", function() {
-        //alert('Handler for .keyup() called.');
-        
-        var search = $(this).val();
-
-        $.ajax({
-          url:'functions/asyncSearch.php',
-          method:'post',
-          data:{query:search},
-          success:function(response){
-            $("#doctorList").html(response);
-          }
-        });
-        
-      });
-      
     });
 
     $("#prescriptions").on('click', function(event) {

@@ -19,11 +19,11 @@
 		$search = $_POST['query'];
 
 		//2. SQL Statement
-		$sql = "SELECT * FROM `doctor` WHERE `fname` LIKE '%" . $search . "%' OR `lname` LIKE '%" . $search . "%'";
-
+		$sql = "SELECT * FROM `doctor` WHERE `fname` LIKE '%" . $search . "%' OR `lname` LIKE '%" . $search . "%' LIMIT " . $start . ", " . $limit;
+		
 	}
 	else{
-		$sql = "SELECT * FROM `doctor`";
+		$sql = "SELECT * FROM `doctor` LIMIT " . $start . ", " . $limit;
 	}
 
 	$doctorResult = mysqli_query($conn, $sql);
@@ -140,12 +140,13 @@
 			      <div class="modal-body mx-3">
 			          <div class="md-form mb-5 modalDateForm">
 			             Pick a date:
-			             <input type="date" class="form-control pickDate" required>
+			             <input type="date" name="appointDate" class="form-control pickDate" required>
 			          </div>
 
 			          <div class="md-form mb-4 modalTimeForm">
 			              Pick a time:<br>
-			              <input type="time" name="time" value="22:00" />
+			              <input type="time" name="time" value="09:00" step="1800" />
+			              <input type="hidden" name="docID" value="' . $doctors[$index]["id"] . '" />
 			          </div>
 
 			        </div>
