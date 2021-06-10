@@ -151,11 +151,6 @@
         }
 
         function addSpecialization(){
-          /*
-          var newText = $('<input />').attr('type','text').attr('placeholder', 'surgery').attr('class','mt-2').attr('name','doctorSpec'+pm).attr('id','spec'+pm);
-            $('#innerSpec').append(newText);
-          */
-
           $("#specialization-group").clone().appendTo("#innerSpec");
 
           pm++;
