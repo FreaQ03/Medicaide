@@ -101,7 +101,7 @@
 
         <div class="user_box">
         <div class="box_field">
-                  <label class="subheading">Birthday</label>
+                  <label class="birthdaycss">Birthday</label>
                   <input type="date" class="form-control" name="birthday" required>
         </div>
 
