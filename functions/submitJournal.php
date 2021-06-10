@@ -6,13 +6,8 @@
 	$patientID = $_SESSION['userID'];
 	$date = date("Y-m-d");
 
-	//1. Setup Database connection
-	$servername = "localhost";
-	$db_username = "root"; //xampp default
-	$db_password = "";  //xampp default
-	$database = "medicaide";
-
-	$conn = mysqli_connect($servername, $db_username, $db_password, $database);
+	//1. Setup database connection
+  	require 'connection.php';
 
 	//I. Find Journal ID of Patient
 

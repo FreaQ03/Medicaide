@@ -13,13 +13,8 @@
   $doctors = [];
   $doctorCount = [];
 
-  //1. Setup Database connection
-  $servername = "localhost";
-  $db_username = "root"; //xampp default
-  $db_password = "";  //xampp default
-  $database = "medicaide";
-
-  $conn = mysqli_connect($servername, $db_username, $db_password, $database);
+  //1. Setup database connection
+  require 'connection.php';
 
   //2. SQL Statements
   $selectDoctors = "SELECT * FROM `doctor` LIMIT " . $start . ", " . $limit;

@@ -9,13 +9,8 @@
 	//1. save the file name in the database
 	//2. upload / move the uploaded file into a specific folder
 
-	//1. Setup Database connection
-	$servername = "localhost";
-	$db_username = "root"; //xampp default
-	$db_password = "";  //xampp default
-	$database = "medicaide";
-
-	$conn = mysqli_connect($servername, $db_username, $db_password, $database);
+	//1. Setup database connection
+  	require 'connection.php';
 
 	//2. Insert SQL
 	$sql = "UPDATE `doctor` SET `profile_pic` = 'user-files/doctor/profile-pic/" . $profilePicture['name'] . "' WHERE `id` = " . $userID; 
