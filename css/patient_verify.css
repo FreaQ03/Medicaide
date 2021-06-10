@@ -157,8 +157,13 @@ input:focus::placeholder {
   transition: .5s;
 }
 .box_field {
-  margin-right: 50px;
-  margin-left: 50px;
+  width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    position: relative;
+    top: 0; left: 0; bottom: 0; right: 0;
+
 }
 
 .pass{
