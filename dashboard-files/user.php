@@ -10,7 +10,7 @@
         </center>
 
         <input type="file" id="picfile">
-        <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
+        <label for="picfile" id="uploadpic"><i class="fas fa-edit">Edit Photo</label></i>
      
         <p id="docName">Name Goes Here</p>
 

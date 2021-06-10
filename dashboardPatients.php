@@ -85,7 +85,6 @@
   <!--Content goes here-->
   <center>
     <div id="dynamicElement">
-      
     </div>
   </center>
 
