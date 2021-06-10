@@ -7,7 +7,7 @@
   $userID = $_SESSION['userID'];
 
   //1. Setup database connection
-  require 'connection.php'; 
+  require '../functions/connection.php'; 
 
   //2. SQL Statements
   $sql = "SELECT * FROM `prescription` WHERE `pat_id`=" . $userID;

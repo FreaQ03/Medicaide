@@ -4,12 +4,8 @@
     $specialization = [];
 
     //1. Setup Database connection
-    $servername = "localhost";
-    $db_username = "root"; //xampp default
-    $db_password = "";  //xampp default
-    $database = "medicaide";
-
-    $conn = mysqli_connect($servername, $db_username, $db_password, $database);
+    require '../../functions/connection.php';
+    
     //I. Finding specializations in the database
     //2. Select SQL
     $sql = "SELECT * FROM `specialization` ORDER BY `id` ASC";

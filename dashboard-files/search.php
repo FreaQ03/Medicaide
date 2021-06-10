@@ -14,7 +14,7 @@
   $doctorCount = [];
 
   //1. Setup database connection
-  require 'connection.php';
+  require '../functions/connection.php';
 
   //2. SQL Statements
   $selectDoctors = "SELECT * FROM `doctor` LIMIT " . $start . ", " . $limit;
@@ -113,7 +113,7 @@
     <?php
     for ($index = 0; $index < count($doctors); $index++) {
 
-      $conn = mysqli_connect($servername, $db_username, $db_password, $database);
+      require '../functions/connection.php';
 
 
       //I. Setting profile picture directory
