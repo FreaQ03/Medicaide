@@ -23,18 +23,6 @@
 			$_SESSION['page'] = 1;
 		}
 
-		if(isset($_GET['docAvail'])) {
-			if($_GET['docAvail'] == 0){
-				$_SESSION['docAvail'] = $_GET['docAvail'];
-			}
-		}
-		
-		if(isset($_GET['bookSuccess'])) {
-			if($_GET['bookSuccess'] == 1){
-				$_SESSION['bookSuccess'] = $_GET['bookSuccess'];
-			}
-		}
-
 	}
 	elseif ($_SESSION['userType'] == 'doctor') {
 		require 'dashboardDoctors.php';
