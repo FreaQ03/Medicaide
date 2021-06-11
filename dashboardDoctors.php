@@ -4,9 +4,6 @@
 	<!--Boostrap CSS-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!--Ajax-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <!--w3schools-->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -90,12 +87,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+  <!--Full Jquery for other functions-->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
   <script>
     var addFunctionsDefined = false;
 
+    //for main dashboard page
     const xhr = new XMLHttpRequest();
     const container = document.getElementById("dynamicElement");
 
+    //Appending content of the HTTP Request (from the php files) to the container
     xhr.onload = function(){
       if (this.status === 200) {
         container.innerHTML = xhr.responseText;
@@ -107,6 +112,36 @@
 
     xhr.open("get", "dashboard-files/doctor/calendar.php");
     xhr.send();
+
+    //Live search function for search patients
+    $(document).on("keyup", "#search-bar", function() {
+      
+      var search = $(this).val();
+
+      $.ajax({
+        url:'functions/asyncSearchPatient.php',
+        method:'post',
+        data:{query:search},
+        success:function(response){
+          $(".row").html(response);
+        }
+      });
+      
+    });
+
+
+    $(document).on("click", "#showForm", function() {
+      var patientID = $(this).val();
+
+      $.ajax({
+        url:'functions/showCreateForm.php',
+        method:'post',
+        data:{userID:patientID},
+        success:function(response){
+          $(".presWrapper").html(response);
+        }
+      });
+    });
 
     $("#calendar_button").on('click', function(event) {
       event.preventDefault();
@@ -124,6 +159,16 @@
       event.preventDefault();
       xhr.open("get", "dashboard-files/doctor/prescriptions.php");
       xhr.send();
+
+      function addPresForm() {
+        $(".presWrapper").css("visibility", "visible");
+        
+      }
+      
+      $(document).on("click", "#showForm", function(){
+        addPresForm();
+      });
+
     });
 
     $("#journal").on('click', function(event) {
@@ -170,20 +215,6 @@
 
         addFunctionsDefined = true;
       }
-      
-
-      
-
-
-
-      function addPresForm() {
-        document.getElementByClassName("presWrapper").style.visibility = "visible";
-        
-      }
-      
-      $(document).on("click", "#showForm", function(){
-        addPresForm();
-      });
 
     });
 

@@ -35,12 +35,14 @@
 
 .card-img-top {
 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 8.125rem;
-    width: 8.125rem;
-    position: relative;
-    top: 0.875rem;
-    border-radius: 50%;
-    border: 0.0625rem solid grey;
+  width: 8.125rem;
+  margin-top: 0.875rem;
+  border-radius: 50%;
+  border: 0.0625rem solid grey;
 }
 
 
@@ -86,14 +88,12 @@
 
 #PatientSearch{
     background: #A4292E;
-    position: relative;
     margin: 0 auto;
     width: 90%;
-    height: 90rem;
     border:1px solid #ccc;
     border-radius:10px;
-    margin-top: 50px;
-    margin-right: 3px;
+    margin-top: 3.125rem;
+    margin-right: .188rem;
 }
 
 
@@ -126,7 +126,7 @@ form{
   background: #fff;
   padding: 1.875rem 1.5625rem;
   border-radius: .25rem;
-  visibility: visible;
+  visibility: hidden;
   
 }
 

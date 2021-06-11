@@ -8,8 +8,6 @@
 	//1. Setup database connection
   	require 'connection.php';
 
-	$output = '';
-
 	if(isset($_POST['query'])){
 		$search = $_POST['query'];
 
@@ -31,8 +29,7 @@
 	if($rowcount > 0){
 		for ($index = 0; $index < count($doctors); $index++) {
 
-			$conn = mysqli_connect($servername, $db_username, $db_password, $database);
-
+			require 'connection.php';
 
 			//I. Setting profile picture directory
 			$pictureDirectory = "icons/img_placeholder.png";

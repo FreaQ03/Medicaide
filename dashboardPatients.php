@@ -172,7 +172,6 @@
 
     //Live search function for search doctors
     $(document).on("keyup", "#doctorSearch", function() {
-      //alert('Handler for .keyup() called.');
       
       var search = $(this).val();
 
