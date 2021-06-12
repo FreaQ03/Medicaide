@@ -38,11 +38,10 @@
 
 <body>
 
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-color">
   <div class="container-fluid sticky-top">
     <a class="navbar-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" href="index.php" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,17 +49,18 @@
         </ul>
       <div class="nav-links">
         <ul>
-          <a href="#"><li>ABOUT US</li></a>
-          <a href="#"><li>CONTACT US</li></a>
+          <a href="index.php#aboutUs"><li>ABOUT US</li></a>
+          <a href="index.php#aboutUs"><li>CONTACT US</li></a>
+   
         </ul>
       </div>   
-          <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
+          <a class="nav-link icon" id="calendar" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
+          <a class="nav-link icon" id="search" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-search"></i></a>
+          <a class="nav-link icon" id="clock" aria-current="page" href="#Pcalendar" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
+          <a class="nav-link icon" id="prescriptions" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
+          <a class="nav-link icon" id="journal" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
+          <a class="nav-link icon" id="user" aria-current="page" href="#Pcalendar" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
 
-          <a class="nav-link icon" id="phone" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
-          <a class="nav-link icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
-          <a class="nav-link icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
-          <a class="nav-link icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
-          <a class="nav-link icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
         </li> 
     </div>
   </div>
