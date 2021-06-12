@@ -95,3 +95,14 @@ li:hover {
 	padding-left: .938rem;
 	transition: .4s;
 }
+.dismissbtn {
+	
+	width: 50% !important;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10px !important;
+}
+.doc_choice {
+	display: flex;
+
+}
