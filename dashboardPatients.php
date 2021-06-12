@@ -80,31 +80,8 @@
 <!--Sidebar Functions-->
 <div class="container m-0 p-0 d-inline" id="dynamicBody">
 
-  <!--TOAST-->
-
-  <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-    <!-- Position it -->
-    <div style="position: absolute; top: 0; right: 0;">
-
-      <!-- Then put toasts within -->
-      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-        <div class="toast-header">
-          <img src="..." class="rounded mr-2" alt="...">
-          <strong class="mr-auto">Bootstrap</strong>
-          <small class="text-muted">just now</small>
-          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="toast-body">
-          See? Just like this.
-        </div>
-      </div>
-
-        <!-- pag nadagdagan (here) automatic sila stacked -->
-
-    </div>
-  </div>
+  
+  
 
   <!--SIDEBAR-->
   <ul class="nav d-inline-flex flex-column justify-content-center" id="dash-sidebar">
@@ -135,6 +112,54 @@
   </center>
 
 </div>
+
+
+<div class="container m-0 p-0 d-inline" id="dynamicBody">
+<!--TOAST-->
+
+  <div aria-live="polite" aria-atomic="true" style="position: static; min-height: 200px;">
+    <!-- Position it -->
+    <div style="position: absolute; top: 80px !important; right: 10px;">
+
+
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+        <div class="toast-header">
+          <img src=" " class="rounded mr-2" alt="...">
+          <strong class="mr-auto">Name Here</strong>
+        </div>
+        <div class="toast-body">
+          Your appointment has been accepted!
+        </div>
+        <button type="button" class="dismissbtn btn-primary" data-dismiss="toast" >
+            DISMISS
+          </button>
+      </div>
+
+          <!-- When auto added marami na notif, stacked sila automatically -->
+
+          <!-- EXAMPLE
+                
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+        <div class="toast-header">
+          <img src=" " class="rounded mr-2" alt="...">
+          <strong class="mr-auto">Name Here</strong>
+        </div>
+        <div class="toast-body">
+          Your appointment has been accepted!
+        </div>
+        <button type="button" class="dismissbtn btn-primary" data-dismiss="toast" >
+            DISMISS
+          </button>
+      </div>
+          
+           -->
+
+
+    </div>
+  </div>
+</div>
+
+
 
 <!-- Error Modal -->
 <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
