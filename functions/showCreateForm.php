@@ -57,12 +57,12 @@
 					
 					<input type="hidden" name="patientID" value="' . $patientID . '">
 
-					<label for="addnote">Add Note:</label>
-					<textarea id="output" id="otherNotes" rows="9" wrap="virtual" cols=48 placeholder="optional note"></textarea>
+					<label for="addnote">Optional Notes:</label>
+					<textarea id="output" name="notes"id="otherNotes" rows="9" wrap="virtual" cols=48></textarea>
 	            </div>
 	        </div> 
 	        <div class="Submit">           
-	            <a class="btn btn-outline-primary Prescription" >Submit Prescription</a>
+	            <input class="btn btn-outline-primary Prescription" type="submit" value="Submit Prescription">
 	        </div>
 	        </form>
 	    </div>
