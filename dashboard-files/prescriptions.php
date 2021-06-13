@@ -75,12 +75,16 @@
               <li>' . $prescriptions[$index]["data"] . '
               <br><b> ' . $prescriptions[$index]["dose"] . ' </b>
               <br><i>' . $prescriptions[$index]["repeatBy"] . '</i> </li>
+              <br><i>' . $prescriptions[$index]["route"] . '</i> </li>
             </p>
             <p class="doctorName">
               Prescribed by: ' . $docFname . ' ' . $docLname . '
             </p>
             <p class="card-title">
               Extra notes:
+            </p>
+            <p>
+              ' . $prescriptions[$index]["notes"] . '
             </p>
 
           </div>
