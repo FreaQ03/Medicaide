@@ -4,18 +4,19 @@
 	echo '
 
 		<div class="right pt-0">
+			<form action="functions/createPrescription.php" method="post">
 	        <div class="info">
 	            <h3 id="main-header">Create Prescription Form</h3>
 	            <div class="info_data">
 	                
 	                <div class="form-group">             
 	                	<label for="txtMedicine">Medicine:</label>
-	                    <input type="text" placeholder="Enter specific medicine"> 
+	                    <input type="text" name="medicine" placeholder="Enter specific medicine"> 
 	                </div>
 
 	                <div class="form-group">
 	  					<label for="Frequency">Frequency:</label>
-	  					<select class="form-control" id="sel1">
+	  					<select class="form-control" name="frequency" id="sel1">
 	    					<option>daily (no abbreviation)</option>
 	    					<option>every other day (no abbreviation)</option>
 	    					<option>BID/b.i.d. (twice a day)</option>
@@ -30,7 +31,7 @@
 
 	                 <div class="form-group">
 	  					<label for="selRoute">Route:</label>
-	  					<select class="form-control" id="sel1">
+	  					<select class="form-control" name="route" id="sel1">
 	    					<option>PO (by mouth)</option>
 	    					<option>PR (per rectum)</option>
 	    					<option>IM (intramuscular)</option>
@@ -46,12 +47,13 @@
 
 					<input type="hidden" name="patientID" value="' . $patientID . '">
 
-					<br/><textarea style="width: 300px;height: 110px;" id="output" name="output" rows="9" wrap="virtual" cols=48 placeholder="optional note"></textarea><br>
+					<br/><textarea style="width: 300px;height: 110px;" id="output" name="otherNotes" rows="9" wrap="virtual" cols=48 placeholder="optional note"></textarea><br>
 	            </div>
 	        </div> 
 	        <div class="Submit">           
 	            <a class="btn btn-outline-primary Prescription" >Submit Prescription</a>
 	        </div>
+	        </form>
 	    </div>
 
 	';

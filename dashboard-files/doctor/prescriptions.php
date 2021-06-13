@@ -18,7 +18,7 @@
 	<p> Search a patient via their user ID. Send them a Prescription</p>
 
 <div class="row mx-5 mb-5">
-	
+	<!--Search content will be printed here-->
 </div>
 
 	<div class="presWrapper container-fluid mb-3">

@@ -39,7 +39,7 @@
 									<div class="card-body">
 								        <h5 class="cardTitle">' . $patients[$index]["fname"] . ' ' . $patients[$index]["lname"] . '</h5>
 									    <p class="card-text" > 
-									    	UserID: "' . $patients[$index]["id"] . '"<br>
+									    	User ID: "' . $patients[$index]["id"] . '"<br>
 									    	Address: "here"<br>
 									    </p>
 									    <button id ="showForm" class="btn btn-outline-primary Prescription" type="submit" value="' . $patients[$index]["id"] . '">Create a Prescription</button>
@@ -55,7 +55,7 @@
   	}
 
   	else{
-  		echo '<h1>Search a patient</h1>';
+  		
   	}
 
   	//Closing Database Connection
