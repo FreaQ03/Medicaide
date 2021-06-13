@@ -37,7 +37,7 @@
     //Displaying prescriptions
     if(count($prescriptions) > 0) {
       echo '
-        <div class="card-deck text-light wow animate__animated animate__bounceIn w-50" align="center">
+        <div class="card-deck text-light w-50" align="center">
       ';
 
       //If there are active prescriptions given to patient
