@@ -143,10 +143,12 @@ form{
   margin: 0;
 }
 .form-control {
+  padding-left: 0 !important;
   width: 100%;
   display: inline-block;
   font-size: .95rem;
   text-align: left;
+  margin-left: 0rem !important; 
   margin-bottom: 0.625rem;
   color: #717880;
   border: 0;
@@ -156,6 +158,20 @@ form{
   box-sizing: border-box;
   resize: vertical;
 
+}
+
+input[type="date"]{
+  display: flex;
+  width: 100%;
+  font-size: .95rem;
+  text-align: left;
+  margin-bottom: 0.625rem;
+  color: #717880;
+  border: 0;
+  border-bottom: 0.0625rem solid #3fb6a8;
+  outline: none;
+  box-sizing: border-box;
+  resize: vertical;
 }
 input[type="text"]{
   display: inline-block;
@@ -172,11 +188,12 @@ input[type="text"]{
 }
 
 textarea{
-  margin: 15px;
+ 
   border-radius: .25rem;
-  border-color:  #A4292E;
+  border-color:  #3fb6a8;
   outline: none;
-  max-width: 80%;
+  height: 50%;
+  width: 100%;
 
 
 }
@@ -190,8 +207,13 @@ textarea:focus{
   margin: 15px;
 }
 
-label[for="txtMedicine"], [for="Frequency"], [for="selRoute"] {
+label[for="txtMedicine"], [for="Frequency"], [for="selRoute"], [for="addnote"], [for="takeUntil"]{
   color: #A4292E;
   display: block;
   text-align: left;
+}
+
+.box_fill {
+  align-items: left !important;
+
 }

@@ -14,6 +14,11 @@
 	                    <input type="text" name="medicine" placeholder="Enter specific medicine"> 
 	                </div>
 
+	                <div class="form-group">             
+	                	<label for="txtMedicine">Amount:</label>
+	                    <input type="text" name="medAmount" placeholder="e.g. 10 mg, 1 pill, 1ml"> 
+	                </div>
+
 	                <div class="form-group">
 	  					<label for="Frequency">Frequency:</label>
 	  					<select class="form-control" name="frequency" id="sel1">
@@ -45,9 +50,15 @@
 	  					</select>
 					</div>
 
+					<div class="box_fill">
+                  		<label for="takeUntil">Take Medicine Until</label>
+                  		<input type="date" class="form-controlpres" name="takeUntil" required>
+        			</div>
+					
 					<input type="hidden" name="patientID" value="' . $patientID . '">
 
-					<br/><textarea style="width: 300px;height: 110px;" id="output" name="otherNotes" rows="9" wrap="virtual" cols=48 placeholder="optional note"></textarea><br>
+					<label for="addnote">Add Note:</label>
+					<textarea id="output" id="otherNotes" rows="9" wrap="virtual" cols=48 placeholder="optional note"></textarea>
 	            </div>
 	        </div> 
 	        <div class="Submit">           
