@@ -87,7 +87,7 @@
         Error creating prescription, please re-check the details and try again.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+        <button type="button" class="btn btn-danger modal-close" data-dismiss="modal">CLOSE</button>
       </div>
     </div>
   </div>

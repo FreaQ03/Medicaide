@@ -5,7 +5,7 @@
 
   if(isset($_SESSION['isLogin'])){
     if($_SESSION['isLogin'] == false){
-      header('Location: dashboard.php');
+      header('Location: index.php');
     }
   }
 ?>
@@ -95,7 +95,7 @@
 
     <div class="center">
       <h1>Verify Account</h1>
-      <form id="registerForm" action="functions/registrationPost.php" method="post">
+      <form id="registerForm" action="functions/verifyDoctor.php" method="post">
 
 
 
@@ -110,38 +110,38 @@
 
 
         <div class="user_info">
-        <div class="txt_field">
-          <input type="text" name="first_name" required>
-          <span></span>
-          <label>First Name</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" name="first_name" required>
+            <span></span>
+            <label>First Name</label>
+          </div>
 
-        <div class="txt_field">
-          <input type="text" name="last_name" required>
-          <span></span>
-          <label>Last Name</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" name="last_name" required>
+            <span></span>
+            <label>Last Name</label>
+          </div>
 
-        <div class="txt_field">
-          <input type="text" name="phone_number" placeholder="+63 980 9876 451" required>
-          <span></span>
-          <label>Phone Number</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" name="phone_number" placeholder="+63 980 9876 451" required>
+            <span></span>
+            <label>Phone Number</label>
+          </div>
         </div>
 
         <div class="user_pass">
-        <div class="txt_field">
-          <input type="text" name="Address" required>
-          <span></span>
-          <label>Address</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" name="Address" required>
+            <span></span>
+            <label>Address</label>
+          </div>
 
 
-        <div class="txt_field">
-          <input type="text" name="Hospital" required>
-          <span></span>
-          <label>Hospital</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" name="Hospital" required>
+            <span></span>
+            <label>Hospital</label>
+          </div>
         </div>
 
 
