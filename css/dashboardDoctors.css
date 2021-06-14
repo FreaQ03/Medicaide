@@ -10,6 +10,11 @@ body {
 	margin: 0;
 }
 
+h5 {
+	color: #A4292E !important;
+	font-family: 'Quicksand', sans-serif !important;
+}
+
 .navbar-brand{
 	font-family: 'Quicksand', sans-serif;
 
@@ -106,3 +111,4 @@ li:hover {
 	display: flex;
 
 }
+

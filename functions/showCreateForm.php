@@ -84,10 +84,10 @@
         </button>
       </div>
       <div class="modal-body">
-        Error creating prescription, please re-check the details and try again
+        Error creating prescription, please re-check the details and try again.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">DISMISS</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
       </div>
     </div>
   </div>
