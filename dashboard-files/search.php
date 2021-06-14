@@ -47,8 +47,6 @@
 	
 	<div class="BookingHeader">
 		<h1>Book an Appointment</h1>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#errorModal">Error</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal">Success</button> 
 		<p>Search for your desired nearby Doctor. These are certified Doctors for your ailment. <br> Check their availability details and book an appointment. Your schedule will be updated in you calendar as well.</p> 
 	</div>
 

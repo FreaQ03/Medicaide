@@ -56,32 +56,7 @@
     </div>
   </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Sidebar Functions-->
 <div class="container m-0 p-0 d-inline" id="dynamicBody">
-
-  
-  
 
   <!--SIDEBAR-->
   <ul class="nav d-inline-flex flex-column justify-content-center" id="dash-sidebar">
@@ -112,7 +87,6 @@
   </center>
 
 </div>
-
 
 <div class="container m-0 p-0 d-inline" id="dynamicBody">
 <!--TOAST-->
@@ -153,8 +127,6 @@
       </div>
           
            -->
-
-
     </div>
   </div>
 </div>
@@ -268,6 +240,11 @@
       xhr.open("get", "dashboard-files/search.php");
       xhr.send();
     }
+
+    //When user updates profile-pic, automatic form submit
+    $(document).on("change", "#picfile", function() {
+      $("#profile-picture").submit();
+    });
 
     $("#calendar_button").on('click', function(event) {
       event.preventDefault();

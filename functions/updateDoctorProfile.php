@@ -42,7 +42,7 @@
 			WHERE `id`='.$hospital_database[0]["id"];
 
 			if(mysqli_query($conn, $updateHospital)){
-				header('Location:../dashboardDoctors.php');
+				header('Location:../dashboard.php');
 			}
 
 			else {
@@ -52,12 +52,12 @@
 
 		else {
 			//code to execute when initial hospital is equal with database file
-			header('Location:../dashboardDoctors.php');
+			header('Location:../dashboard.php');
 		}
 	}
 
 	else{
-		header('Location:../dashboardDoctors.php');
+		header('Location:../dashboard.php');
 	}
 	
 
@@ -84,7 +84,7 @@
 			WHERE `id` = ' . $specializationDatabase[0]["id"];
 
 			if(mysqli_query($conn, $updateSpecialization)){
-				header('Location:../dashboardDoctors.php');
+				header('Location:../dashboard.php');
 			}
 
 			else {
@@ -94,7 +94,7 @@
 
 		else{
     	//Code to execute when initial specialization is equal with database file
-    	header('Location:../dashboardDoctors.php');
+    	header('Location:../dashboard.php');
     }
   }
 
