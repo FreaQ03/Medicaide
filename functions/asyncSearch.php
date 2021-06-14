@@ -11,12 +11,14 @@
 	if(isset($_POST['query'])){
 		$search = $_POST['query'];
 
-		//2. SQL Statement
-		$sql = "SELECT * FROM `doctor` WHERE `fname` LIKE '%" . $search . "%' OR `lname` LIKE '%" . $search . "%' LIMIT " . $start . ", " . $limit;
+		$sql = "SELECT * FROM `doctor` WHERE `verified` = 1 
+		AND (`fname` LIKE '%" . $search . "%' 
+		OR `lname` LIKE '%" . $search . "%') 
+		LIMIT " . $start . ", " . $limit;
 		
 	}
 	else{
-		$sql = "SELECT * FROM `doctor` LIMIT " . $start . ", " . $limit;
+		$sql = "SELECT * FROM `doctor` WHERE `verified` = 1 LIMIT " . $start . ", " . $limit;
 	}
 
 	$doctorResult = mysqli_query($conn, $sql);
@@ -52,6 +54,44 @@
 			array_push($specValue, $specRow);
 			}
 
+
+			//III. Getting doctor's schedule
+			$schedule = [];
+
+			//SQL to get the doctor's schedule
+			$getSchedule = "SELECT * FROM `doctor_schedule` WHERE `doc_id` = " . $doctors[$index]["id"] . " ORDER BY `day` ASC";
+
+			//3. Execute SQL
+			$schedResult = mysqli_query($conn, $getSchedule);
+			while ($schedRow = mysqli_fetch_assoc($schedResult)) {
+			array_push($schedule, $schedRow);
+			}
+
+			$scheduleData = "";
+
+			//Set schedule data
+			for($i = 0; $i < count($schedule); $i++){
+
+			//Convert numbered day in database to word
+			$days = [
+			  0 => 'Sunday',
+			  1 => 'Monday',
+			  2 => 'Tuesday',
+			  3 => 'Wednesday',
+			  4 => 'Thursday',
+			  5 => 'Friday',
+			  6 => 'Saturday'
+			];
+
+			$scheduleData = $scheduleData . 
+			'<tr>
+			  <td>' . $days[$schedule[$i]["day"]] . '</td>
+			  <td>' . $schedule[$i]["start_time"] . ' - ' . $schedule[$i]["end_time"] . '</td>
+			</tr>
+			';
+			}
+
+
 			//4. Closing Database Connection
 			mysqli_close($conn);
 
@@ -83,27 +123,12 @@
 			          <table class="table table-striped">
 			    <thead>
 			      <tr>
-			        <th>Time</th>
 			        <th>Date</th>
-			        <th>Contact</th>
+			        <th>Time</th>
 			      </tr>
 			    </thead>
 			    <tbody>
-			      <tr>
-			        <td>8:00am-1:00pm</td>
-			        <td>Monday</td>
-			        <td><i>john@example.com</i></td>
-			      </tr>
-			      <tr>
-			        <td>8:00am-1:00pm</td>
-			        <td>Tueday</td>
-			        <td><i>091919191919</i></td>
-			      </tr>
-			      <tr>
-			        <td>8:00am-1:00pm</td>
-			        <td>Wedneday</td>
-			        <td></td>
-			      </tr>
+			      ' . $scheduleData . '
 			    </tbody>
 			  </table>
 			  </div>

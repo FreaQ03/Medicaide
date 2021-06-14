@@ -17,9 +17,9 @@
   require '../functions/connection.php';
 
   //2. SQL Statements
-  $selectDoctors = "SELECT * FROM `doctor` LIMIT " . $start . ", " . $limit;
+  $selectDoctors = "SELECT * FROM `doctor` WHERE `verified` = 1 LIMIT " . $start . ", " . $limit;
 
-  $checkCount = "SELECT count(`id`) AS `id` FROM `doctor`"; //selects only the count of doctors in database
+  $checkCount = "SELECT count(`id`) AS `id` FROM `doctor` WHERE `verified` = 1"; //selects only the count of verified doctors in database
 
   //3. Execute SQL
   $doctorResult = mysqli_query($conn, $selectDoctors);
@@ -80,6 +80,7 @@
     <?php
     for ($index = 0; $index < count($doctors); $index++) {
 
+      //Set-up SQL connection
       require '../functions/connection.php';
 
 
@@ -89,7 +90,6 @@
       if(!empty($doctors[$index]["profile_pic"])){
         $pictureDirectory = $doctors[$index]["profile_pic"];
       }
-
 
       //II. Setting specialization
       $specialization = $doctors[$index]["specialization"];
@@ -102,6 +102,43 @@
       $specResult = mysqli_query($conn, $compareSpecialization);
       while ($specRow = mysqli_fetch_assoc($specResult)) {
         array_push($specValue, $specRow);
+      }
+
+
+      //III. Getting doctor's schedule
+      $schedule = [];
+
+      //SQL to get the doctor's schedule
+      $getSchedule = "SELECT * FROM `doctor_schedule` WHERE `doc_id` = " . $doctors[$index]["id"] . " ORDER BY `day` ASC";
+
+      //3. Execute SQL
+      $schedResult = mysqli_query($conn, $getSchedule);
+      while ($schedRow = mysqli_fetch_assoc($schedResult)) {
+        array_push($schedule, $schedRow);
+      }
+
+      $scheduleData = "";
+
+      //Set schedule data
+      for($i = 0; $i < count($schedule); $i++){
+
+        //Convert numbered day in database to word
+        $days = [
+          0 => 'Sunday',
+          1 => 'Monday',
+          2 => 'Tuesday',
+          3 => 'Wednesday',
+          4 => 'Thursday',
+          5 => 'Friday',
+          6 => 'Saturday'
+        ];
+
+        $scheduleData = $scheduleData . 
+        '<tr>
+          <td>' . $days[$schedule[$i]["day"]] . '</td>
+          <td>' . $schedule[$i]["start_time"] . ' - ' . $schedule[$i]["end_time"] . '</td>
+        </tr>
+        ';
       }
 
       //4. Closing Database Connection
@@ -135,27 +172,12 @@
                   <table class="table table-striped">
             <thead>
               <tr>
+                <th>Day</th>
                 <th>Time</th>
-                <th>Date</th>
-                <th>Contact</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>8:00am-1:00pm</td>
-                <td>Monday</td>
-                <td><i>john@example.com</i></td>
-              </tr>
-              <tr>
-                <td>8:00am-1:00pm</td>
-                <td>Tueday</td>
-                <td><i>091919191919</i></td>
-              </tr>
-              <tr>
-                <td>8:00am-1:00pm</td>
-                <td>Wedneday</td>
-                <td></td>
-              </tr>
+              ' . $scheduleData . '
             </tbody>
           </table>
           </div>
