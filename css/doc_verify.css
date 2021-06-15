@@ -300,3 +300,7 @@ input[type="submit"]:hover{
 .birthdaycss {
   align-self: center;
 }
+
+#specSelect {
+  background-color: #fff !important;
+}

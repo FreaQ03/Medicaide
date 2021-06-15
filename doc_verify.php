@@ -105,6 +105,16 @@
                   <input type="date" class="form-control" name="birthday" required>
         </div>
 
+        <div class="box_field">
+                  <label class="birthdaycss">Specialization</label>
+                  <select class="form-control" name="Specialization" id="specSelect" required>
+                <option>option1</option>
+                <option>option2</option>
+                <option>option3</option>
+
+              </select>
+        </div>
+
         </div>
 
 
@@ -150,6 +160,41 @@
         
         
       </form>
+
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Verification form sent!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Verification form sent please wait 1-2 business days to get verified
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger modal-close" data-dismiss="modal">CLOSE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>  
+  $('.toast')
+</script>
+
+
+
+
+
+
     </div>
 
 </body>
