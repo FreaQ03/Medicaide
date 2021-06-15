@@ -1,3 +1,15 @@
+<doctype html>
+<?php
+  //security check
+  session_start();
+
+  if(isset($_SESSION['isLogin'])){
+    if($_SESSION['isLogin'] == false){
+      header('Location: index.php');
+    }
+  }
+?>
+
 <head>
 
 	<!--Boostrap CSS-->
@@ -60,86 +72,155 @@
         <p class="subheading">Send image of valid ID (required).</p>
 
         <div class="id-pic-div">
-                <img src="https://i.stack.imgur.com/y9DpT.jpg" id="photo" >
+          <img src="https://i.stack.imgur.com/y9DpT.jpg" class="photo" id="idPhoto">
         </div>
 
-        <input type="file" id="picfile" required>
-        <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
+        <input type="file" class="picfile" id="inputIDPhoto" required>
 
+        <label for="inputIDPhoto" id="uploadpic" ><i class="fas fa-edit">Edit Photo</i></label>
 
         <p class="subheading" style="color: #fff;" >Set profile picture (optional)</p>
 
         <div class="profile-pic-div">
-                <img src="icons/img_placeholder.png" id="photo">
+          <img src="icons/img_placeholder.png" class="photo" id="profilePicture">
         </div>
 
-        <input type="file" id="picfile">
-        <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
+        <input type="file" class="picfile" id="inputDP">
+        <label for="inputDP" id="uploadpic" ><i class="fas fa-edit">Edit Photo</i></label>
+      </div>
 
     </div>
-  </label>
-</label>
-</div>
 
 
     <div class="center">
       <h1>Verify Account</h1>
-      <form id="registerForm" action="functions/registrationPost.php" method="post">
-
-
+      <form id="registerForm" action="functions/verifyPatient.php" method="post">
 
         <div class="user_box">
-        <div class="box_field">
-                  <label class="subheading">Birthday</label>
-                  <input type="date" class="form-control" name="birthday" required>
+          <div class="box_field">
+            <label class="subheading">Birthday</label>
+            <input type="date" class="form-control" id="birthdayInput" name="birthday" required>
+          </div>
         </div>
-
-        </div>
-
-
 
         <div class="user_info">
-        <div class="txt_field">
-          <input type="text" name="first_name" required>
-          <span></span>
-          <label>First Name</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" id="fname" name="first_name" required>
+            <span></span>
+            <label>First Name</label>
+          </div>
 
-        <div class="txt_field">
-          <input type="text" name="last_name" required>
-          <span></span>
-          <label>Last Name</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" id="lname" name="last_name" required>
+            <span></span>
+            <label>Last Name</label>
+          </div>
 
-        <div class="txt_field">
-          <input type="text" name="phone_number" placeholder="+63 980 9876 451" required>
-          <span></span>
-          <label>Phone Number</label>
-        </div>
+          <div class="txt_field">
+            <input type="text" id="inputPhone" name="phone_number" placeholder="+63 980 9876 451" required>
+            <span></span>
+            <label>Phone Number</label>
+          </div>
         </div>
 
         <div class="user_pass">
-        <div class="txt_field">
-          <input type="text" name="Address" required>
-          <span></span>
-          <label>Address</label>
+          <div class="txt_field">
+            <input type="text" id="inputAddress" name="Address" required>
+            <span></span>
+            <label>Address</label>
+          </div>
         </div>
 
-
-        <div class="txt_field">
-          <input type="text" name="Hospital" required>
-          <span></span>
-          <label>Phone Number</label>
-        </div>
-        </div>
-
-
-
-        <input type="submit" value="Verify">
-        
-        
+        <input id="submit-btn" type="submit" value="Verify">
+          
       </form>
     </div>
+
+
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  <!--Full Jquery for other functions-->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#submit-btn').attr('disabled', true);
+
+      $(document).on("change", "#registerForm", function () {
+
+          if ($('#inputIDPhoto').val() != '' && 
+          $('#birthdayInput').val() != '' && 
+          $('#fname').val() != '' && 
+          $('#lname').val() != '' &&
+          $('#inputPhone').val() != '' && 
+          $('#inputAddress').val() != '') {
+
+            $('#submit-btn').attr('disabled', false);
+            alert("Button now enabled");
+          }
+
+          else {
+              $('#submit-btn').attr('disabled', true);
+          }
+
+      });
+
+
+      //Asynchronous update pictures (ID Pic and Profile Pic)
+      $(document).on("change", "#inputIDPhoto", function() {
+        
+        var data = new FormData();
+
+        jQuery.each(jQuery('#inputIDPhoto')[0].files, function(i, file) {
+          data.append('idPhoto-'+i, file);
+        });
+
+        $.ajax({
+          url:'functions/patientVerifyImg.php',
+          data: data,
+          cache: false,
+          contentType: false,
+          processData: false,
+          method:'POST',
+          success:function(response){
+            $("#idPhoto").attr("src", response);
+          }
+        });
+        
+      });
+
+      $(document).on("change", "#inputDP", function() {
+        
+        var data = new FormData();
+
+        jQuery.each(jQuery('#inputDP')[0].files, function(i, file) {
+          data.append('profilePic-'+i, file);
+        });
+
+        $.ajax({
+          url:'functions/patientVerifyImg.php',
+          data: data,
+          cache: false,
+          contentType: false,
+          processData: false,
+          method:'POST',
+          success:function(response){
+            $("#profilePicture").attr("src", response);
+          }
+        });
+        
+      });
+
+    });
+  </script>
+
+  <script>
+    
+  </script>
 
 </body>
 </html>
