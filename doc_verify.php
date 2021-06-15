@@ -186,9 +186,7 @@
   </div>
 </div>
 
-<script>  
-  $('.toast')
-</script>
+
 
 
 

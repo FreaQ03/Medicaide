@@ -304,3 +304,8 @@ input[type="submit"]:hover{
 #specSelect {
   background-color: #fff !important;
 }
+.modal-header h5 {
+  color: #A4292E !important;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
