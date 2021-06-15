@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  font-family: 'Quicksand', sans-serif;
+
 }
 
 .wrapper{
@@ -89,7 +89,6 @@
     margin-bottom: 1.5625rem;
     padding-bottom: 0.3125rem;
     border-bottom: 0.0625rem solid #e0e0e0;
-    font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 0.3125rem;
     font-family: 'Quicksand', sans-serif !important;
@@ -108,7 +107,6 @@
 .category{
   font-size: 1.5rem !important;
   color: #A4292E;
-  font-weight: bold;
   margin-bottom: 0.3125rem;
 }
 
@@ -131,7 +129,6 @@ input[type="submit"]{
   border-radius: 1.5625rem;
   font-size: 1.125rem;
   color: #e9f4fb;
-  font-weight: 700;
   cursor: pointer;
   outline: none;
 }
