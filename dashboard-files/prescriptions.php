@@ -66,9 +66,11 @@
         //Print the prescriptions
         echo '
 
-        <div class="card crdimg d-inline-block" style="background-image: url(img/PrescriptionCard.png);">
-          <div class="card-body cb1">
-            <h5 class="card-title">Prescription #' . $prespNo . ' 
+        <div class="mainCard">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body" style="background-image: url(img/PrescriptionCard.png);">
+        <h5 class="card-title">Prescription #' . $prespNo . ' 
             <br> Prescribed On: <br>' . $prescriptions[$index]["issuedOn"] . ' 
             <br><br> Prescribed to: <br>' . $fname . ' ' . $lname . '</h5>
             <p class="list">
@@ -86,9 +88,11 @@
             <p>
               ' . $prescriptions[$index]["notes"] . '
             </p>
-
+            
+            </div>
           </div>
         </div>
+
 
         ';
       }

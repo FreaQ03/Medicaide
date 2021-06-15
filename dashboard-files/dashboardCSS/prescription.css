@@ -14,8 +14,12 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-.cb1{
-	height: 360px;
+.card{
+	width: 360px;
+	margin-top: : 0 !important;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+	margin-bottom: 1rem !important;
 }
 
 .cb1 li{
