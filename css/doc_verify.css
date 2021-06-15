@@ -276,12 +276,12 @@ input[type="submit"]:hover{
   background-color: #ECECEC;
 }
 
-#photo{
+.photo{
   height: 100%;
   width: 100%;
 }
 
-#picfile {
+.picfile {
   display: none;
 }
 

@@ -21,7 +21,6 @@
 	$sql = "UPDATE `doctor` SET 
 	`fname` = '" . $first_name . "',
 	`lname` = '" . $last_name . "', 
-	`profile_pic` = NULL,
 	`specialization` = '" . $specialization . "',
 	`birthday`= '" . $birthday . "' 
 	WHERE `id` = " . $userID;

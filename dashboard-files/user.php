@@ -51,7 +51,7 @@
 
         <form action="functions/updatePatientDP.php" method="post" class="mb-0" id="profile-picture" enctype="multipart/form-data">
             <input type="file" id="picfile" name="profile-pic">
-            <label for="picfile" id="uploadpic"><i class="fas fa-edit">Edit Photo</label></i>
+            <label for="picfile" id="uploadpic"><i class="fas fa-edit">Edit Photo</i></label>
         </form>
      
         <p id="patientName" class="mt-0"><?php echo $_SESSION['fname'] . " " . $_SESSION['lname'];?></p>

@@ -13,11 +13,11 @@
   	require 'connection.php';
 
 	//2. Insert SQL
-	$sql = "UPDATE `doctor` SET `profile_pic` = 'user-files/doctor/profile-pic/" . $profilePicture['name'] . "' WHERE `id` = " . $userID; 
+	$sql = "UPDATE `doctor` SET `profile_pic` = 'user-files/doctor/profile-pic/" . $userID . "/" . $profilePicture['name'] . "' WHERE `id` = " . $userID;
 
 	//3. Execute SQL
 	if (mysqli_query($conn, $sql)) {
-		move_uploaded_file($profilePicture['tmp_name'], '../user-files/doctor/profile-pic/' . $profilePicture['name']);
+		move_uploaded_file($profilePicture['tmp_name'], "../user-files/doctor/profile-pic/" . $userID . "/" . $profilePicture['name']);
 		header('Location: ../dashboard.php');
 
 	} 

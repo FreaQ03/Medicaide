@@ -18,7 +18,6 @@
 	$sql = "UPDATE `patient` SET 
 	`fname` = '" . $first_name . "',
 	`lname` = '" . $last_name . "', 
-	`profile_pic` = NULL,
 	`birthday`= '" . $birthday . "' 
 	WHERE `id` = " . $userID;
 

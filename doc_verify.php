@@ -65,55 +65,54 @@
     </div>
   </div>
 </nav>
+
+
     <div class="picform">
+      <form>
+        <div class="form-group" id="account-container">        
+          <p class="subheading" style="color: #fff;" >Send image of valid ID (required).</p>
 
-      <div class="form-group" id="account-container">        
-        <p class="subheading" style="color: #fff;" >Send image of valid ID (required).</p>
+          <div class="id-pic-div">
+            <img src="https://i.stack.imgur.com/y9DpT.jpg" class="photo" id="idPhoto" >
+          </div>
 
-        <div class="id-pic-div">
-                <img src="https://i.stack.imgur.com/y9DpT.jpg" id="photo" >
+          <input type="file" class="picfile" id="inputIDPhoto" required>
+
+          <label for="inputIDPhoto" id="uploadpic" ><i class="fas fa-edit">Edit Photo</i></label>
+
+          <p class="subheading" style="color: #fff;" >Set profile picture (optional)</p>
+
+          <div class="profile-pic-div">
+            <img src="icons/img_placeholder.png" class="photo" id="profilePicture">
+          </div>
+
+          <input type="file" class="picfile" id="inputDP">
+          <label for="inputDP" id="uploadpic" ><i class="fas fa-edit">Edit Photo</i></label>
+      
         </div>
-
-        <input type="file" id="picfile" required>
-        <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
-
-
-        <p class="subheading" style="color: #fff;" >Set profile picture (optional)</p>
-
-        <div class="profile-pic-div">
-                <img src="icons/img_placeholder.png" id="photo">
-        </div>
-
-        <input type="file" id="picfile">
-        <label for="picfile" id="uploadpic" ><i class="fas fa-edit">Edit Photo</label></i>
-
+      </form>
     </div>
-  </label>
-</label>
-</div>
 
 
     <div class="center">
       <h1>Verify Account</h1>
       <form id="registerForm" action="functions/verifyDoctor.php" method="post">
 
-
-
         <div class="user_box">
-        <div class="box_field">
-                  <label class="birthdaycss">Birthday</label>
-                  <input type="date" class="form-control" name="birthday" required>
-        </div>
+          <div class="box_field">
+            <label class="birthdaycss">Birthday</label>
+            <input type="date" id="birthdayInput" class="form-control" name="birthday" required>
+          </div>
 
-        <div class="box_field">
-                  <label class="birthdaycss">Specialization</label>
-                  <select class="form-control" name="Specialization" id="specSelect" required>
-                <option>option1</option>
-                <option>option2</option>
-                <option>option3</option>
+          <div class="box_field">
+            <label class="birthdaycss">Specialization</label>
+            <select class="form-control" name="Specialization" id="specSelect" required>
+              <option>option1</option>
+              <option>option2</option>
+              <option>option3</option>
+            </select>
 
-              </select>
-        </div>
+          </div>
 
         </div>
 
@@ -121,19 +120,19 @@
 
         <div class="user_info">
           <div class="txt_field">
-            <input type="text" name="first_name" required>
+            <input type="text" name="first_name" id="fname" required>
             <span></span>
             <label>First Name</label>
           </div>
 
           <div class="txt_field">
-            <input type="text" name="last_name" required>
+            <input type="text" name="last_name" id="lname" required>
             <span></span>
             <label>Last Name</label>
           </div>
 
           <div class="txt_field">
-            <input type="text" name="phone_number" placeholder="+63 980 9876 451" required>
+            <input type="text" name="phone_number" id="inputPhone" placeholder="+63 980 9876 451" required>
             <span></span>
             <label>Phone Number</label>
           </div>
@@ -141,14 +140,14 @@
 
         <div class="user_pass">
           <div class="txt_field">
-            <input type="text" name="Address" required>
+            <input type="text" name="Address" id="inputAddress" required>
             <span></span>
             <label>Address</label>
           </div>
 
 
           <div class="txt_field">
-            <input type="text" name="Hospital" required>
+            <input type="text" name="Hospital" id="inputHospital" required>
             <span></span>
             <label>Hospital</label>
           </div>
@@ -156,7 +155,7 @@
 
 
 
-        <input type="submit" value="Verify">
+        <input type="submit" id="submit-btn" value="Verify">
         
         
       </form>
@@ -199,6 +198,89 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!--Full Jquery for other functions-->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      //Submit button will only be enabled
+      //when everything is filled up (including ID upload)
+      $('#submit-btn').attr('disabled', true);
+
+      $(document).on("change", "#registerForm", function () {
+
+          if ($('#inputIDPhoto').val() != '' && 
+          $('#birthdayInput').val() != '' && 
+          $('#specSelect').val() != '' && 
+          $('#fname').val() != '' && 
+          $('#lname').val() != '' &&
+          $('#inputPhone').val() != '' &&
+          $('#inputHospital').val() != '' && 
+          $('#inputAddress').val() != '') {
+
+            $('#submit-btn').attr('disabled', false);
+            alert("Triggered");
+          }
+
+          else {
+              $('#submit-btn').attr('disabled', true);
+          }
+
+      });
+
+
+      //Asynchronous update pictures (ID Pic and Profile Pic)
+      $(document).on("change", "#inputIDPhoto", function() {
+        
+        var data = new FormData();
+
+        jQuery.each(jQuery('#inputIDPhoto')[0].files, function(i, file) {
+          data.append('idPhoto-'+i, file);
+        });
+
+        $.ajax({
+          url:'functions/doctorVerifyImg.php',
+          data: data,
+          cache: false,
+          contentType: false,
+          processData: false,
+          method:'POST',
+          success:function(response){
+            $("#idPhoto").attr("src", response);
+          }
+        });
+        
+      });
+
+      $(document).on("change", "#inputDP", function() {
+        
+        var data = new FormData();
+
+        jQuery.each(jQuery('#inputDP')[0].files, function(i, file) {
+          data.append('profilePic-'+i, file);
+        });
+
+        $.ajax({
+          url:'functions/doctorVerifyImg.php',
+          data: data,
+          cache: false,
+          contentType: false,
+          processData: false,
+          method:'POST',
+          success:function(response){
+            $("#profilePicture").attr("src", response);
+          }
+        });
+        
+      });
+
+    });
+  </script>
 
 </body>
 </html>

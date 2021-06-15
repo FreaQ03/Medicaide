@@ -148,6 +148,9 @@
 
   <script>
     $(document).ready(function () {
+
+      //Submit button will only be enabled
+      //when everything is filled up (including ID upload)
       $('#submit-btn').attr('disabled', true);
 
       $(document).on("change", "#registerForm", function () {
@@ -160,7 +163,6 @@
           $('#inputAddress').val() != '') {
 
             $('#submit-btn').attr('disabled', false);
-            alert("Button now enabled");
           }
 
           else {
