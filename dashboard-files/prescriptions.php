@@ -26,10 +26,8 @@
 <div class="PrespHeader">
   <h1>Your Prescriptions</h1>
 </div> 
-
-<div class="container">
   
-  
+<div class="container float-right">
   <?php
     $fname = $_SESSION['fname'];
     $lname = $_SESSION['lname'];
@@ -37,7 +35,7 @@
     //Displaying prescriptions
     if(count($prescriptions) > 0) {
       echo '
-        <div class="card-deck text-light w-50" align="center">
+        <div class="row text-light" align="center">
       ';
 
       //If there are active prescriptions given to patient
@@ -66,32 +64,48 @@
         //Print the prescriptions
         echo '
 
-        <div class="mainCard">
-          <div class="col-sm-6">
+          <div class="col-sm-4 mx-2">
             <div class="card">
               <div class="card-body" style="background-image: url(img/PrescriptionCard.png);">
-        <h5 class="card-title">Prescription #' . $prespNo . ' 
-            <br> Prescribed On: <br>' . $prescriptions[$index]["issuedOn"] . ' 
-            <br><br> Prescribed to: <br>' . $fname . ' ' . $lname . '</h5>
-            <p class="list">
-              <li>' . $prescriptions[$index]["data"] . '
-              <br><b> ' . $prescriptions[$index]["dose"] . ' </b>
-              <br><i>' . $prescriptions[$index]["repeatBy"] . '</i> </li>
-              <br><i>' . $prescriptions[$index]["route"] . '</i> </li>
-            </p>
-            <p class="doctorName">
-              Prescribed by: ' . $docFname . ' ' . $docLname . '
-            </p>
-            <p class="card-title">
-              Extra notes:
-            </p>
-            <p>
-              ' . $prescriptions[$index]["notes"] . '
-            </p>
-            
+
+                <h5 class="card-title">
+                  Prescription #' . $prespNo . ' <br><br> Prescribed On: <br>' . $prescriptions[$index]["issuedOn"] . ' 
+
+                  <br>
+                  <br>
+
+                  Take Until: 
+                  <br>
+                  ' . $prescriptions[$index]["repeatUntil"] . '  
+
+                  <br>
+                  <br> 
+
+                  Prescribed to: <br>' . $fname . ' ' . $lname . '
+                </h5>
+
+                <p class="list">
+                  <li>' . $prescriptions[$index]["data"] . '
+                    <br><b> ' . $prescriptions[$index]["dose"] . ' </b>
+                    <br><i>' . $prescriptions[$index]["repeatBy"] . '</i> 
+                    <br>' . $prescriptions[$index]["route"] . '
+                  </li>
+                </p>
+
+                <p class="doctorName">
+                  Prescribed by: ' . $docFname . ' ' . $docLname . '
+                </p>
+
+                <p class="card-title">
+                  Extra notes:
+                </p>
+
+                <p>
+                  ' . $prescriptions[$index]["notes"] . '
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
 
         ';
@@ -110,5 +124,4 @@
     }
     
   ?>
-
 </div>
