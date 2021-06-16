@@ -115,21 +115,23 @@
             <span></span>
             <label>Last Name</label>
           </div>
+        </div>
+
+        <div class="user_pass">
+
+          <div class="txt_field">
+            <input type="text" id="inputAddress" name="Address" required>
+            <span></span>
+            <label>Address</label>
+          </div>
 
           <div class="txt_field">
             <input type="text" id="inputPhone" name="phone_number" placeholder="+63 980 9876 451" required>
             <span></span>
             <label>Phone Number</label>
           </div>
-        </div>
 
-        <div class="user_pass">
-          <div class="txt_field">
-            <input type="text" id="inputAddress" name="Address" required>
-            <span></span>
-            <label>Address</label>
-          </div>
-        </div>
+      </div>
 
         <input id="submit-btn" type="submit" value="Verify">
           

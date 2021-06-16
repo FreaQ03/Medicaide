@@ -28,12 +28,14 @@ h5 {
 .nav-links ul{
 	margin-left: 3.125rem;
 	display: inline;
+	font-weight: normal !important;
 }
 
 .nav-links ul li{
 	list-style: none;
 	display: inline-block;
 	padding: .5rem 1.563rem;
+	font-weight: normal !important;
 }
 
 .nav-links ul a{
@@ -114,8 +116,10 @@ li:hover {
 	font-size: .75rem;
 }
 
+
 .doc_choice {
 	display: flex;
+	background: #fff !important;
 
 }
 
@@ -123,3 +127,6 @@ li:hover {
 	font-size: 1.25rem;
 }
 
+.toast-body {
+	background: #fff !important;
+}
