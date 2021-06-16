@@ -6,6 +6,13 @@
 	$patientID = $_SESSION['userID'];
 	$date = date("Y-m-d");
 
+	if(isset($_SESSION['targetDate'])){
+		$date = $_SESSION['targetDate'];
+	}
+	else{
+		$date = date("Y-m-d");
+	}
+
 	//1. Setup database connection
   	require 'connection.php';
 
@@ -21,12 +28,29 @@
 	//1.3 Set journal ID
 	$journalID = $row["id"];
 
-	//II. Inserting data to database
+	//II. Check if date exists in database
 
 	//2.1 SELECT SQL
-	$sql = 'INSERT INTO `journal_entries` (`pat_id`, `journal_id`, `data`, `createdOn`) VALUES (' . $patientID . ', ' . $journalID . ', "' . $formData . '", "' . $date . '")';
+	$checkSQL = "SELECT * FROM `journal_entries` WHERE `createdOn` = '" . $date . "' AND `pat_id` = " . $patientID;
 
-	//3. Execute SQL
+	$dateResult = mysqli_query($conn, $checkSQL);
+	$dateRow = mysqli_fetch_assoc($dateResult);
+
+	//II. Inserting data to database
+
+	if(count($dateRow) > 0){
+		//There is an existing entry for the day
+		//3.1 UPDATE SQL
+		$sql = "UPDATE `journal_entries` SET `data` = '" . $formData . "' WHERE `createdOn` = '" . $date . "' AND `pat_id` = " . $patientID;
+	}
+
+	else{
+		//There is no existing entry for the day
+		//3.1 INSERT SQL
+		$sql = 'INSERT INTO `journal_entries` (`pat_id`, `journal_id`, `data`, `createdOn`) VALUES (' . $patientID . ', ' . $journalID . ', "' . $formData . '", "' . $date . '")';
+	}
+
+	//3.2 Execute SQL
 	if(mysqli_query($conn, $sql)) {
 		header('Location: ../dashboard.php');
 	}
