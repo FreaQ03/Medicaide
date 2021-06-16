@@ -144,10 +144,13 @@
         </div>
         </div>
 
+        <div class="terms mb-2">
+          By clicking Register, you agree to our <a href="TermsPolicy.php">Terms, Data Policy and Cookies Policy.</a>
+        </div>
 
 
         <input type="submit" value="Register">
-        <div class="register_link">
+        <div class="register_link"> 
           Not a member? <a href="login.php">Login</a>
         </div>
 

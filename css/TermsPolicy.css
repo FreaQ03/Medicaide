@@ -1,0 +1,87 @@
+.navbar-brand{
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nav-links{
+  flex: 1;
+}
+
+.nav-links ul{
+  margin-left: 3.125rem;
+  display: inline;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: .5rem 1.563rem;
+}
+
+.nav-links ul a{
+  color: #A4292E;
+  text-decoration: none;
+  font-size: .813rem;
+}
+
+.nav-links ul li::after{
+  content: '';
+  width: 0;
+  height: .125rem;
+  background: #A4292E;
+  display: block;
+  margin: auto;
+  transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+
+
+#Policies{
+  background: #A4292E;
+  margin: 0 auto;
+  width: 90%;
+  border:1px solid #ccc;
+  border-radius:10px;
+  margin-top: 5rem;
+  margin-right: 5rem;
+}
+.terms h1{
+  text-align: center;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 2rem;
+  text-decoration: underline;
+
+}
+.terms p{
+  margin-right: 10rem;
+  margin-left: 10rem;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+.terms h2{
+  text-align: center;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: underline;
+}
+.terms h3{
+  text-align: center;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+.terms strong{
+  margin-right: 10rem;
+  margin-left: 10rem;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+.terms li{
+  margin-right: 10rem;
+  margin-left: 10rem;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
