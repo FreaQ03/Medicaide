@@ -64,7 +64,7 @@
 	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="caption" style="height: 180px;">
     <h1><b>MEDICAIDE</b></h1>
-    <p>For Patients and Doctors Medical Assistance</p>
+    <p>Saved by Medicine. Made for Convenience.</p>
      <a class="btn btn-outline-success btn-lg" href="login.php" role="button">Login</a>
     <a class="btn btn-primary btn-lg" href="register.php" role="button">Signup</a>
   </div>

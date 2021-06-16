@@ -71,7 +71,7 @@
     <div class="row">
       <div class="col-sm">
         <div class="login-brand" href="#" style="color: #A4292E;"><b>MEDICAIDE</b> </div>
-        <div class="placeholdperry" href="#" style="color: #A4292E;"><b>(Replaced with logo or add phrase below idk )</b> </div>
+        <div class="placeholdperry" href="#" style="color: #A4292E;"><b>Saved by Medicine. Made for Convenience.</b> </div>
       </div>
       <div class="col-sm">
         <div class="center">
