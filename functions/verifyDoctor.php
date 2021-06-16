@@ -8,8 +8,7 @@
 	$phone = $_POST['phone_number'];
 	$address = $_POST['Address'];
 	$hospital = $_POST['Hospital'];
-	//$specialization = $_POST['specialization'];
-	$specialization = "1";
+	$specialization = $_POST['Specialization'];
 
 	$userID = $_SESSION['userID'];
 
@@ -25,12 +24,6 @@
 	`birthday`= '" . $birthday . "' 
 	WHERE `id` = " . $userID;
 
-	if (mysqli_query($conn, $sql)){
-		header('Location: ../dashboard.php?verifySent=1');
-	}
-	else {
-		echo mysqli_error($conn);
-	}
 
 
 	//II. Update doctor address
@@ -44,7 +37,17 @@
 	'" . $address . "'
 	)";
 
-	if (mysqli_query($conn, $insertDetails)){
+	//III. Insert doctor hospital
+	$insertHosp = "INSERT INTO `doctor_hospitals`(
+	`doc_id`, 
+	`hospital`
+	) VALUES (
+	" . $userID . ",
+	'" . $hospital . "'
+	)";
+
+	//Execute SQL
+	if (mysqli_query($conn, $sql) && mysqli_query($conn, $insertDetails) && mysqli_query($conn, $insertHosp)){
 		header('Location: ../dashboard.php?verifySent=1');
 	}
 	else {
