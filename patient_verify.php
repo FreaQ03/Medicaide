@@ -106,15 +106,15 @@
         <div class="user_info">
 
           <div class="txt_field">
-            <center><input type="text" id="fname" name="first_name" required>
+            <input type="text" id="fname" name="first_name" required>
             <span></span>
-            <label>First Name</label></center>
+            <label>First Name</label>
           </div>
 
-          <center><div class="txt_field">
-            <center><input type="text" id="lname" name="last_name" required>
+          <div class="txt_field">
+            <input type="text" id="lname" name="last_name" required>
             <span></span>
-            <label>Last Name</label></center>
+            <label>Last Name</label>
           </div>
 
         </div>
@@ -122,48 +122,21 @@
         <div class="user_pass">
 
           <div class="txt_field">
-            </center><input type="text" id="inputAddress" name="Address" required>
+            <input type="text" id="inputAddress" name="Address" required>
             <span></span>
-            <label>Address</label></center>
+            <label>Address</label>
           </div>
 
           <div class="txt_field">
-            </center><input type="text" id="inputPhone" name="phone_number" placeholder="+63 980 9876 451" required>
+            <input type="text" id="inputPhone" name="phone_number" placeholder="+63 980 9876 451" required>
             <span></span>
-            <label>Phone Number</label></center>
+            <label>Phone Number</label>
           </div>
 
-      </div>
+        </div>
 
         <input id="submit-btn" type="submit" value="Verify">
-
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Thank you for registering! Please verify your account details to be able to access Medicaide's features.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-          
+ 
       </form>
     </div>
 
@@ -249,10 +222,6 @@
       });
 
     });
-  </script>
-
-  <script>
-    
   </script>
 
 </body>
