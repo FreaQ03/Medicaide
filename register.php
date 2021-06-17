@@ -151,7 +151,7 @@
 
         <input type="submit" value="Register">
         <div class="register_link"> 
-          Not a member? <a href="login.php">Login</a>
+         Already a member? <a href="login.php">Login</a>
         </div>
 
         <?php
