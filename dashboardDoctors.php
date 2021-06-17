@@ -83,7 +83,7 @@
 </div>
 
 
-<div class="container m-0 p-0 d-inline" id="dynamicBody">
+<div class="container m-0 p-0 d-inline">
 
   <?php
 
@@ -188,7 +188,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Verify your account details</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -198,6 +198,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">DISMISS</button>
+        <a class="btn btn-success" href="doc_verify.php" role="button">GO</a>
       </div>
     </div>
   </div>
@@ -215,9 +216,14 @@
       echo "<script> $('#verifyModal').modal('show');</script>";
     } 
 
+    //Show verification notification modal if user is not yet verified
+    if(isset($_SESSION['verified'])){
+      if($_SESSION['verified'] == 0){
+        echo "<script> $('#verificationNotif').modal('show');</script>";
+      }
+    }
   ?>
-
-  <script> $('#verificationNotif').modal('show');</script>
+  
 
   <script>
     $('.toast').toast('show');

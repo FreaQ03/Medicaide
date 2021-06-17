@@ -32,6 +32,7 @@
     $_SESSION['lname'] = $row['lname'];
     $_SESSION['userID'] = $row['id'];
     $_SESSION['userType'] = "doctor";
+    $_SESSION['verified'] = $row['verified'];
 
     header('Location: ../dashboard.php');
   } else {

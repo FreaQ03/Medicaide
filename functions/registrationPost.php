@@ -69,6 +69,7 @@
           $_SESSION['fname'] = $first_name;
           $_SESSION['lname'] = $last_name;
           $_SESSION['userType'] = $userType;
+          $_SESSION['verified'] = 0;
 
           header('Location: ../dashboard.php');
           

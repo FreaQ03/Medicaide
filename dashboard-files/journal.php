@@ -26,12 +26,16 @@
 
     //Automatically include today's journal data
     //If there is an entry on the same day
-    if(date("Y-m-d") == $userDates[0]["createdOn"]){
-    	$journalData = $userDates[0]["data"];
+    if(count($userDates) > 0){
+    	if(date("Y-m-d") == $userDates[0]["createdOn"]){
+    		$journalData = $userDates[0]["data"];
+    	}
+
+	    else{
+	    	$journalData = "";
+	    }
     }
-    else{
-    	$journalData = "";
-    }
+    
 
     //Closing Database Connection
     mysqli_close($conn);
@@ -74,7 +78,7 @@
 			<!--Initial Journal Entry-->
 			<div class="journalOutput">
 
-			    <textarea id="output" name="journalData" placeholder="Write your day here..." required><?php echo $journalData; ?></textarea>
+			    <textarea id="output" name="journalData" placeholder="Write your day here..." required><?php if(count($userDates) > 0){echo $journalData;} ?></textarea>
 			    <p align="center" class="clearBtn"><input type="reset" value="clear"></p>
 			  	
 			</div>

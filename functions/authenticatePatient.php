@@ -31,6 +31,7 @@
     $_SESSION['fname'] = $row['fname'];
     $_SESSION['lname'] = $row['lname'];
     $_SESSION['userID'] = $row['id'];
+    $_SESSION['verified'] = $row['verified'];
 
     $_SESSION['userType'] = "patient";
 

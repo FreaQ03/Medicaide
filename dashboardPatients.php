@@ -88,7 +88,7 @@
 
 </div>
 
-<div class="container m-0 p-0 d-inline" id="dynamicBody">
+<div class="container m-0 p-0 d-inline">
 
   <?php
 
@@ -217,7 +217,6 @@
 </div>
 
 
-
 <!-- Error Modal -->
 <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -236,7 +235,7 @@
   </div>
 </div>  
 
-<!-- Success Modal -->
+<!-- Success Booking Modal -->
 <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -245,10 +244,52 @@
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       Your booking was sucessful, see your calendar to check the time and date of appointment. See you ;3 
+       Your booking was sucessful, see your calendar to check the time and date of appointment. See you! 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Verification Notification Modal -->
+<div class="modal fade" id="verificationNotif" data-backdrop="static" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Verify your account details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Thank you for registering! Please verify your account details to be able to access Medicaide's features.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">DISMISS</button>
+        <a class="btn btn-success" href="patient_verify.php" role="button">GO</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Verification Success Modal -->
+<div class="modal fade" id="verifyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title verify-title" id="exampleModalLabel">Verification form sent!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Verification form sent please wait 1-2 business days for us to verify your information.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger modal-close" data-dismiss="modal">CLOSE</button>
       </div>
     </div>
   </div>
@@ -260,23 +301,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <!--Shows modals for appointment queries-->
   <?php 
 
+    //Shows modals for appointment queries
     if(isset($_GET['docAvail'])){
       echo "<script> $('#errorModal').modal('show');</script>";
     } 
 
-    
-  ?>
-
-  <?php 
-
+    //Shows modal after booking is success
     if(isset($_GET['bookSuccess'])){
       echo "<script> $('#successModal').modal('show');</script>";
     } 
 
-    
+    //Show verification notification modal if user is not yet verified
+    if(isset($_SESSION['verified'])){
+      if($_SESSION['verified'] == 0){
+        echo "<script> $('#verificationNotif').modal('show');</script>";
+      }
+    }
+
+    //Show verification modal after submitting verification form
+    if(isset($_GET['verifySent'])){
+      echo "<script> $('#verifyModal').modal('show');</script>";
+    } 
+
   ?>
 
   <script>
