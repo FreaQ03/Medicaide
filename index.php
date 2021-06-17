@@ -91,8 +91,8 @@
         <div class="col-8 features-col features-text px-5 my-5" style="padding-right: 9rem!important;
         padding-left: 13rem!important;">
           <h2 class="wow animate__animated animate__fadeInDown">MADE FOR PATIENTS AND DOCTORS</h2>
-            <p class="wow animate__animated animate__fadeInDown">Our goal/aim (subheading)</p>
-            <p class="wow animate__animated animate__fadeInDown">Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. Description here before entering the features, give introductions or over view about the website and or the developers keep it atleast 3 sentences or so. 
+            <p class="wow animate__animated animate__fadeInDown">Our goal</p>
+            <p class="wow animate__animated animate__fadeInDown"> Medicaide is a website for both patients and doctors that seeks medication assistance. The team behind Medicaide aims to decrease the growing number of patients with medication nonadherence or for those patients that are struggling to proceed and continue their treatment. Medicaide is a free website with the unlimited use of the features. Our objective is to reach out to as many as possible users to lessen the cost of healthcare expenses to patients.
             </p>
         </div>
 
@@ -112,40 +112,39 @@
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/calendar.png);">
         <div class="card-body cb1">
           <h5 class="card-title">CALENDAR <br> TRACKING</h5>
-          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+          <p class="card-text"> <br>For patients to view their medication and appointment schedule; For doctors to view their scheduled appointments from their patients.<br><br><br><br></p>
         </div>
       </div>
   
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/search.png);">
         <div class="card-body cb2">
           <h5 class="card-title">APPOINTMENT BOOKING<br>&<br>DOCTOR SEARCH AVAILABILITY</h5>
-          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization</p>
+          <p class="card-text">Patient users could search for their desired doctor around their area while the doctors may view their patients scheduled appointment in the calendar.<br><br></p>
         </div>
       </div>
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/clock.png);">
         <div class="card-body cb3">
           <h5 class="card-title">MEDICATION <br> REMINDER</h5>
-          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
-        </div>
+          <p class="card-text"><br>It is also indicated in the calendar where the medication schedules are shown, the calendar page will pop up a notification to alert patients that they need to take their medication on that specific time and day.<br><br></p>
       </div>
     </div>
     <div class="card-deck text-light mt-5 wow animate__animated animate__bounceIn" align="center">
       <div class="card crdimg4 crdimg w-25 d-inline-block" style="background-image: url(bgCards/journal.png);">
         <div class="card-body cb4">
           <h5 class="card-title">PATIENT'S <br> JOURNAL</h5>
-          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+          <p class="card-text"><br>Patients may also share their experience on what they feel about their treatment journey, the doctors may view their journal to help them monitor their patient’s progress.<br><br><br></p>
         </div>
       </div>
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/presp.png);">
         <div class="card-body cb5">
           <h5 class="card-title">DOCTOR'S <br> PRESCRIPTIONS</h5>
-          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+          <p class="card-text"><br><br>Doctors may also give digitally made prescriptions for the convenience of both users, Patients and Physicians. <br><br><br><br></p>
         </div>
       </div>
       <div class="card crdimg w-25 d-inline-block" style="background-image: url(bgCards/user.png);">
         <div class="card-body cb6">
           <h5 class="card-title">PATIENTS <br> AND DOCTORS</h5>
-          <p class="card-text">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+          <p class="card-text"><br>Both users may have an account to access the features of Medicaide, after finishing the verification forms, Medicaide is ready to use.<br><br><br><br></p>
         </div>
       </div>
     </div>
@@ -155,7 +154,7 @@
   <section id="aboutUs">
   <div class="container about-us d-flex flex-column justify-content-center align-items-center h-75 mt-5">
     <h1><u> About Us</u></h1>
-    <p class="px-5">Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptionsDoctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions</p>
+    <p class="px-5">Medicaide is a website made by Senior High School students that studies under the School of Information Technology bootcamp semester of the Senior High School program in Asia Pacific College. They aspire to help people that are in need of medical assistance to help improve the healthcare system of the Philippines. Their main goal is to address medication nonadherence and to eliminate poor doctor to patient communication, in that way, people may lessen their healthcare costs. Their motivation is also to help the healthcare providers monitor their patient’s needs. With this, Medicaide will be the bridge for the patients to be saved by medicine and medicaide is made for convenience.</p>
   </div>
   </section>
 
@@ -163,7 +162,7 @@
 <!--contact us-->
   <footer>
     <p>Contact Us</p>
-    <p>Doctors are can give prescriptions with proper authorization, so that patients can conveniently access their healthcare prescriptions.Doctors are can give prescriptions with proper authorization.</p>
+    <p>If there are suggestions on how to improve our website, we gladly appreciate your comments. Kindly send it to our social media accounts or send us an email. We are happy to develop Medicaide with such advancements that could help our users for better service. </p>
     <!--social-->
     <div class="social-icons">
       <a href=""><i class="fas fa-envelope"></i></a>
