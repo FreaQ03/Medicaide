@@ -94,15 +94,21 @@ body {
   color: #A4292E;
 }
 .center form .user_info {
-  display: flex;
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
 }
 .center form .user_box {
   align-self: left;
-  display: flex ;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
 }
 .center form .user_pass {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  
 }
 form .txt_field{
   position: relative;
@@ -110,6 +116,7 @@ form .txt_field{
   margin-top: 30px;
   margin-right: 30px;
   margin-bottom: 30px;
+  
 }
 .txt_field input{
   width: 100%;

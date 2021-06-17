@@ -104,31 +104,33 @@
         </div>
 
         <div class="user_info">
-          <div class="txt_field">
-            <input type="text" id="fname" name="first_name" required>
-            <span></span>
-            <label>First Name</label>
-          </div>
 
           <div class="txt_field">
-            <input type="text" id="lname" name="last_name" required>
+            <center><input type="text" id="fname" name="first_name" required>
             <span></span>
-            <label>Last Name</label>
+            <label>First Name</label></center>
           </div>
+
+          <center><div class="txt_field">
+            <center><input type="text" id="lname" name="last_name" required>
+            <span></span>
+            <label>Last Name</label></center>
+          </div>
+
         </div>
 
         <div class="user_pass">
 
           <div class="txt_field">
-            <input type="text" id="inputAddress" name="Address" required>
+            </center><input type="text" id="inputAddress" name="Address" required>
             <span></span>
-            <label>Address</label>
+            <label>Address</label></center>
           </div>
 
           <div class="txt_field">
-            <input type="text" id="inputPhone" name="phone_number" placeholder="+63 980 9876 451" required>
+            </center><input type="text" id="inputPhone" name="phone_number" placeholder="+63 980 9876 451" required>
             <span></span>
-            <label>Phone Number</label>
+            <label>Phone Number</label></center>
           </div>
 
       </div>
