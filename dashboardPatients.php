@@ -89,46 +89,131 @@
 </div>
 
 <div class="container m-0 p-0 d-inline" id="dynamicBody">
-<!--TOAST-->
 
-  <div aria-live="polite" aria-atomic="true" style="position: static; min-height: 200px;">
+  <?php
+
+  //I. Find declined appointment requests from database
+  $declined = [];
+  $userID = $_SESSION['userID'];
+
+  //1. Setup database connection
+  require 'functions/connection.php';
+
+  //2. Select SQL
+  $selectDeclined = "
+    SELECT 
+      appointment.`id`, appointment.`doc_id`, appointment.`appoint_date`, appointment.`appoint_time`, doctor.`fname`, doctor.`lname`
+    FROM 
+      `appointment` 
+    INNER JOIN `doctor` ON appointment.`doc_id` = doctor.`id`
+    WHERE 
+      `pat_id` = " . $userID . "
+      AND
+      `active` = 0
+      AND
+      `accepted` = 0
+  ";
+
+  //3. Execute SQL
+  $declineResult = mysqli_query($conn, $selectDeclined);
+  while ($declinedRow = mysqli_fetch_assoc($declineResult)) {
+    array_push($declined, $declinedRow);
+  }
+
+  //II. Find accepted appointment requests from database
+  $accepted = [];
+
+  //Select SQL
+  $selectAccepted = "
+    SELECT 
+      appointment.`id`, appointment.`doc_id`, appointment.`appoint_date`, appointment.`appoint_time`, doctor.`fname`, doctor.`lname`
+    FROM 
+      `appointment` 
+    INNER JOIN `doctor` ON appointment.`doc_id` = doctor.`id`
+    WHERE 
+      `pat_id` = " . $userID . "
+      AND
+      `active` = 1
+      AND
+      `accepted` = 1
+  ";
+
+  //3. Execute SQL
+  $acceptResult = mysqli_query($conn, $selectAccepted);
+  while ($acceptRow = mysqli_fetch_assoc($acceptResult)) {
+    array_push($accepted, $acceptRow);
+  }
+
+  //Toast containers
+  echo '
+  <!--TOAST DIV-->
+  <div aria-live="polite" aria-atomic="true" style="position: static; min-height: 12.5rem;">
     <!-- Position it -->
-    <div style="position: absolute; top: 80px !important; right: 10px;">
+    <div style="position: absolute; top: 5rem !important; right: .625rem;">
+  ';
 
+  if(count($declined) > 0){
 
-      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-        <div class="toast-header">
-          <img src=" " class="rounded mr-2" alt="...">
-          <strong class="mr-auto">Name Here</strong>
-        </div>
-        <div class="toast-body">
-          Your appointment has been accepted!
-        </div>
-        <button type="button" class="dismissbtn btn-primary" data-dismiss="toast" >
+    for($i = 0; $i < count($declined); $i++){
+      echo '
+        <!--Toast-->
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+          <div class="toast-header">
+            <strong class="mr-auto">Appointment Notification</strong>
+          </div>
+          <div class="toast-body">
+            <p>Your appointment for Dr. ' . $declined[$i]["fname"] . ' ' . $declined[$i]["lname"] . ' at time ' . $declined[$i]["appoint_time"] . ' of ' . $declined[$i]["appoint_date"] . ' has been declined.</p>
+          </div>
+          <button type="button" class="dismissbtn btn-primary" data-dismiss="toast" >
             DISMISS
           </button>
-      </div>
-
-          <!-- When auto added marami na notif, stacked sila automatically -->
-
-          <!-- EXAMPLE
-                
-      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-        <div class="toast-header">
-          <img src=" " class="rounded mr-2" alt="...">
-          <strong class="mr-auto">Name Here</strong>
         </div>
-        <div class="toast-body">
-          Your appointment has been accepted!
-        </div>
-        <button type="button" class="dismissbtn btn-primary" data-dismiss="toast" >
+      ';
+
+      //Delete row from database (to prevent redundancy)
+      $deleteDeclined = "DELETE FROM `appointment` WHERE `id`= " . $declined[$i]["id"];
+
+      //Execute the SQL
+      mysqli_query($conn, $deleteDeclined);
+    }
+  }
+
+  if(count($accepted) > 0){
+
+    for($i = 0; $i < count($accepted); $i++){
+      echo '
+        <!--Toast-->
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+          <div class="toast-header">
+            <strong class="mr-auto">Appointment Notification</strong>
+          </div>
+          <div class="toast-body">
+            <p>Your appointment for Dr. ' . $accepted[$i]["fname"] . ' ' . $accepted[$i]["lname"] . ' at time ' . $accepted[$i]["appoint_time"] . ' of ' . $accepted[$i]["appoint_date"] . ' has been accepted.</p>
+          </div>
+          <button type="button" class="dismissbtn btn-primary" data-dismiss="toast" >
             DISMISS
           </button>
-      </div>
-          
-           -->
-    </div>
+        </div>
+      ';
+
+      //Make `active` set to 0 to prevent redundancy
+      $setInactive = "UPDATE `appointment` SET `active` = 0 WHERE `id` = " . $accepted[$i]["id"];
+
+      //Execute SQL
+      mysqli_query($conn, $setInactive);
+    }
+  }
+
+  //Closing tags for toast containers
+  echo '
   </div>
+  </div>
+  ';
+
+  //.4 Closing Database Connection
+  mysqli_close($conn);
+  ?>
+
 </div>
 
 

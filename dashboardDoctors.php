@@ -84,66 +84,84 @@
 
 
 <div class="container m-0 p-0 d-inline" id="dynamicBody">
-<!--TOAST-->
 
-  <div aria-live="polite" aria-atomic="true" style="position: static; min-height: 200px;">
-    <!-- Position it -->
-    <div style="position: absolute; top: 80px !important; right: 10px;">
+  <?php
 
+  //Find active appointment requests from database
+  $appointments = [];
+  $userID = $_SESSION['userID'];
 
-      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-        <div class="toast-header">
-          <img src=" " class="rounded mr-2" alt="...">
-          <strong class="mr-auto">Name Here</strong>
+  //1. Setup database connection
+  require 'functions/connection.php';
+
+  //2. Select SQL
+  $sql = "
+    SELECT 
+      appointment.`id`, appointment.`pat_id`, appointment.`appoint_date`, appointment.`appoint_time`, patient.`fname`, patient.`lname`, patient.`sex` 
+    FROM 
+      `appointment` 
+    INNER JOIN `patient` ON appointment.`pat_id` = patient.`id`
+    WHERE 
+      `doc_id` = " . $userID . "
+      AND
+      `active` = 1
+      AND
+      `accepted` = 0
+  ";
+
+  //3. Execute SQL
+  $result = mysqli_query($conn, $sql);
+  while ($row = mysqli_fetch_assoc($result)) {
+    array_push($appointments, $row);
+  }
+
+  if(count($appointments) > 0){
+
+    //Echo toast area containers
+    echo '
+
+    <!--TOAST-->
+    <div aria-live="polite" aria-atomic="true" style="position: static; min-height: 12.5rem;">
+      <!-- Position it -->
+      <div style="position: absolute; top: 5rem !important; right: .625rem;">
+    ';
+    for($i = 0; $i < count($appointments); $i++){
+
+      echo '
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+          <div class="toast-header">
+            <strong class="mr-auto">Appointment Notification</strong>
+          </div>
+          <div class="toast-body">
+            <p>' . $appointments[$i]["fname"] . ' ' . $appointments[$i]["lname"] . ' [' . $appointments[$i]["sex"] . '] wants to book an appointment at ' . $appointments[$i]["appoint_time"] . ' on ' . $appointments[$i]["appoint_date"] . '</p>
+          </div>
+          <div class="doc_choice">
+            <button type="button" class="dismissbtn btn-success acceptRequest" data-dismiss="toast" value="' . $appointments[$i]["id"] . '">
+                ACCEPT
+              </button>
+            <button type="button" class="dismissbtn btn-danger declineRequest" data-dismiss="toast" value="' . $appointments[$i]["id"] . '">
+                DECLINE
+            </button>
+          </div>
         </div>
-        <div class="toast-body">
-          (name) wants to book an appointment at (time) (date) (idk yung content)
-        </div>
-        <div class="doc_choice">
-        <button type="button" class="dismissbtn btn-success" data-dismiss="toast" >
-            ACCEPT
-          </button>
-        <button type="button" class="dismissbtn btn-danger" data-dismiss="toast" >
-            DECLINE
-        </button>
-      </div>
+      ';
+    }
+
+    //Closing tags for the toast containers
+    echo '
     </div>
-
-          <!-- When auto added marami na notif, stacked sila automatically -->
-
-          <!-- EXAMPLE
-                
-      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-        <div class="toast-header">
-          <img src=" " class="rounded mr-2" alt="...">
-          <strong class="mr-auto">Name Here</strong>
-        </div>
-        <div class="toast-body">
-          (name) wants to book an appointment at (time) (date) (idk yung content)
-        </div>
-        <div class="doc_choice">
-        <button type="button" class="dismissbtn btn-success" data-dismiss="toast" >
-            ACCEPT
-          </button>
-        <button type="button" class="dismissbtn btn-danger" data-dismiss="toast" >
-            DECLINE
-        </button>
-      </div>
     </div>
-          
-           -->
+    ';
+  }
 
-
-
-
-
-
-    </div>
-  </div>
+  //.4 Closing Database Connection
+  mysqli_close($conn);
+  ?>
+  
 </div>
 
 
-<!-- Verification Modal -->
+<!-- Verification Success Modal -->
 <div class="modal fade" id="verifyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -164,6 +182,28 @@
 </div>
 
 
+<!-- Verification Notification Modal -->
+<div class="modal fade" id="verificationNotif" data-backdrop="static" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Thank you for registering! Please verify your account details to be able to access Medicaide's features.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">DISMISS</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <!--Bootstrap Javascript-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -177,6 +217,7 @@
 
   ?>
 
+  <script> $('#verificationNotif').modal('show');</script>
 
   <script>
     $('.toast').toast('show');
@@ -224,7 +265,6 @@
       
     });
 
-
     $(document).on("click", "#showForm", function() {
       var patientID = $(this).val();
 
@@ -234,6 +274,34 @@
         data:{userID:patientID},
         success:function(response){
           $(".presWrapper").html(response);
+        }
+      });
+    });
+
+    //AJAX for when doctor clicks accept (update database)
+    $(document).on("click", ".acceptRequest", function(){
+      var appointmentID = $(this).val();
+
+      $.ajax({
+        url:'functions/acceptAppointment.php',
+        method:'post',
+        data:{appointment_ID:appointmentID},
+        success:function(response){
+          console.log(response);
+        }
+      });
+    });
+
+    //AJAX for when doctor clicks decline (update database)
+    $(document).on("click", ".declineRequest", function(){
+      var appointmentID = $(this).val();
+
+      $.ajax({
+        url:'functions/declineAppointment.php',
+        method:'post',
+        data:{appointment_ID:appointmentID},
+        success:function(response){
+          console.log(response);
         }
       });
     });
