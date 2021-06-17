@@ -8,8 +8,23 @@
       header('Location: index.php');
     }
   }
-?>
 
+
+  $specialization = [];
+
+  //1. Setup Database connection
+  require 'functions/connection.php';
+  
+  //I. Finding specializations in the database
+  //2. Select SQL
+  $sql = "SELECT * FROM `specialization` ORDER BY `id` ASC";
+
+  //3. Execute Select Query
+  $result = mysqli_query($conn, $sql);
+  while ($row = mysqli_fetch_assoc($result)) {
+  array_push($specialization, $row);
+  }
+?>
 
 <head>
 
@@ -107,9 +122,17 @@
           <div class="box_field">
             <label class="birthdaycss">Specialization</label>
             <select class="form-control" name="Specialization" id="specSelect" required>
-              <option>option1</option>
-              <option>option2</option>
-              <option>option3</option>
+              <option value="">Select a specialization</option>
+              <?php
+
+              //Echo specializations from database
+              for ($ctr = 0; $ctr < count($specialization); $ctr++){
+                  $optionValue = $ctr + 1;
+
+                  echo '<option value="' . $optionValue . '">' . $specialization[$ctr]["value"] . '</option>';
+              }
+              ?>
+
             </select>
 
           </div>
@@ -212,7 +235,7 @@
       //when everything is filled up (including ID upload)
       $('#submit-btn').attr('disabled', true);
 
-      $(document).on("change", "#registerForm", function () {
+      $(document).on("keyup", "#registerForm", function () {
 
           if ($('#inputIDPhoto').val() != '' && 
           $('#birthdayInput').val() != '' && 
@@ -224,7 +247,6 @@
           $('#inputAddress').val() != '') {
 
             $('#submit-btn').attr('disabled', false);
-            alert("Triggered");
           }
 
           else {
