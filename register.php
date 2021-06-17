@@ -70,66 +70,66 @@
 </nav>
 
 
-    <div class="center">
-      <h1>Sign up</h1>
-      <form id="registerForm" action="functions/registrationPost.php" method="post">
-        
+  <div class="center">
+    <h1>Sign up</h1>
+    <form id="registerForm" action="functions/registrationPost.php" method="post">
+      
 
 
-      <div class="form-group" id="account-container">        
-        <p class="subheading" style="color: #6c757d;" align="center">Please pick an account type.</p>
-        <div class="userchoice">
-          <input type="radio" id="check_patient" name="role" value="patient" checked>
-          <label for="check_patient"><i class="fas fa-user"></i> Patient </label>
-        </div>
-        <div class="userchoice">
-          <input type="radio" id="check_doctor" name="role" value="doctor">
-          <label for="check_doctor"><i class="fas fa-user-md"></i> Doctor </label>
-        </div>
+    <div class="form-group" id="account-container">        
+      <p class="subheading" style="color: #6c757d;" align="center">Please pick an account type.</p>
+      <div class="userchoice">
+        <input type="radio" id="check_patient" name="role" value="patient" checked>
+        <label for="check_patient"><i class="fas fa-user"></i> Patient </label>
+      </div>
+      <div class="userchoice">
+        <input type="radio" id="check_doctor" name="role" value="doctor">
+        <label for="check_doctor"><i class="fas fa-user-md"></i> Doctor </label>
+      </div>
 
 
 
 
-        <div class="user_info">
-        <div class="txt_field">
-          <input type="text" name="first_name" required>
-          <span></span>
-          <label>First Name</label>
-        </div>
+      <div class="user_info">
+      <div class="txt_field">
+        <input type="text" name="first_name" required>
+        <span></span>
+        <label>First Name</label>
+      </div>
 
-        <div class="txt_field">
-          <input type="text" name="last_name" required>
-          <span></span>
-          <label>Last Name</label>
-        </div>
+      <div class="txt_field">
+        <input type="text" name="last_name" required>
+        <span></span>
+        <label>Last Name</label>
+      </div>
 
-        <div class="txt_field">
-          <input type="email" name="email" required>
-          <span></span>
-          <label>Email</label>
-        </div>
-        </div>
+      <div class="txt_field">
+        <input type="email" name="email" required>
+        <span></span>
+        <label>Email</label>
+      </div>
+      </div>
 
-        <div class="user_box">
-        <div class="box_field">
-                  <label class="subheading">Birthday</label>
-                  <input type="date" class="form-control" name="birthday" required>
-        </div>
+      <div class="user_box justify-content-center">
+      <div class="mx-1">
+                <label class="subheading">Birthday</label>
+                <input type="date" class="form-control" name="birthday" required>
+      </div>
 
-        <div class="box_field">
-                <div class="form-group registration">
-                  <label for="userSex">Sex</label>
-                  <select class="form-control" id="userSex" name="sex">
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                  </select>
-        </div>
-                <input type="radio" name="userType" value="patient" id="radio1" style="display:none;" checked>
-                <input type="radio" name="userType" value="doctor" id="radio2" style="display:none;" checked>
-        </div>
-        </div>
+      <div class="mx-1">
+              <div class="form-group registration">
+                <label for="userSex">Sex</label>
+                <select class="form-control" id="userSex" name="sex">
+                  <option value="M">Male</option>
+                  <option value="F">Female</option>
+                </select>
+      </div>
+              <input type="radio" name="userType" value="patient" id="radio1" style="display:none;" checked>
+              <input type="radio" name="userType" value="doctor" id="radio2" style="display:none;" checked>
+      </div>
+      </div>
 
-        <div class="user_pass">
+      <div class="user_pass justify-content-center">
         <div class="txt_field">
           <input type="password" name="password" required>
           <span></span>
@@ -142,87 +142,47 @@
           <span></span>
           <label>Confirm Password</label>
         </div>
-        </div>
+      </div>
 
-        <div class="terms mb-2">
-          By clicking Register, you agree to our <a href="TermsPolicy.php">Terms, Data Policy and Cookies Policy.</a>
-        </div>
+      <div class="terms mb-2">
+        By clicking Register, you agree to our <a href="TermsPolicy.php">Terms, Data Policy and Cookies Policy.</a>
+      </div>
 
 
-        <input type="submit" value="Register">
-        <div class="register_link"> 
-         Already a member? <a href="login.php">Login</a>
-        </div>
+      <input type="submit" value="Register">
+      <div class="register_link mt-2"> 
+        Not a member? <a href="login.php">Login</a>
+      </div>
 
-        <?php
-            if (isset($_GET['origemail'])) { //check if authenticate key exists in URL
-              if ($_GET['origemail'] == "false") {
-                echo '
-                  <br>
-                  <div class="alert alert-warning ml-5 mr-5" role="alert">
-                  This email already exists, please use another email.
-                  </div>
-                ';
-              }
+      <?php
+          if (isset($_GET['origemail'])) { //check if authenticate key exists in URL
+            if ($_GET['origemail'] == "false") {
+              echo '
+                <br>
+                <div class="alert alert-warning ml-5 mr-5" role="alert">
+                This email already exists, please use another email.
+                </div>
+              ';
             }
-          ?>
-      </form>
-    </div>
+          }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          if (isset($_GET['matchPass'])) { //check if authenticate key exists in URL
+            if ($_GET['matchPass'] == "false") {
+              echo '
+                <br>
+                <div class="alert alert-warning ml-5 mr-5" role="alert">
+                Passwords do not match. Please try again.
+                </div>
+              ';
+            }
+          }
+        ?>
+      </div>
+    </form>
+  </div>
 
 	<!--Bootstrap Javascript-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-
-	<!--Wow.js Javascript-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script>
-		var wow = new WOW(
-      {
-        boxClass:     'wow',      // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset:       0,          // distance to the element when triggering the animation (default is 0)
-        mobile:       true,       // trigger animations on mobile devices (default is true)
-        live:         true,       // act on asynchronously loaded content (default is true)
-        callback:     function(box) {
-          // the callback is fired every time an animation is started
-          // the argument that is passed in is the DOM node being animated
-        },
-        scrollContainer: null,    // optional scroll container selector, otherwise use window,
-        resetAnimation: true,     // reset animation on end (default is true)
-      }
-    );
-    wow.init();
-	</script>
-
-  <!--Checkbox Script-->
-  <script>
-  $( "input:radio[id=check_patient]" ).on( "click", function() {
-    $("#radio_1").prop("checked", true); 
-
-  });
-
-  $( "input:radio[id=check_doctor]" ).on( "click", function() {
-    $("#radio_2").prop("checked", true);  
-
-  });
-
-  </script>
 
 </body>
 </html>
