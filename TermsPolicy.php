@@ -16,11 +16,11 @@
   />
 
 	<!--Google Fonts API-->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 	<!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/TermsPolicy.css">
 </head>
@@ -57,8 +57,7 @@
 </nav>
 
 <div class="container-fluid terms" id="Policies">
-  <h1><i>TERMS AND AGREEMENT and PRIVACY POLICY</i></h1><br>
-  <p><h1>Privacy Policy</h1>
+  <h1><i>MEDICAIDE PRIVACY POLICY</i></h1><br>
 <p>Last updated: June 16, 2021</p>
 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
 <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.privacypolicies.com/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a>.</p>
@@ -67,7 +66,7 @@
 <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
 <h3>Definitions</h3>
 <p>For the purposes of this Privacy Policy:</p>
-<ul>
+
 <li>
 <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
 </li>

@@ -51,10 +51,8 @@
 .terms h1{
   text-align: center;
   color: white;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 2rem;
-  text-decoration: underline;
-
 }
 .terms p{
   margin-right: 10rem;
@@ -65,13 +63,12 @@
 .terms h2{
   text-align: center;
   color: white;
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
 }
 .terms h3{
   text-align: center;
   color: white;
-  font-family: 'Quicksand', sans-serif;
+ font-family: 'Montserrat', sans-serif;
 }
 .terms strong{
   margin-right: 10rem;
