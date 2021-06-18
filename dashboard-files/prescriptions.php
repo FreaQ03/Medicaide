@@ -66,7 +66,7 @@
 
           <div class="col-sm-4 mx-2">
             <div class="card">
-              <div class="card-body" style="background-image: url(img/PrescriptionCard.png);">
+              <div class="crdimg" style="background-image: url(img/PrescriptionCard.png);">
 
                 <h5 class="card-title">
                   Prescription #' . $prespNo . ' <br><br> Prescribed On: <br>' . $prescriptions[$index]["issuedOn"] . ' 

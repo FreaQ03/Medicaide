@@ -1,7 +1,8 @@
 .crdimg {
 	border: none;
 	background-size: cover;
-	background-position: center;
+	background-repeat: no-repeat;
+
 }
 
 .card-title{
@@ -24,7 +25,7 @@
 
 .cb1 li{
 	font-family: 'Montserrat', sans-serif;
-}
+} 
 
 .container{
 	align-items: center;
@@ -44,3 +45,4 @@
 	color:  #A4292E;
 	font-weight: bold;
 }
+
