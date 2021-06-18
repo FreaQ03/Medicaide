@@ -11,17 +11,17 @@
 	                
 	                <div class="form-group">             
 	                	<label for="txtMedicine">Medicine:</label>
-	                    <input type="text" name="medicine" placeholder="Enter specific medicine"> 
+	                    <input type="text" name="medicine" placeholder="Enter specific medicine" required> 
 	                </div>
 
 	                <div class="form-group">             
 	                	<label for="txtMedicine">Amount:</label>
-	                    <input type="text" name="medAmount" placeholder="e.g. 10 mg, 1 pill, 1ml"> 
+	                    <input type="text" name="medAmount" placeholder="e.g. 10 mg, 1 pill, 1ml" required> 
 	                </div>
 
 	                <div class="form-group">
 	  					<label for="Frequency">Frequency:</label>
-	  					<select class="form-control" name="frequency" id="sel1">
+	  					<select class="form-control" name="frequency" id="sel1" required>
 	    					<option>daily (no abbreviation)</option>
 	    					<option>every other day (no abbreviation)</option>
 	    					<option>BID/b.i.d. (twice a day)</option>
@@ -36,7 +36,7 @@
 
 	                 <div class="form-group">
 	  					<label for="selRoute">Route:</label>
-	  					<select class="form-control" name="route" id="sel1">
+	  					<select class="form-control" name="route" id="sel1" required>
 	    					<option>PO (by mouth)</option>
 	    					<option>PR (per rectum)</option>
 	    					<option>IM (intramuscular)</option>
