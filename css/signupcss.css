@@ -12,6 +12,7 @@ body {
   border-radius: 4%;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
+
 .center h1{
   text-align: center;
   padding: 2%;
@@ -19,22 +20,26 @@ body {
   font-family: 'Quicksand', sans-serif;
   color: #A4292E;
 }
+
 .center form{
-  padding: 5%;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   color: #A4292E;
 }
+
 .center form .user_info {
   display: flex;
   flex-direction: row;
 }
+
 .center form .user_box {
   display: flex;
 }
+
 .center form .user_pass {
   display: flex;
 }
+
 form .txt_field{
   position: relative;
   border-bottom: .1rem solid #adadad;
@@ -42,6 +47,7 @@ form .txt_field{
   margin-right: 2rem;
   margin-bottom: 2rem;
 }
+
 .txt_field input{
   width: 100%;
   padding: .1rem;
@@ -51,6 +57,7 @@ form .txt_field{
   background: none;
   outline: none;
 }
+
 .txt_field label{
   position: absolute;
   top: 30%;
@@ -61,6 +68,7 @@ form .txt_field{
   pointer-events: none;
   transition: .5s;
 }
+
 .txt_field span::before{
   content: '';
   position: absolute;
@@ -71,11 +79,13 @@ form .txt_field{
   background: #12c0ff;
   transition: .5s;
 }
+
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
   top: -5px;
   color: #A4292E;
 }
+
 .txt_field input:focus ~ span::before,
 .txt_field input:valid ~ span::before{
   width: 100%;
@@ -86,12 +96,14 @@ form .txt_field{
   color: #a6a6a6;
   cursor: pointer;
 }
+
 .pass:hover{
   text-decoration: underline;
 }
+
 input[type="submit"]{
-  width: 100%;
-  height: 10%;
+  width: 85%;
+  height: 3rem;
   border: 1px solid;
   background: #A4292E;
   border-radius: 25px;
@@ -101,6 +113,7 @@ input[type="submit"]{
   cursor: pointer;
   outline: none;
 }
+
 input[type="submit"]:hover{
   border-color: #12c0ff;
   transition: .5s;
@@ -111,10 +124,12 @@ input[type="submit"]:hover{
   font-size: 16px;
   color: #666666;
 }
+
 .register_link a{
   color: #12c0ff;
   text-decoration: none;
 }
+
 .register_link a:hover{
   text-decoration: underline;
 }
@@ -124,6 +139,7 @@ input[type="submit"]:hover{
   margin-right: 80px;
   margin-left: 80px;
 }
+
 .terms{
    font-family: 'Quicksand', sans-serif;
    text-align: center;
@@ -132,10 +148,12 @@ input[type="submit"]:hover{
    color: #666666;
    font-size: 70%;
 }
+
 .terms a{
     color: #12c0ff;
     text-decoration: none;
 }
+
 .terms a:hover{
   text-decoration: underline;
 }
