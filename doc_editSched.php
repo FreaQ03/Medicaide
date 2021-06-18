@@ -46,15 +46,18 @@
       </div>
 
 
-
-
-      <table class="main-table justify-content-center">
+<table class="main-table justify-content-center">
 <thead>
   <tr>
     <th><label>Day: </label></th>
-    <th>
-      <div class="form-group registration">
-                <select class="form-control" id="userSex" name="sex" >
+    <th><label>Start time: </label></th>
+    <th><label>End time: </label></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><div class="form-group registration justify-content-center">
+                <select class="Day" id="Day" name="Day" >
                   <option value="Sunday">Sunday</option>
                   <option value="Monday">Monday</option>
                   <option value="Tuesday">Tuesday</option>
@@ -64,22 +67,19 @@
                   <option value="Saturday">Saturday</option>
                 </select>
 
-              </div>
-    </th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><label>Start time: </label></td>
-    <td><input type="time" name="start_time" required></td>
-  </tr>
-  <tr>
-    <td><label>End time: </label></td>
-    <td><input type="time" name="end_time" required></td>
+              </div> 
+    </td>
+    <td> <div class="start_time">
+      <input type="time" required>
+        </div>
+    </td>
+    <td> <div class="end_time">
+      <input type="time" required>
+        </div>
+    </td>
   </tr>
 </tbody>
 </table>
-      
 
               <button type="button" class="btn btn-success">Add Schedule</button>
               <input type="submit" value="Submit">
