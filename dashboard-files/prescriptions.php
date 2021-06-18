@@ -64,45 +64,46 @@
         //Print the prescriptions
         echo '
 
-          <div class="col-sm-4 mx-2">
+          <div class="col-sm-12 col-md-4 mx-2">
             <div class="card">
               <div class="crdimg" style="background-image: url(img/PrescriptionCard.png);">
+                <div class="card-body">
+                  <h5 class="card-title p-0">
+                    Prescription #' . $prespNo . ' <br><br> Prescribed On: <br>' . $prescriptions[$index]["issuedOn"] . ' 
 
-                <h5 class="card-title">
-                  Prescription #' . $prespNo . ' <br><br> Prescribed On: <br>' . $prescriptions[$index]["issuedOn"] . ' 
+                    <br>
+                    <br>
 
-                  <br>
-                  <br>
+                    Take Until: 
+                    <br>
+                    ' . $prescriptions[$index]["repeatUntil"] . '  
 
-                  Take Until: 
-                  <br>
-                  ' . $prescriptions[$index]["repeatUntil"] . '  
+                    <br>
+                    <br> 
 
-                  <br>
-                  <br> 
+                    Prescribed to: <br>' . $fname . ' ' . $lname . '
+                  </h5>
 
-                  Prescribed to: <br>' . $fname . ' ' . $lname . '
-                </h5>
+                  <p class="list">
+                    <li>' . $prescriptions[$index]["data"] . '
+                      <br><b> ' . $prescriptions[$index]["dose"] . ' </b>
+                      <br><i>' . $prescriptions[$index]["repeatBy"] . '</i> 
+                      <br>' . $prescriptions[$index]["route"] . '
+                    </li>
+                  </p>
 
-                <p class="list">
-                  <li>' . $prescriptions[$index]["data"] . '
-                    <br><b> ' . $prescriptions[$index]["dose"] . ' </b>
-                    <br><i>' . $prescriptions[$index]["repeatBy"] . '</i> 
-                    <br>' . $prescriptions[$index]["route"] . '
-                  </li>
-                </p>
+                  <p class="doctorName">
+                    Prescribed by: ' . $docFname . ' ' . $docLname . '
+                  </p>
 
-                <p class="doctorName">
-                  Prescribed by: ' . $docFname . ' ' . $docLname . '
-                </p>
+                  <p class="card-title p-0">
+                    Extra notes:
+                  </p>
 
-                <p class="card-title">
-                  Extra notes:
-                </p>
-
-                <p>
-                  ' . $prescriptions[$index]["notes"] . '
-                </p>
+                  <p>
+                    ' . $prescriptions[$index]["notes"] . '
+                  </p>
+                </div>
               </div>
             </div>
           </div>

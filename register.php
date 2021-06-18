@@ -72,19 +72,21 @@
 
   <div class="center">
     <h1>Sign up</h1>
-    <form id="registerForm" action="functions/registrationPost.php" method="post">
+    <form class="px-4 py-2"  id="registerForm" action="functions/registrationPost.php" method="post">
       
 
 
     <div class="form-group" id="account-container">        
       <p class="subheading" style="color: #6c757d;" align="center">Please pick an account type.</p>
-      <div class="userchoice">
-        <input type="radio" id="check_patient" name="role" value="patient" checked>
-        <label for="check_patient"><i class="fas fa-user"></i> Patient </label>
-      </div>
-      <div class="userchoice">
-        <input type="radio" id="check_doctor" name="role" value="doctor">
-        <label for="check_doctor"><i class="fas fa-user-md"></i> Doctor </label>
+      <div class="d-flex justify-content-center">
+        <div class="userchoice">
+          <input type="radio" id="check_patient" name="role" value="patient" checked>
+          <label for="check_patient"><i class="fas fa-user"></i> Patient </label>
+        </div>
+        <div class="userchoice">
+          <input type="radio" id="check_doctor" name="role" value="doctor">
+          <label for="check_doctor"><i class="fas fa-user-md"></i> Doctor </label>
+        </div>
       </div>
 
 
@@ -149,7 +151,7 @@
       </div>
 
 
-      <input type="submit" value="Register">
+      <center><input type="submit" value="Register"></center>
       <div class="register_link mt-2"> 
         Not a member? <a href="login.php">Login</a>
       </div>
