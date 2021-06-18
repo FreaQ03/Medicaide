@@ -25,10 +25,6 @@
 	}
 	elseif ($_SESSION['userType'] == 'doctor') {
 		require 'dashboardDoctors.php';
-
-		/*if(isset($_GET['verifySent'])) {
-			$_SESSION['verifySent'] = $_GET['verifySent']; //Get after each verification page
-		}*/
 	}
 
 ?>

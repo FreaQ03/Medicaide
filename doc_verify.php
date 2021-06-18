@@ -9,6 +9,9 @@
     }
   }
 
+  if($_SESSION['userType'] != 'doctor'){
+    header('Location: dashboard.php');
+  }
 
   $specialization = [];
 

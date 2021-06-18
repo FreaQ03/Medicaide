@@ -8,6 +8,10 @@
       header('Location: index.php');
     }
   }
+
+  if($_SESSION['userType'] != 'patient'){
+    header('Location: dashboard.php');
+  }
 ?>
 
 <head>
