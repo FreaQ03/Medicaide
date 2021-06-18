@@ -11,6 +11,7 @@
 	$specialization = $_POST['Specialization'];
 
 	$userID = $_SESSION['userID'];
+	$hospital = strtoupper($hospital); //Make hospital uppercase
 
 	//1. Setup Database Connection
 	require 'connection.php';
@@ -21,9 +22,9 @@
 	`fname` = '" . $first_name . "',
 	`lname` = '" . $last_name . "', 
 	`specialization` = '" . $specialization . "',
-	`birthday`= '" . $birthday . "' 
+	`birthday`= '" . $birthday . "',
+	`verified` = 2
 	WHERE `id` = " . $userID;
-
 
 
 	//II. Update doctor address
@@ -49,6 +50,7 @@
 	//Execute SQL
 	if (mysqli_query($conn, $sql) && mysqli_query($conn, $insertDetails) && mysqli_query($conn, $insertHosp)){
 		header('Location: ../dashboard.php?verifySent=1');
+		$_SESSION['verified'] = 2;
 	}
 	else {
 		echo mysqli_error($conn);

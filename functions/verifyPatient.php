@@ -17,12 +17,14 @@
 	//2. Insert SQL
 	$sql = "UPDATE `patient` SET 
 	`fname` = '" . $first_name . "',
-	`lname` = '" . $last_name . "', 
+	`lname` = '" . $last_name . "',
+	`verified` = 2,
 	`birthday`= '" . $birthday . "' 
 	WHERE `id` = " . $userID;
 
 	if (mysqli_query($conn, $sql)){
 		header('Location: ../dashboard.php?verifySent=1');
+		$_SESSION['verified'] = 2;
 	}
 	else {
 		echo mysqli_error($conn);

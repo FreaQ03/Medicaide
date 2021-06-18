@@ -157,7 +157,7 @@
       //when everything is filled up (including ID upload)
       $('#submit-btn').attr('disabled', true);
 
-      $(document).on("change", "#registerForm", function () {
+      $(document).on("keyup", "#registerForm", function () {
 
           if ($('#inputIDPhoto').val() != '' && 
           $('#birthdayInput').val() != '' && 
