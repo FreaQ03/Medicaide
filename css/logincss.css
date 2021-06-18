@@ -5,7 +5,7 @@ body {
 .login-brand{
 	font-size: 400%;
 	position: absolute;
-	top: 40%;
+	top: 50%;
   left: 15%;
   font-family: 'Quicksand', sans-serif;
 }
@@ -13,10 +13,11 @@ body {
 .placeholdperry{
 	font-size: 100%;
 	position: absolute;
-  top: 30rem;
+  top: 50%;
 	left: 15%;
   font-family: 'Quicksand', sans-serif;
 }
+
 
 .center{
   position: absolute;
