@@ -91,3 +91,56 @@ li:hover {
 	margin-right: 25%;
 	margin-bottom: 10px;
 }
+
+.modal-header {
+	font-size: 1.3rem;
+	color: #A4292E !important;
+	font-family: 'Quicksand', sans-serif !important;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+.modal-body {
+	font-size: 1.1rem;
+	font-weight: normal !important;
+	color: grey !important;
+	font-family: 'Quicksand', sans-serif !important;
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-close {
+	padding: .625rem 1.5rem .5rem;
+	font-size: .75rem;
+}
+.btn-danger {
+   color: #fff;
+   background-color: #dc3545 !important;
+   border-color: #dc3545 !important;
+}
+
+.toast-header {
+	font-family: 'Quicksand', sans-serif !important;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .25rem .75rem;
+    color: #A4292E !important;
+    background-color: rgba(255,255,255,.85);
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.toast-body {
+	font-family: 'Quicksand', sans-serif !important;
+	color: grey !important;
+	background: #fff !important;
+	padding: .75rem;
+}

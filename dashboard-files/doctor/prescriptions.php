@@ -24,5 +24,28 @@
 	<div class="presWrapper container-fluid mb-3">
 		<!--Content will be printed here when user pressses the button-->
 	</div>
+
+
+
+
+
+	<br><br><br>
+
+<!--pagination-->
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item <?php if($_SESSION['page']==1){echo 'disabled';} ?>">
+      <a class="page-link" href="dashboard.php?page=<?php echo $previous; ?>" tabindex="-1">Previous</a>
+    </li>
+    <?php
+      for($i = 1; $i <= $pages; $i++){
+        echo '<li class="page-item"><a class="page-link" href="dashboard.php?page=' . $i . '">' . $i . '</a></li>';
+      }
+    ?>
+    <li class="page-item <?php if($_SESSION['page']==$pages){echo 'disabled';} ?>">
+      <a class="page-link" href="dashboard.php?page=<?php echo $next; ?>">Next</a>
+    </li>
+  </ul>
+</nav>
 	
 </div>
