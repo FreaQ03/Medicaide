@@ -164,6 +164,7 @@ li:hover {
     border-bottom: 1px solid rgba(0,0,0,.05);
 }
 .toast-body {
+	all:unset;
 	font-family: 'Quicksand', sans-serif !important;
 	color: grey !important;
 	background: #fff !important;
