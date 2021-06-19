@@ -22,26 +22,7 @@
 		<script>
 			$("#calendar").evoCalendar({
 		  	theme: 'Royal Navy',
-
-			  	calendarEvents: [
-			      {
-			        id: 'bHay68s', // Event's ID (required)
-			        name: "New Year", // Event name (required)
-			        date: "January/1/2020", // Event date (required)
-			        type: "holiday", // Event type (required)
-			        everyYear: true // Same event every year (optional)
-			      },
-			      {
-			        name: "Vacation Leave",
-			        badge: "02/13 - 02/15", // Event badge (optional)
-			        date: ["February/13/2020", "February/15/2020"], // Date range
-			        description: "Vacation leave for 3 days.", // Event description (optional)
-			        type: "event",
-			        color: "#63d867" // Event custom color (optional)
-			      }
-			    ],
-
-			    todayHighlight: true,
+			todayHighlight: true,
 			});
 		</script>
 
@@ -58,7 +39,7 @@
   			require '../../functions/connection.php';
 
   			if($_SESSION['userType'] == 'patient'){
-  				//Select SQL
+  				//Select SQL for patients
 				$selectAccepted = "
 				SELECT 
 				  	appointment.`id`, appointment.`doc_id`, appointment.`appoint_date`, appointment.`appoint_time`, doctor.`fname`, doctor.`lname`
@@ -85,15 +66,15 @@
   			}
 
   			elseif($_SESSION['userType'] == 'doctor'){
-  				//Select SQL
+  				//Select SQL for doctors
 				$selectAccepted = "
 				SELECT 
-				  	appointment.`id`, appointment.`doc_id`, appointment.`appoint_date`, appointment.`appoint_time`, doctor.`fname`, doctor.`lname`
+				  	appointment.`id`, appointment.`doc_id`, appointment.`appoint_date`, appointment.`appoint_time`, patient.`fname`, patient.`lname`
 				FROM 
 				  	`appointment` 
-				INNER JOIN `doctor` ON appointment.`doc_id` = doctor.`id`
+				INNER JOIN `patient` ON appointment.`pat_id` = patient.`id`
 				WHERE 
-					`pat_id` = " . $userID . "
+					`doc_id` = " . $userID . "
 					AND
 					`accepted` = 1
 				";
@@ -110,25 +91,53 @@
 
 			if(count($accepted) > 0){
 				
+				if($_SESSION['userType'] == 'patient'){
 
-				for($i = 0; $i < count($accepted); $i++){
+					for($i = 0; $i < count($accepted); $i++){
 
-					echo '
+						echo '
 
-					  	$("#calendar").evoCalendar("addCalendarEvent", [
-							{
-							  id: "Appointment' . $i . '",
-							  name: "Dr. ' . $accepted[$i]["fname"] . ' ' . $accepted[$i]["lname"] . '",
-							  date: "' . $accepted[$i]["appoint_date"] . '",
-							  type: "event",
-							  color: "#28a745",
-							  everyYear: false
-							}
-						]);
+						  	$("#calendar").evoCalendar("addCalendarEvent", [
+								{
+								  id: "Appointment' . $i . '",
+								  name: "Dr. ' . $accepted[$i]["fname"] . ' ' . $accepted[$i]["lname"] . '",
+								  date: "' . $accepted[$i]["appoint_date"] . '",
+								  type: "event",
+								  color: "#28a745",
+								  everyYear: false
+								}
+							]);
 
 
-					';
+						';
+					}
+
 				}
+
+				elseif($_SESSION['userType'] == 'doctor'){
+
+					for($i = 0; $i < count($accepted); $i++){
+
+						echo '
+
+						  	$("#calendar").evoCalendar("addCalendarEvent", [
+								{
+								  id: "Appointment' . $i . '",
+								  name: "' . $accepted[$i]["fname"] . ' ' . $accepted[$i]["lname"] . '",
+								  date: "' . $accepted[$i]["appoint_date"] . '",
+								  description: "Patient appointment",
+								  type: "event",
+								  color: "#28a745",
+								  everyYear: false
+								}
+							]);
+
+
+						';
+					}
+					
+				}
+				
 
 			}
 

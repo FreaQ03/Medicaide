@@ -252,7 +252,7 @@
       }
     };
 
-    xhr.open("get", "dashboard-files/doctor/calendar.php");
+    xhr.open("get", "dashboard-files/calendar.php");
     xhr.send();
 
     //Live search function for search patients
