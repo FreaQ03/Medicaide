@@ -2,7 +2,7 @@
 
 <div id="PatientSearch">
 	
-	<div class="Header">
+	<div class="Heading_patient">
 		<h1>Send a Prescription</h1> 
 		<p>Search for a patient with their user ID </p> 
 	</div>
@@ -15,7 +15,7 @@
  			 <button type="button" class="btn btn-outline-primary search-btn"><i class="fas fa-search fa-2x"></i></button>
 		</div>
 	</div>
-	<p> Search a patient via their user ID. Send them a Prescription</p>
+	<p class="Heading_three"> Search a patient via their user ID. Send them a Prescription</p>
 
 <div class="row mx-5 mb-5">
 	<!--Search content will be printed here-->

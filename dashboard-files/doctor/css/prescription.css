@@ -7,14 +7,19 @@
   color: #aaa;
   font-style: italic;
 }
-
-
-.Header h1, p{
+.Heading_patient {
 	text-align: center !important;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
   font-weight: bold;
 }
+.Heading_three {
+  text-align: center !important;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
 #main-header {
   color: #A4292E !important;
   font-weight: 400;
