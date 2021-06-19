@@ -156,5 +156,10 @@
 form{
 	padding-top: 1rem;
 }
-
-
+.page-item{
+  font-family: 'Quicksand', sans-serif !important;
+  line-height: 1.6;
+}
+.page-link {
+  color: grey !important;
+}

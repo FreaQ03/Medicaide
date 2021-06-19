@@ -217,3 +217,11 @@ label[for="txtMedicine"], [for="Frequency"], [for="selRoute"], [for="addnote"], 
   align-items: left !important;
 
 }
+
+.page-item{
+  font-family: 'Quicksand', sans-serif !important;
+  line-height: 1.6;
+}
+.page-link {
+  color: grey !important;
+}

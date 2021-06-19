@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="dashboard-files/dashboardCSS/search.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/scss/_pagination.scss" rel="stylesheet">
 
 <!--Getting doctors from databsae-->
 <?php
