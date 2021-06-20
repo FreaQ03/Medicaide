@@ -18,7 +18,7 @@
   require '../functions/connection.php';
 
   //2. SQL Statements
-  $selectDoctors = "SELECT * FROM `doctor` WHERE `verified` = 1 LIMIT " . $start . ", " . $limit;
+  $selectDoctors = "SELECT * FROM `doctor` INNER JOIN `doctor_hospitals` ON doctor_hospitals.`doc_id` = doctor.`id` WHERE doctor.`verified` = 1 LIMIT " . $start . ", " . $limit;
 
   $checkCount = "SELECT count(`id`) AS `id` FROM `doctor` WHERE `verified` = 1"; //selects only the count of verified doctors in database
 
@@ -149,7 +149,7 @@
             <img class="card-img-top" src="'. $pictureDirectory . '" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">' . $doctors[$index]["fname"] .' ' . $doctors[$index]["lname"] . '</h5>
-              <p class="card-text">Medical Specialist: <br> ' . $specValue[0]["value"] . ' <br><br> Hospitals: <br> St. Lukes Medical Center</p>
+              <p class="card-text">Medical Specialist: <br> ' . $specValue[0]["value"] . ' <br><br> Hospitals: <br> ' . $doctors[$index]["hospital"] . ', ' . $doctors[$index]["location"] . '</p>
               <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal' . $index . '">Book Now</button></small></p>
             </div>
           </div>
