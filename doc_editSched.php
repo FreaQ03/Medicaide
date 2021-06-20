@@ -49,6 +49,33 @@
 </head>
 
 <body>
+  
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar-color">
+  <div class="container-fluid sticky-top">
+    <a class="navbar-brand" href="index.php" style="color: #A4292E; font-family: 'Quicksand', sans-serif;"><b>MEDICAIDE</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      <div class="nav-links">
+        <ul>
+          <a href="#"><li>ABOUT US</li></a>
+          <a href="#"><li>CONTACT US</li></a>
+        </ul>
+      </div>   
+          <a class="nav-link icon" id="calendar" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-calendar-plus"></i></a>
+          <a class="nav-link icon" id="phone" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-phone-square-alt"></i></a>
+          <a class="nav-link icon" id="clock" aria-current="page" href="#" style="color: #A4292E;">  <i class="fas fa-clock"></i></a>
+          <a class="nav-link icon" id="prescriptions" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-notes-medical"></i></a>
+          <a class="nav-link icon" id="journal" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-sticky-note"></i></a>
+          <a class="nav-link icon" id="user" aria-current="page" href="#" style="color: #A4292E;"> <i class="fas fa-user"></i></a>
+        </li> 
+    </div>
+  </div>
+</nav>
 
 
   <div class="center">
@@ -62,7 +89,35 @@
         <span></span>
         <label>Hospital</label>
       </div>
+
+      <div class="box_field">
+            <label class="birthdaycss">Hospital Location</label>
+            <select class="form-control" name="Specialization" id="specSelect" required>
+              <option value="">Select Location</option>
+              <option value="">Caloocan</option>
+              <option value="">Malabon</option>
+              <option value="">Navotas</option>
+              <option value="">Valenzuela</option>
+              <option value="">Quezon City</option>
+              <option value="">Marikina</option>
+              <option value="">Pasig</option>
+              <option value="">Makati</option>
+              <option value="">Manila</option>
+              <option value="">Mandaluyong</option>
+              <option value="">San Juan</option>
+              <option value="">Pasay</option>
+              <option value="">Parañaque</option>
+              <option value="">Las Piñas</option>
+              <option value="">Pateros</option>
+
+
+            </select>
+
+          </div>
+
       </div>
+
+
 
 
 <table class="main-table justify-content-center">

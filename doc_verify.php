@@ -1,4 +1,5 @@
 <doctype html>
+
 <?php
   //security check
   session_start();
@@ -140,6 +141,31 @@
 
           </div>
 
+          <div class="box_field">
+            <label class="birthdaycss">Hospital Location</label>
+            <select class="form-control" name="Specialization" id="specSelect" required>
+              <option value="">Select Location</option>
+              <option value="">Caloocan</option>
+              <option value="">Malabon</option>
+              <option value="">Navotas</option>
+              <option value="">Valenzuela</option>
+              <option value="">Quezon City</option>
+              <option value="">Marikina</option>
+              <option value="">Pasig</option>
+              <option value="">Makati</option>
+              <option value="">Manila</option>
+              <option value="">Mandaluyong</option>
+              <option value="">San Juan</option>
+              <option value="">Pasay</option>
+              <option value="">Parañaque</option>
+              <option value="">Las Piñas</option>
+              <option value="">Pateros</option>
+
+
+            </select>
+
+          </div>
+
         </div>
 
 
@@ -175,8 +201,10 @@
           <div class="txt_field">
             <input type="text" name="Hospital" id="inputHospital" required>
             <span></span>
-            <label>Hospital</label>
+            <label>Hospital Name</label>
           </div>
+
+
         </div>
 
 
