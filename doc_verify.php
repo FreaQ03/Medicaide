@@ -1,6 +1,34 @@
 <doctype html>
 
+<?php
+  //security check
+  session_start();
 
+  if(isset($_SESSION['isLogin'])){
+    if($_SESSION['isLogin'] == false){
+      header('Location: index.php');
+    }
+  }
+
+  if($_SESSION['userType'] != 'doctor'){
+    header('Location: dashboard.php');
+  }
+
+  $specialization = [];
+
+  //1. Setup Database connection
+  require 'functions/connection.php';
+  
+  //I. Finding specializations in the database
+  //2. Select SQL
+  $sql = "SELECT * FROM `specialization` ORDER BY `id` ASC";
+
+  //3. Execute Select Query
+  $result = mysqli_query($conn, $sql);
+  while ($row = mysqli_fetch_assoc($result)) {
+  array_push($specialization, $row);
+  }
+?>
 <head>
 
 	<!--Boostrap CSS-->
