@@ -1,34 +1,5 @@
 <doctype html>
 
-<?php
-  //security check
-  session_start();
-
-  if(isset($_SESSION['isLogin'])){
-    if($_SESSION['isLogin'] == false){
-      header('Location: index.php');
-    }
-  }
-
-  if($_SESSION['userType'] != 'doctor'){
-    header('Location: dashboard.php');
-  }
-
-  $specialization = [];
-
-  //1. Setup Database connection
-  require 'functions/connection.php';
-  
-  //I. Finding specializations in the database
-  //2. Select SQL
-  $sql = "SELECT * FROM `specialization` ORDER BY `id` ASC";
-
-  //3. Execute Select Query
-  $result = mysqli_query($conn, $sql);
-  while ($row = mysqli_fetch_assoc($result)) {
-  array_push($specialization, $row);
-  }
-?>
 
 <head>
 
@@ -141,30 +112,6 @@
 
           </div>
 
-          <div class="box_field">
-            <label class="birthdaycss">Hospital Location</label>
-            <select class="form-control" name="Specialization" id="specSelect" required>
-              <option value="">Select Location</option>
-              <option value="">Caloocan</option>
-              <option value="">Malabon</option>
-              <option value="">Navotas</option>
-              <option value="">Valenzuela</option>
-              <option value="">Quezon City</option>
-              <option value="">Marikina</option>
-              <option value="">Pasig</option>
-              <option value="">Makati</option>
-              <option value="">Manila</option>
-              <option value="">Mandaluyong</option>
-              <option value="">San Juan</option>
-              <option value="">Pasay</option>
-              <option value="">Parañaque</option>
-              <option value="">Las Piñas</option>
-              <option value="">Pateros</option>
-
-
-            </select>
-
-          </div>
 
         </div>
 
@@ -202,6 +149,31 @@
             <input type="text" name="Hospital" id="inputHospital" required>
             <span></span>
             <label>Hospital Name</label>
+          </div>
+
+          <div class="box_field">
+            <label class="birthdaycss">Hospital Location</label>
+            <select class="hospitalLocal" name="Specialization" id="specSelect" required>
+              <option value="">Select Location</option>
+              <option value="">Caloocan</option>
+              <option value="">Malabon</option>
+              <option value="">Navotas</option>
+              <option value="">Valenzuela</option>
+              <option value="">Quezon City</option>
+              <option value="">Marikina</option>
+              <option value="">Pasig</option>
+              <option value="">Makati</option>
+              <option value="">Manila</option>
+              <option value="">Mandaluyong</option>
+              <option value="">San Juan</option>
+              <option value="">Pasay</option>
+              <option value="">Parañaque</option>
+              <option value="">Las Piñas</option>
+              <option value="">Pateros</option>
+
+
+            </select>
+
           </div>
 
 
