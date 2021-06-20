@@ -57,7 +57,8 @@
 
       <div class="user_info justify-content-center">
       <div class="txt_field">
-        <input type="text" name="Hospital" value="<?php echo $docHospital[0]["hospital"]; ?>" disabled>
+        <input type="text" value="<?php echo $docHospital[0]["hospital"]; ?>" disabled>
+        <input type="hidden" name="Hospital" value="<?php echo $docHospital[0]["hospital"]; ?>" >
         <span></span>
         <label>Hospital</label>
       </div>
