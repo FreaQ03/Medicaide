@@ -1,5 +1,26 @@
 <doctype html>
 
+<?php
+  session_start();
+  //1. Setup Database connection
+  require 'functions/connection.php';
+
+  //I. Get hospital of doctor
+  $docHospital = [];
+
+  $selectHosp = "SELECT * FROM `doctor_hospitals` WHERE `doc_id` = " . $_SESSION['userID'];
+
+  $result = mysqli_query($conn, $selectHosp);
+  while ($row = mysqli_fetch_assoc($result)) {
+      array_push($docHospital, $row);
+  }
+
+  //Closing Database Connection
+  mysqli_close($conn);
+
+?>
+
+
 <head>
 
   <!--Boostrap CSS-->
@@ -32,14 +53,11 @@
 
   <div class="center">
     <h1>Edit Schedule</h1>
-    <form id="registerForm" action="functions/registrationPost.php" method="post">
-
-
-
+    <form id="registerForm" action="functions/updateSchedule.php" method="post">
 
       <div class="user_info justify-content-center">
       <div class="txt_field">
-        <input type="text" name="Hospital" required>
+        <input type="text" name="Hospital" value="<?php echo $docHospital[0]["hospital"]; ?>" disabled>
         <span></span>
         <label>Hospital</label>
       </div>
@@ -58,23 +76,23 @@
   <tr>
     <td><div class="form-group registration justify-content-center">
                 <select class="Day" id="Day" name="Day" >
-                  <option value="Sunday">Sunday</option>
-                  <option value="Monday">Monday</option>
-                  <option value="Tuesday">Tuesday</option>
-                  <option value="Wednesday">Wednesday</option>
-                  <option value="Thursday">Thursday</option>
-                  <option value="Friday">Friday</option>
-                  <option value="Saturday">Saturday</option>
+                  <option value="0">Sunday</option>
+                  <option value="1">Monday</option>
+                  <option value="2">Tuesday</option>
+                  <option value="3">Wednesday</option>
+                  <option value="4">Thursday</option>
+                  <option value="5">Friday</option>
+                  <option value="6">Saturday</option>
                 </select>
 
               </div> 
     </td>
     <td> <div class="start_time">
-      <input type="time" required>
+      <input type="time" name="start_time" required>
         </div>
     </td>
     <td> <div class="end_time">
-      <input type="time" required>
+      <input type="time" name="end_time" required>
         </div>
     </td>
   </tr>
