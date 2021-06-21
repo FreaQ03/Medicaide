@@ -87,7 +87,7 @@
                         <p class="category">Current Hospital</p>        
                         <div class="container-fluid p-0" id="innerHosp">          
                             <input type="text" id="hosp autocomplete" placeholder="Enter Hospital Here" value="<?php echo $docHospital[0]["hospital"]; ?>" name="doctorHosp">
-                            <button type="button" class="btn btn-success btn-sm">Edit Hospital</button>
+                            <a class="btn btn-success btn-sm" href="doc_editSched.php" role="button">Edit Hospital</a>
                         </div>
                         <button type="button" class="btn btn-danger btn-sm mt-2" id="addHosp">Add</button>
                     </div>

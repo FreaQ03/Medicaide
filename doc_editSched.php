@@ -82,6 +82,21 @@
     <h1>Edit Schedule</h1>
     <form id="registerForm" action="functions/updateSchedule.php" method="post">
 
+      <?php
+
+        if (isset($_GET['duplicate'])) { //check if duplicate key exists in URL
+          if ($_GET['duplicate'] == 1) {
+            echo '
+              <br>
+              <div class="alert alert-warning text-center ml-5 mr-5" role="alert">
+              There are duplicate days in your entry. Please re-check and try again.
+              </div>
+            ';
+          }
+        }
+
+        ?>
+
       <div class="user_info justify-content-center">
       <div class="txt_field">
         <input type="text" value="<?php echo $docHospital[0]["hospital"]; ?>" disabled>
@@ -92,25 +107,23 @@
 
       <div class="box_field">
             <label class="birthdaycss">Hospital Location</label>
-            <select class="form-control" name="Specialization" id="specSelect" required>
+            <select class="form-control" name="Location" id="specSelect" required>
               <option value="">Select Location</option>
-              <option value="">Caloocan</option>
-              <option value="">Malabon</option>
-              <option value="">Navotas</option>
-              <option value="">Valenzuela</option>
-              <option value="">Quezon City</option>
-              <option value="">Marikina</option>
-              <option value="">Pasig</option>
-              <option value="">Makati</option>
-              <option value="">Manila</option>
-              <option value="">Mandaluyong</option>
-              <option value="">San Juan</option>
-              <option value="">Pasay</option>
-              <option value="">Parañaque</option>
-              <option value="">Las Piñas</option>
-              <option value="">Pateros</option>
-
-
+              <option value="Caloocan">Caloocan</option>
+              <option value="Malabon">Malabon</option>
+              <option value="Navotas">Navotas</option>
+              <option value="Valenzuela">Valenzuela</option>
+              <option value="Quezon City">Quezon City</option>
+              <option value="Marikina">Marikina</option>
+              <option value="Pasig">Pasig</option>
+              <option value="Makati">Makati</option>
+              <option value="Manila">Manila</option>
+              <option value="Mandaluyong">Mandaluyong</option>
+              <option value="San Juan">San Juan</option>
+              <option value="Pasay">Pasay</option>
+              <option value="Parañaque">Parañaque</option>
+              <option value="Las Piñas">Las Piñas</option>
+              <option value="Pateros">Pateros</option>
             </select>
 
           </div>
@@ -120,7 +133,7 @@
 
 
 
-<table class="main-table justify-content-center">
+<table class="main-table justify-content-center" id="scheduleTable">
 <thead>
   <tr>
     <th><label>Day: </label></th>
@@ -128,34 +141,36 @@
     <th><label>End time: </label></th>
   </tr>
 </thead>
-<tbody>
-  <tr>
-    <td><div class="form-group registration justify-content-center">
-                <select class="Day" id="Day" name="Day" >
-                  <option value="0">Sunday</option>
-                  <option value="1">Monday</option>
-                  <option value="2">Tuesday</option>
-                  <option value="3">Wednesday</option>
-                  <option value="4">Thursday</option>
-                  <option value="5">Friday</option>
-                  <option value="6">Saturday</option>
-                </select>
+<tbody id="tableBody">
+  <tr id="tableRow">
+    <td>
+      <div class="form-group registration justify-content-center">
+        
+        <select class="Day" id="Day" name="Day[]" >
+          <option value="0">Sunday</option>
+          <option value="1">Monday</option>
+          <option value="2">Tuesday</option>
+          <option value="3">Wednesday</option>
+          <option value="4">Thursday</option>
+          <option value="5">Friday</option>
+          <option value="6">Saturday</option>
+        </select>
 
-              </div> 
+      </div> 
     </td>
     <td> <div class="start_time">
-      <input type="time" name="start_time" required>
+      <input type="time" name="start_time[]" required>
         </div>
     </td>
     <td> <div class="end_time">
-      <input type="time" name="end_time" required>
+      <input type="time" name="end_time[]" required>
         </div>
     </td>
   </tr>
 </tbody>
 </table>
 
-              <button type="button" class="btn btn-success">Add Schedule</button>
+              <button type="button" id="addSched" class="btn btn-success">Add Schedule</button>
               <input type="submit" value="Submit">
       <div class="register_link mt-2"> 
          <a href="login.php"></a>
@@ -165,6 +180,30 @@
       </div>
       </div>
     </form>
+
+
+    <script>
+      
+      var day = 1;
+
+      function addSchedule() {
+        
+        if(day < 7){
+          var row = $('#tableRow').html();
+          $('#scheduleTable tbody').append('<tr>'+row+'</tr>');
+          day++;
+        }
+        else{
+          alert("You cannot add any more days!");
+        }
+      }
+
+      $(document).on("click", "#addSched", function(){
+          addSchedule();
+          
+      });  
+
+    </script>
 
 </body>
 </html>

@@ -51,9 +51,8 @@ form .txt_field{
 }
 .txt_field label{
   position: absolute;
-  top: 50%;
   left: 5px;
-  color: #adadad;
+  color: #A4292E;
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;

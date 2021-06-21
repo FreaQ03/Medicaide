@@ -181,23 +181,23 @@
 
           <div class="box_field">
             <label class="birthdaycss">Hospital Location</label>
-            <select class="hospitalLocal" name="Specialization" id="specSelect" required>
+            <select class="hospitalLocal" name="Location" id="specSelect" required>
               <option value="">Select Location</option>
-              <option value="">Caloocan</option>
-              <option value="">Malabon</option>
-              <option value="">Navotas</option>
-              <option value="">Valenzuela</option>
-              <option value="">Quezon City</option>
-              <option value="">Marikina</option>
-              <option value="">Pasig</option>
-              <option value="">Makati</option>
-              <option value="">Manila</option>
-              <option value="">Mandaluyong</option>
-              <option value="">San Juan</option>
-              <option value="">Pasay</option>
-              <option value="">Parañaque</option>
-              <option value="">Las Piñas</option>
-              <option value="">Pateros</option>
+              <option value="Caloocan">Caloocan</option>
+              <option value="Malabon">Malabon</option>
+              <option value="Navotas">Navotas</option>
+              <option value="Valenzuela">Valenzuela</option>
+              <option value="Quezon City">Quezon City</option>
+              <option value="Marikina">Marikina</option>
+              <option value="Pasig">Pasig</option>
+              <option value="Makati">Makati</option>
+              <option value="Manila">Manila</option>
+              <option value="Mandaluyong">Mandaluyong</option>
+              <option value="San Juan">San Juan</option>
+              <option value="Pasay">Pasay</option>
+              <option value="Parañaque">Parañaque</option>
+              <option value="Las Piñas">Las Piñas</option>
+              <option value="Pateros">Pateros</option>
 
 
             </select>

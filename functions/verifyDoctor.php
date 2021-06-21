@@ -8,6 +8,7 @@
 	$phone = $_POST['phone_number'];
 	$address = $_POST['Address'];
 	$hospital = $_POST['Hospital'];
+	$location = $_POST['Location'];
 	$specialization = $_POST['Specialization'];
 
 	$userID = $_SESSION['userID'];
@@ -41,10 +42,12 @@
 	//III. Insert doctor hospital
 	$insertHosp = "INSERT INTO `doctor_hospitals`(
 	`doc_id`, 
-	`hospital`
+	`hospital`,
+	`location`
 	) VALUES (
 	" . $userID . ",
-	'" . $hospital . "'
+	'" . $hospital . "',
+	'" . $location . "'
 	)";
 
 	//Execute SQL
