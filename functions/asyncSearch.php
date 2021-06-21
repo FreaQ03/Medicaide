@@ -11,9 +11,13 @@
 	if(isset($_POST['query'])){
 		$search = $_POST['query'];
 
-		$sql = "SELECT * FROM `doctor` WHERE `verified` = 1 
-		AND (`fname` LIKE '%" . $search . "%' 
-		OR `lname` LIKE '%" . $search . "%') 
+		$sql = "SELECT * FROM `doctor` 
+		INNER JOIN `doctor_hospitals` ON doctor_hospitals.`doc_id` = doctor.`id`
+		WHERE doctor.`verified` = 1 
+		AND (doctor.`fname` LIKE '%" . $search . "%' 
+		OR doctor.`lname` LIKE '%" . $search . "%'
+		OR doctor_hospitals.`hospital` LIKE '%" . $search . "%'
+		OR doctor_hospitals.`location` LIKE '%" . $search . "%') 
 		LIMIT " . $start . ", " . $limit;
 		
 	}
@@ -91,7 +95,6 @@
 			';
 			}
 
-
 			//4. Closing Database Connection
 			mysqli_close($conn);
 
@@ -101,7 +104,11 @@
 			    <img class="card-img-top" src="'. $pictureDirectory . '" alt="Card image cap">
 			    <div class="card-body">
 			      <h5 class="card-title">' . $doctors[$index]["fname"] .' ' . $doctors[$index]["lname"] . '</h5>
-			      <p class="card-text">Medical Specialist: <br> ' . $specValue[0]["value"] . ' <br><br> Hospitals: <br> St. Lukes Medical Center</p>
+			      <p class="card-text">Medical Specialist: 
+			      <br> 
+			      ' . $specValue[0]["value"] . ' 
+			      <br><br> Hospitals: 
+			      <br> ' . $doctors[$index]["hospital"] . ', ' . $doctors[$index]["location"] . '</p>
 			      <p class="card-text"><small class="text-muted"><button type="button" class="btn btn-outline-primary bookNow" data-toggle="modal" data-target="#myModal' . $index . '">Book Now</button></small></p>
 			    </div>
 			  </div>

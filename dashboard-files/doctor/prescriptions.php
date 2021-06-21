@@ -2,7 +2,7 @@
 
 <div id="PatientSearch">
 	
-	<div class="Header">
+	<div class="Heading_patient">
 		<h1>Send a Prescription</h1> 
 		<p>Search for a patient with their user ID </p> 
 	</div>
@@ -15,7 +15,7 @@
  			 <button type="button" class="btn btn-outline-primary search-btn"><i class="fas fa-search fa-2x"></i></button>
 		</div>
 	</div>
-	<p> Search a patient via their user ID. Send them a Prescription</p>
+	<p class="Heading_three"> Search a patient via their user ID. Send them a Prescription</p>
 
 <div class="row mx-5 mb-5">
 	<!--Search content will be printed here-->
@@ -34,17 +34,9 @@
 <!--pagination-->
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
-    <li class="page-item <?php if($_SESSION['page']==1){echo 'disabled';} ?>">
-      <a class="page-link" href="dashboard.php?page=<?php echo $previous; ?>" tabindex="-1">Previous</a>
-    </li>
-    <?php
-      for($i = 1; $i <= $pages; $i++){
-        echo '<li class="page-item"><a class="page-link" href="dashboard.php?page=' . $i . '">' . $i . '</a></li>';
-      }
-    ?>
-    <li class="page-item <?php if($_SESSION['page']==$pages){echo 'disabled';} ?>">
-      <a class="page-link" href="dashboard.php?page=<?php echo $next; ?>">Next</a>
-    </li>
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
   </ul>
 </nav>
 	

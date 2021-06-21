@@ -6,9 +6,19 @@
     //1. Setup Database connection
     require '../../functions/connection.php';
     
-    //I. Finding specializations in the database
+    //I. Get specialization of doctor
+    $specValue = [];
+
+    $selectSpecialization = "SELECT specialization.`value`, doctor.`specialization` FROM `specialization` INNER JOIN `doctor` ON specialization.`id` = doctor.`specialization` WHERE doctor.`id` = " . $_SESSION['userID'];
+
+    $result = mysqli_query($conn, $selectSpecialization);
+    while ($row = mysqli_fetch_assoc($result)) {
+        array_push($specValue, $row);
+    }
+
+    //II. Finding specializations in the database
     //2. Select SQL
-    $sql = "SELECT * FROM `specialization` ORDER BY `id` ASC";
+    $sql = "SELECT * FROM `specialization` WHERE `value` != '" . $specValue[0]["value"] . "' ORDER BY `id` ASC";
 
     //3. Execute Select Query
     $result = mysqli_query($conn, $sql);
@@ -17,7 +27,7 @@
     }
 
 
-    //II. Checking if user has a profile picture
+    //III. Checking if user has a profile picture
 
     $profilePictureDatabase = [];
     $pictureDirectory = "icons/img_placeholder.png";
@@ -32,6 +42,16 @@
 
     if(!empty($profilePictureDatabase[0]["profile_pic"])){
         $pictureDirectory = $profilePictureDatabase[0]["profile_pic"];
+    }
+
+    //IV. Get hospital of doctor
+    $docHospital = [];
+
+    $selectHosp = "SELECT * FROM `doctor_hospitals` WHERE `doc_id` = " . $_SESSION['userID'];
+
+    $result = mysqli_query($conn, $selectHosp);
+    while ($row = mysqli_fetch_assoc($result)) {
+        array_push($docHospital, $row);
     }
 
     //Closing Database Connection
@@ -66,8 +86,8 @@
                     <div class="data" id="hospital">
                         <p class="category">Current Hospital</p>        
                         <div class="container-fluid p-0" id="innerHosp">          
-                            <input type="text" id="hosp autocomplete" placeholder="Makati Medical Center" name="doctorHosp">
-                            <button type="button" class="btn btn-success btn-sm">Edit Schedule</button>
+                            <input type="text" id="hosp autocomplete" placeholder="Enter Hospital Here" value="<?php echo $docHospital[0]["hospital"]; ?>" name="doctorHosp">
+                            <button type="button" class="btn btn-success btn-sm">Edit Hospital</button>
                         </div>
                         <button type="button" class="btn btn-danger btn-sm mt-2" id="addHosp">Add</button>
                     </div>
@@ -77,7 +97,7 @@
                         <div class="container-fluid p-0" id="innerSpec">
                             <div class="form-group" id="specialization-group">
                                 <select class="form-control" name="doctorSpec" id="spec">
-                                    <option value="">Select a specialization</option>
+                                    <option value=""><?php echo $specValue[0]["value"]; ?></option>
                                     <?php
 
                                     for ($ctr = 0; $ctr < count($specialization); $ctr++){

@@ -7,14 +7,19 @@
   color: #aaa;
   font-style: italic;
 }
-
-
-.Header h1, p{
+.Heading_patient {
 	text-align: center !important;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
   font-weight: bold;
 }
+.Heading_three {
+  text-align: center !important;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
 #main-header {
   color: #A4292E !important;
   font-weight: 400;
@@ -216,4 +221,39 @@ label[for="txtMedicine"], [for="Frequency"], [for="selRoute"], [for="addnote"], 
 .box_fill {
   align-items: left !important;
 
+}
+
+.page-item{
+  font-family: 'Quicksand', sans-serif !important;
+  line-height: 1.6;
+}
+.page-link {
+  color: #A4292E !important;
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.toast-header {
+  font-family: 'Quicksand', sans-serif !important;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .25rem .75rem;
+    color: #A4292E !important;
+    background-color: rgba(255,255,255,.85);
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.toast-body {
+  all:unset;
+  font-family: 'Quicksand', sans-serif !important;
+  color: grey !important;
+  background: #fff !important;
+  padding: .75rem;
 }
