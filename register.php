@@ -92,7 +92,7 @@
 
 
 
-      <div class="user_info">
+      <div class="user_info justify-content-center">
       <div class="txt_field">
         <input type="text" name="first_name" required>
         <span></span>
