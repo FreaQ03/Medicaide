@@ -17,7 +17,16 @@
 
 	//3. Execute SQL
 	if (mysqli_query($conn, $sql)) {
-		move_uploaded_file($profilePicture['tmp_name'], "../user-files/doctor/profile-pic/" . $userID . "/" . $profilePicture['name']);
+		$profilePicPath = "../user-files/doctor/profile-pic/" . $userID;
+
+		//Creates new directory for User ID if directory is not created
+		if (!is_dir($profilePicPath)){
+			mkdir($profilePicPath);
+		}
+
+		move_uploaded_file($profilePicture['tmp_name'], $profilePicPath . '/' . $profilePicture['name']);
+
+		
 		header('Location: ../dashboard.php');
 
 	} 

@@ -225,11 +225,15 @@
   </div>
 </div>
 
-
+  
   <!--Bootstrap Javascript-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script>
+    $('.toast').toast('show');
+  </script>
 
   <?php 
     //Show verification modal after submitting verification form
@@ -247,191 +251,24 @@
     //Show verification notification modal if user is not yet verified
     if(isset($_SESSION['verified'])){
       if($_SESSION['verified'] == 0){
-        echo "<script> $('#verificationNotif').modal('show');</script>";
+        echo '<script src="js/dashboardDoctors.js"></script>';
+
+      }
+      elseif($_SESSION['verified'] == 2){
+        echo '<script src="js/dashboardDoctorsMin.js"></script>';
+      }
+      else{
+        echo '
+        <!--Full Jquery for other functions-->
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+        <script src="js/dashboardDoctorsVerified.js"></script>';
       }
     }
   ?>
-  
 
-  <script>
-    $('.toast').toast('show');
-  </script>
-
-  <!--Full Jquery for other functions-->
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
-
-  <script>
-    var addFunctionsDefined = false;
-
-    //for main dashboard page
-    const xhr = new XMLHttpRequest();
-    const container = document.getElementById("dynamicElement");
-
-    //Appending content of the HTTP Request (from the php files) to the container
-    xhr.onload = function(){
-      if (this.status === 200) {
-        container.innerHTML = xhr.responseText;
-      }
-      else {
-        console.warn("Did not receive 200 OK from response!");
-      }
-    };
-
-    xhr.open("get", "dashboard-files/calendar.php");
-    xhr.send();
-
-    //Live search function for search patients
-    $(document).on("keyup", "#search-bar", function() {
-      
-      var search = $(this).val();
-
-      $.ajax({
-        url:'functions/asyncSearchPatient.php',
-        method:'post',
-        data:{query:search},
-        success:function(response){
-          $(".row").html(response);
-        }
-      });
-      
-    });
-
-    $(document).on("click", "#showForm", function() {
-      var patientID = $(this).val();
-
-      $.ajax({
-        url:'functions/showCreateForm.php',
-        method:'post',
-        data:{userID:patientID},
-        success:function(response){
-          $(".presWrapper").html(response);
-        }
-      });
-    });
-
-    //AJAX for when doctor clicks accept (update database)
-    $(document).on("click", ".acceptRequest", function(){
-      var appointmentID = $(this).val();
-
-      $.ajax({
-        url:'functions/acceptAppointment.php',
-        method:'post',
-        data:{appointment_ID:appointmentID},
-        success:function(response){
-          console.log(response);
-        }
-      });
-    });
-
-    //AJAX for when doctor clicks decline (update database)
-    $(document).on("click", ".declineRequest", function(){
-      var appointmentID = $(this).val();
-
-      $.ajax({
-        url:'functions/declineAppointment.php',
-        method:'post',
-        data:{appointment_ID:appointmentID},
-        success:function(response){
-          console.log(response);
-        }
-      });
-    });
-
-    $("#calendar_button").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/calendar.php");
-      xhr.send();
-    });
-
-    $("#clock").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/clock.php");
-      xhr.send();
-    });
-
-    $("#prescriptions").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/prescriptions.php");
-      xhr.send();
-
-      function addPresForm() {
-        $(".presWrapper").css("visibility", "visible");
-        
-      }
-      
-      $(document).on("click", "#showForm", function(){
-        addPresForm();
-      });
-
-    });
-
-    $("#journal").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/journal.php");
-      xhr.send();
-    });
-
-    $("#user").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/doctor/user.php");
-      xhr.send();
-
-      var am = 1;
-      var pm = 1;
-      
-      if (addFunctionsDefined == false){
-        //Add button JS for Hospitals
-        function addHosp() {
-          var newText = $('<input />').attr('type','text').attr('placeholder', 'Makati Medical Center').attr('class','mt-2').attr('id','hosp'+am+' autocomplete').attr('name','doctorHosp'+am);
-          var newBtn = $('<button />').attr('id','sched'+am).attr('type','button').attr('class','btn btn-success btn-sm').html('Edit Schedule');
-          $('#innerHosp').append(newText);
-          $('#innerHosp').append(newBtn);
-          am++;
-        }
-
-        function addSpecialization(){
-          $("#specialization-group").clone().appendTo("#innerSpec");
-
-          pm++;
-        }
-
-        $(document).on("click", "#addHosp", function(){
-          addHosp();
-        });        
-
-        $(document).on("click", "#addSpec", function(){
-          addSpecialization();
-        });
-
-        $(document).on("change", "#picfile", function() {
-          $("#profile-picture").submit();
-        });
-
-        addFunctionsDefined = true;
-      }
-
-    });
-
-  </script>
-
-  <script>
-    // Selecting the iframe element
-    var iframe = document.getElementById("calendarFrame");
-    
-    // Adjusting the iframe height onload event
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    }
-  </script>
-
-  <script>
-    
-    
-
-  </script>
 
 </body>
 </html>

@@ -18,7 +18,7 @@
   require '../functions/connection.php';
 
   //2. SQL Statements
-  $selectDoctors = "SELECT * FROM `doctor` INNER JOIN `doctor_hospitals` ON doctor_hospitals.`doc_id` = doctor.`id` WHERE doctor.`verified` = 1 LIMIT " . $start . ", " . $limit;
+  $selectDoctors = "SELECT doctor.`id`, doctor.`fname`, doctor.`lname`, doctor.`specialization`, doctor.`profile_pic`, doctor_hospitals.`hospital`, doctor_hospitals.`location` FROM `doctor` INNER JOIN `doctor_hospitals` ON doctor_hospitals.`doc_id` = doctor.`id` WHERE doctor.`verified` = 1 LIMIT " . $start . ", " . $limit;
 
   $checkCount = "SELECT count(`id`) AS `id` FROM `doctor` WHERE `verified` = 1"; //selects only the count of verified doctors in database
 
@@ -119,7 +119,7 @@
       $scheduleData = "";
 
       //Set schedule data
-      for($i = 0; $i < count($schedule); $i++){
+      for($ctr = 0; $ctr < count($schedule); $ctr++){
 
         //Convert numbered day in database to word
         $days = [
@@ -134,8 +134,8 @@
 
         $scheduleData = $scheduleData . 
         '<tr>
-          <td>' . $days[$schedule[$i]["day"]] . '</td>
-          <td>' . $schedule[$i]["start_time"] . ' - ' . $schedule[$i]["end_time"] . '</td>
+          <td>' . $days[$schedule[$ctr]["day"]] . '</td>
+          <td>' . $schedule[$ctr]["start_time"] . ' - ' . $schedule[$ctr]["end_time"] . '</td>
         </tr>
         ';
       }

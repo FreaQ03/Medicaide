@@ -11,7 +11,8 @@
 	if(isset($_POST['query'])){
 		$search = $_POST['query'];
 
-		$sql = "SELECT * FROM `doctor` 
+		$sql = "SELECT doctor.`id`, doctor.`fname`, doctor.`lname`, doctor.`specialization`, doctor.`profile_pic`, doctor_hospitals.`hospital`, doctor_hospitals.`location` 
+		FROM `doctor` 
 		INNER JOIN `doctor_hospitals` ON doctor_hospitals.`doc_id` = doctor.`id`
 		WHERE doctor.`verified` = 1 
 		AND (doctor.`fname` LIKE '%" . $search . "%' 
@@ -22,7 +23,11 @@
 		
 	}
 	else{
-		$sql = "SELECT * FROM `doctor` WHERE `verified` = 1 LIMIT " . $start . ", " . $limit;
+		$sql = "SELECT doctor.`id`, doctor.`fname`, doctor.`lname`, doctor.`specialization`, doctor.`profile_pic`, doctor_hospitals.`hospital`, doctor_hospitals.`location` 
+		FROM `doctor` 
+		INNER JOIN `doctor_hospitals` ON doctor_hospitals.`doc_id` = doctor.`id`
+		WHERE `verified` = 1 
+		LIMIT " . $start . ", " . $limit;
 	}
 
 	$doctorResult = mysqli_query($conn, $sql);

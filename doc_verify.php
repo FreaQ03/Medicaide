@@ -14,6 +14,10 @@
     header('Location: dashboard.php');
   }
 
+  if($_SESSION['verified'] == 2 || $_SESSION['verified'] == 1){
+    header('Location: dashboard.php?verifySent=1');
+  }
+
   $specialization = [];
 
   //1. Setup Database connection
@@ -195,6 +199,7 @@
               <option value="Mandaluyong">Mandaluyong</option>
               <option value="San Juan">San Juan</option>
               <option value="Pasay">Pasay</option>
+              <option value="Taguig">Taguig</option>
               <option value="Parañaque">Parañaque</option>
               <option value="Las Piñas">Las Piñas</option>
               <option value="Pateros">Pateros</option>

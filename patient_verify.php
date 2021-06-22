@@ -12,6 +12,10 @@
   if($_SESSION['userType'] != 'patient'){
     header('Location: dashboard.php');
   }
+
+  if($_SESSION['verified'] == 2 || $_SESSION['verified'] == 1){
+    header('Location: dashboard.php?verifySent=1');
+  }
 ?>
 
 <head>

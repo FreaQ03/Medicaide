@@ -295,11 +295,25 @@
   </div>
 </div>
 
-
+  
   <!--Bootstrap Javascript-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script>
+    $('.toast').toast('show');
+  </script>
+
+  <script>
+    // Selecting the iframe element
+    var iframe = document.getElementById("calendarFrame");
+    
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+  </script>
 
   <?php 
 
@@ -313,122 +327,34 @@
       echo "<script> $('#successModal').modal('show');</script>";
     } 
 
-    //Show verification notification modal if user is not yet verified
-    if(isset($_SESSION['verified'])){
-      if($_SESSION['verified'] == 0){
-        echo "<script> $('#verificationNotif').modal('show');</script>";
-      }
-    }
-
     //Show verification modal after submitting verification form
     if(isset($_GET['verifySent'])){
       echo "<script> $('#verifyModal').modal('show');</script>";
     } 
 
+    //Different javascripts for verification levels
+    if(isset($_SESSION['verified'])){
+      if($_SESSION['verified'] == 0){
+
+        echo '<script src="js/dashboardPatients.js"></script>';
+      }
+      elseif($_SESSION['verified'] == 2){
+        echo '<script src="js/dashboardPatientsMin.js"></script>';
+      }
+      else{
+        echo '
+        <!--Full Jquery for other functions-->
+          <script
+          src="https://code.jquery.com/jquery-3.6.0.js"
+          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          crossorigin="anonymous"></script>
+          <script src="js/dashboardPatientsVerified.js"></script>
+        ';
+      }
+    }
   ?>
 
-  <script>
-    $('.toast').toast('show');
-  </script>
-
-  <!--Full Jquery for other functions-->
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
-
-  <script>
-    const xhr = new XMLHttpRequest();
-    const container = document.getElementById("dynamicElement");
-
-    xhr.onload = function(){
-      if (this.status === 200) {
-        container.innerHTML = xhr.responseText;
-      }
-      else {
-        console.warn("Did not receive 200 OK from response!");
-      }
-    };
-
-    xhr.open("get", "dashboard-files/calendar.php");
-    xhr.send();
-
-    //Live search function for search doctors
-    $(document).on("keyup", "#doctorSearch", function() {
-      
-      var search = $(this).val();
-
-      $.ajax({
-        url:'functions/asyncSearch.php',
-        method:'post',
-        data:{query:search},
-        success:function(response){
-          $("#doctorList").html(response);
-        }
-      });
-      
-    });
-
-    //Functional dropdown on journal page
-    $(document).on("click", ".withDate", function() {
-      
-      var date = $(this).text();
-      $("#output").val("");
-
-      $.ajax({
-        url:'functions/asyncPrescDate.php',
-        method:'post',
-        data:{query:date},
-        success:function(response){
-          $("#output").val(response);
-        }
-      });
-      
-    });
-
-
-    //Automatic redirection if element has "page" php element
-    if (window.location.href.indexOf("page") > -1) {
-      xhr.open("get", "dashboard-files/search.php");
-      xhr.send();
-    }
-
-    //When user updates profile-pic, automatic form submit
-    $(document).on("change", "#picfile", function() {
-      $("#profile-picture").submit();
-    });
-
-    $("#calendar_button").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/calendar.php");
-      xhr.send();
-    });
-
-    $("#search").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/search.php");
-      xhr.send();
-    });
-
-    $("#prescriptions").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/prescriptions.php");
-      xhr.send();
-    });
-
-    $("#journal").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/journal.php");
-      xhr.send();
-    });
-
-    $("#user").on('click', function(event) {
-      event.preventDefault();
-      xhr.open("get", "dashboard-files/user.php");
-      xhr.send();
-    });
-
-  </script>
+  
 
 </body>
 </html>

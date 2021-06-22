@@ -62,6 +62,12 @@
     color: #A4292E;
 }
 
+.card-img-top{
+  width: 100% !important;
+  height: 30vh !important;
+  object-fit: cover !important;
+}
+
 .card-text{ 
 	color: #A4292E !important;
 	font-family: 'Montserrat', sans-serif;

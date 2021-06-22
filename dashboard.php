@@ -25,6 +25,13 @@
 	}
 	elseif ($_SESSION['userType'] == 'doctor') {
 		require 'dashboardDoctors.php';
+
+		if(isset($_GET['page'])) {
+			$_SESSION['page'] = $_GET['page']; //Get for dynamic page no. in search
+		}
+		else {
+			$_SESSION['page'] = 1;
+		}
 	}
 
 ?>
